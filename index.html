@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paraíso dos Cupons — As ofertas mais cobiçadas do jardim</title>
+<meta name="description" content="Curadoria diária de cupons e promoções. Eletrônicos, moda, beleza, mercado — sempre verificados." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================
+     TOKENS — Paraíso dos Cupons · style guide v1.0
+     ============================================================ */
+  :root{
+    --pc-emerald-900:#03261D;
+    --pc-emerald-800:#064E3B;
+    --pc-emerald-700:#0B6B52;
+    --pc-emerald-600:#15876A;
+    --pc-emerald-500:#1FA683;
+    --pc-emerald-100:#D6EDE3;
+    --pc-emerald-50:#EAF4EE;
+
+    --pc-apple-900:#7A1313;
+    --pc-apple-700:#A21C1C;
+    --pc-apple-600:#DC2626;
+    --pc-apple-500:#EF4444;
+    --pc-apple-100:#FCE4E4;
+
+    --pc-gold-700:#B45309;
+    --pc-gold-600:#D97706;
+    --pc-gold-500:#F59E0B;
+    --pc-gold-400:#FBBF24;
+    --pc-gold-100:#FEF3C7;
+
+    --pc-cream-50:#FFFBEB;
+    --pc-cream-100:#FAF3DE;
+    --pc-cream-200:#F1E7C8;
+    --pc-cream-300:#E5D6A6;
+
+    --pc-ink-900:#1B2A24;
+    --pc-ink-700:#3D4E47;
+    --pc-ink-500:#6B7A73;
+    --pc-ink-300:#A8B3AD;
+
+    --pc-font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --pc-font-sans:  "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --pc-font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+    --pc-r-sm:6px; --pc-r-md:10px; --pc-r-lg:16px; --pc-r-pill:999px;
+
+    --pc-shadow-sm: 0 1px 2px rgba(3,38,29,.06), 0 1px 1px rgba(3,38,29,.04);
+    --pc-shadow-md: 0 6px 16px -8px rgba(3,38,29,.22), 0 2px 6px -2px rgba(3,38,29,.10);
+    --pc-shadow-lg: 0 24px 48px -24px rgba(3,38,29,.35), 0 8px 16px -8px rgba(3,38,29,.18);
+    --pc-shadow-gold: 0 10px 30px -12px rgba(245,158,11,.55);
+    --pc-shadow-apple: 0 10px 24px -10px rgba(220,38,38,.45);
+
+    --pc-container: 1240px;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: var(--pc-font-sans);
+    color: var(--pc-ink-900);
+    background: var(--pc-cream-50);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    font-size:16px;
+    line-height:1.55;
+  }
+  a{ color: inherit; text-decoration:none; }
+  img{ display:block; max-width:100%; }
+  button{ font-family: inherit; }
+
+  .container{ max-width: var(--pc-container); margin: 0 auto; padding: 0 32px; }
+  .eyebrow{ font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em; text-transform:uppercase; color: var(--pc-emerald-700); margin:0;}
+  .section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:32px; margin-bottom: 40px; }
+  .section-head h2{ font-family: var(--pc-font-serif); font-weight:500; font-style: italic; font-size: 48px; line-height: 1; letter-spacing:-.015em; color: var(--pc-emerald-900); margin: 10px 0 0; }
+  .section-head h2 em{ color: var(--pc-apple-600); font-style: italic; }
+  .section-head p{ margin:0; color: var(--pc-ink-700); font-size: 15px; max-width: 480px; }
+
+  /* ============================================================
+     BOTÃO (do style guide)
+     ============================================================ */
+  .pc-btn{
+    --bg: var(--pc-apple-600);
+    --bg-hover: var(--pc-apple-700);
+    --fg: var(--pc-cream-50);
+    --bd: transparent;
+    appearance:none; border:1px solid var(--bd);
+    background: var(--bg); color: var(--fg);
+    font-family: var(--pc-font-sans); font-weight: 700;
+    font-size: 15px; letter-spacing:.01em;
+    padding: 14px 22px; border-radius: var(--pc-r-pill);
+    cursor: pointer; display:inline-flex; align-items:center; gap: 10px;
+    line-height: 1;
+    transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
+    box-shadow: var(--pc-shadow-apple);
+  }
+  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
+  .pc-btn:active{ transform: translateY(0); }
+  .pc-btn:focus-visible{ outline: 2px solid var(--pc-gold-500); outline-offset: 3px; }
+  .pc-btn .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 18px; transform: translateY(-1px); }
+  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); box-shadow: 0 10px 24px -14px rgba(3,38,29,.55); }
+  .pc-btn--gold{ --bg: var(--pc-gold-500); --bg-hover: var(--pc-gold-600); --fg: var(--pc-emerald-900); box-shadow: var(--pc-shadow-gold); }
+  .pc-btn--ghost{ --bg: transparent; --bg-hover: rgba(6,78,59,.06); --fg: var(--pc-emerald-800); --bd: var(--pc-emerald-800); box-shadow: none; }
+  .pc-btn--ghost:hover{ background: var(--bg-hover); }
+  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
+  .pc-btn--lg{ font-size: 17px; padding: 18px 28px; }
+
+  /* ============================================================
+     NAVBAR
+     ============================================================ */
+  .nav-wrap{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,251,235,.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6,78,59,.08);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    height: 76px;
+  }
+  .logo-lockup{ display:flex; align-items:center; gap: 14px; color: var(--pc-emerald-900); }
+  .logo-mark{
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 22px;
+    box-shadow: inset 0 0 0 1px rgba(3,38,29,.15);
+  }
+  .logo-wordmark{
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 22px; letter-spacing:-.01em; line-height: 1;
+  }
+  .logo-wordmark small{
+    display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400;
+    font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65;
+  }
+  .nav-links{ display:flex; align-items:center; gap: 8px; }
+  .nav-link{
+    font-size: 14px; font-weight: 600; color: var(--pc-emerald-900);
+    padding: 10px 14px; border-radius: var(--pc-r-pill);
+    transition: background .15s ease;
+  }
+  .nav-link:hover{ background: rgba(6,78,59,.07); }
+  .nav-link.active{ color: var(--pc-apple-700); }
+  .nav-cta{ display:flex; align-items:center; gap: 12px; }
+  .nav-search{
+    display:flex; align-items:center; gap: 10px;
+    background: #fff;
+    border:1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-pill);
+    padding: 8px 14px 8px 16px;
+    min-width: 280px;
+    box-shadow: var(--pc-shadow-sm);
+  }
+  .nav-search input{
+    border: none; outline: none; background: transparent;
+    font-family: inherit; font-size: 14px; color: var(--pc-ink-900);
+    flex: 1; padding: 4px 0;
+  }
+  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
+  .nav-search kbd{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    padding: 3px 6px; border-radius: 4px;
+    background: var(--pc-cream-100); color: var(--pc-ink-500);
+    border: 1px solid var(--pc-cream-200);
+  }
+  @media (max-width: 980px){
+    .nav-links{ display:none; }
+    .nav-search{ display:none; }
+  }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero{
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 80% at 90% 8%, rgba(245,158,11,.20), transparent 60%),
+      radial-gradient(80% 60% at 5% 100%, rgba(31,166,131,.22), transparent 70%),
+      linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 56px;
+    align-items:center;
+    padding: 96px 0 112px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-text .eyebrow{ color: var(--pc-gold-400); }
+  .hero-text h1{
+    font-family: var(--pc-font-serif);
+    font-weight: 500; font-style: italic;
+    font-size: clamp(56px, 6.4vw, 92px); line-height: .95;
+    letter-spacing:-.02em;
+    margin: 22px 0 0;
+    max-width: 14ch;
+  }
+  .hero-text h1 .accent{ color: var(--pc-gold-500); }
+  .hero-text h1 .apple{ color: var(--pc-apple-500); }
+  .hero-text .sub{
+    margin-top: 24px;
+    font-size: 19px; line-height: 1.5;
+    color: rgba(255,251,235,.78);
+    max-width: 52ch;
+  }
+  .hero-cta{ margin-top: 36px; display:flex; flex-wrap:wrap; gap: 14px; align-items:center; }
+  .hero-cta .ghost-light{
+    --bg: transparent; --bg-hover: rgba(255,251,235,.10);
+    --fg: var(--pc-cream-50); --bd: rgba(255,251,235,.4);
+    box-shadow: none;
+  }
+  .hero-stats{
+    margin-top: 56px;
+    display:grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,251,235,.15);
+    max-width: 560px;
+  }
+  .hero-stats .stat{ font-size: 13px; color: rgba(255,251,235,.6); }
+  .hero-stats .stat b{
+    display:block;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 36px; color: var(--pc-gold-400); margin-bottom: 4px; line-height: 1;
+  }
+
+  /* ——— Mascote ——— */
+  .mascot{
+    position: relative;
+    aspect-ratio: 1 / 1;
+    display:grid; place-items:center;
+  }
+  .mascot::before, .mascot::after{
+    /* Halos circulares decorativos (jardim) */
+    content:""; position:absolute; border-radius: 50%; pointer-events:none;
+  }
+  .mascot::before{
+    width: 88%; height: 88%;
+    border: 1px dashed rgba(245,158,11,.30);
+    left: 6%; top: 6%;
+    animation: rotate 80s linear infinite;
+  }
+  .mascot::after{
+    width: 70%; height: 70%;
+    border: 1px solid rgba(214,237,227,.18);
+    left: 15%; top: 15%;
+    animation: rotate 60s linear infinite reverse;
+  }
+  @keyframes rotate{ to{ transform: rotate(360deg); } }
+  @keyframes float-y{
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+  .mascot-img{
+    position: relative; z-index: 2;
+    width: 96%; height: auto;
+    display: block;
+    filter: drop-shadow(0 24px 32px rgba(3,38,29,.45)) drop-shadow(0 8px 16px rgba(3,38,29,.25));
+    animation: float-y 6s ease-in-out infinite;
+  }
+  /* Fitinha "novo cupom" */
+  .mascot-ribbon{
+    position:absolute; bottom: 6%; left: -2%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    padding: 10px 18px;
+    border-radius: 4px var(--pc-r-pill) var(--pc-r-pill) 4px;
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 12px;
+    letter-spacing:.14em; text-transform:uppercase;
+    box-shadow: var(--pc-shadow-md);
+    z-index: 3;
+    transform: rotate(-3deg);
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .mascot-ribbon::before{
+    content:""; position:absolute; left:-7px; top:50%; transform:translateY(-50%);
+    width:0; height:0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 7px solid var(--pc-gold-500);
+  }
+  .mascot-ribbon .dot{ width:6px; height:6px; border-radius:50%; background: var(--pc-emerald-900); }
+  @media (prefers-reduced-motion: reduce){
+    .mascot-img, .mascot::before, .mascot::after{ animation: none; }
+  }
+
+  /* arcos decorativos no hero (folha-jardim) */
+  .hero-ornament{
+    position:absolute; pointer-events:none; border-radius:50%;
+    border: 1px solid rgba(245,158,11,.25);
+  }
+  .hero-ornament.o1{ width: 480px; height: 480px; right: -180px; top: -180px; }
+  .hero-ornament.o2{ width: 280px; height: 280px; right: -60px; top: 80px; border-color: rgba(214,237,227,.12); }
+  .hero-ornament.o3{ width: 360px; height: 360px; left: -160px; bottom: -180px; border-color: rgba(31,166,131,.3); }
+
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; padding: 64px 0 80px; }
+    .mascot{ max-width: 420px; margin: 0 auto; }
+  }
+
+  /* ============================================================
+     CATEGORIAS (faixa)
+     ============================================================ */
+  .cats-strip{
+    background: var(--pc-cream-100);
+    border-bottom: 1px solid var(--pc-cream-200);
+    padding: 18px 0;
+  }
+  .cats-row{
+    display:flex; gap: 8px; align-items:center;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .cats-row::-webkit-scrollbar{ display:none; }
+  .cat-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    color: var(--pc-emerald-800);
+    font-weight: 600; font-size: 13px;
+    border-radius: var(--pc-r-pill);
+    white-space:nowrap;
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .cat-pill:hover{ background: var(--pc-emerald-50); }
+  .cat-pill.active{ background: var(--pc-emerald-800); color: var(--pc-cream-50); border-color: var(--pc-emerald-800); }
+  .cat-pill .count{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    background: var(--pc-cream-100); color: var(--pc-emerald-800);
+    padding: 2px 6px; border-radius: 999px;
+  }
+  .cat-pill.active .count{ background: rgba(245,158,11,.25); color: var(--pc-gold-400); }
+
+  /* ============================================================
+     SEÇÃO OFERTAS
+     ============================================================ */
+  .offers-section{ padding: 80px 0; }
+
+  .offer-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  @media (max-width: 980px){ .offer-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px){ .offer-grid{ grid-template-columns: 1fr; } }
+
+  .pc-card{
+    background: #fff;
+    border-radius: var(--pc-r-lg);
+    overflow: hidden;
+    box-shadow: var(--pc-shadow-md);
+    border: 1px solid rgba(6,78,59,.08);
+    display:flex; flex-direction:column;
+    transition: transform .2s ease, box-shadow .2s ease;
+    position:relative;
+  }
+  .pc-card:hover{ transform: translateY(-3px); box-shadow: var(--pc-shadow-lg); }
+
+  .pc-card__media{
+    position:relative;
+    aspect-ratio: 4/3;
+    background:
+      repeating-linear-gradient(135deg, rgba(6,78,59,.045) 0 10px, transparent 10px 22px),
+      linear-gradient(160deg, var(--pc-emerald-50), var(--pc-cream-100));
+    display:grid; place-items:center;
+    color: var(--pc-emerald-800);
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em; text-transform:uppercase;
+    overflow: hidden;
+  }
+  .pc-card__media img{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform .35s ease;
+  }
+  .pc-card:hover .pc-card__media img{ transform: scale(1.03); }
+  .pc-card__media .ph{ position: relative; z-index: 1; }
+  .pc-card__media .corner{ position:absolute; top: 16px; left: 16px; }
+  .pc-card__media .save{
+    position:absolute; top: 16px; right: 16px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,251,235,.92);
+    display:grid; place-items:center;
+    color: var(--pc-emerald-800);
+    font-size: 18px;
+    box-shadow: var(--pc-shadow-sm);
+    cursor:pointer;
+    border:none;
+    transition: color .15s ease, background .15s ease, transform .12s ease;
+  }
+  .pc-card__media .save:hover{ background: var(--pc-cream-50); color: var(--pc-apple-600); }
+  .pc-card__media .save.saved{ color: var(--pc-apple-600); }
+  .pc-card__media .save.saved:active{ transform: scale(.9); }
+
+  .pc-badge-corner{
+    background: var(--pc-apple-600); color: var(--pc-cream-50);
+    font-family: var(--pc-font-sans); font-weight: 800;
+    font-size: 18px; letter-spacing:-.01em;
+    padding: 10px 14px; border-radius: var(--pc-r-sm);
+    display:inline-flex; flex-direction: column; align-items:center; line-height: 1;
+  }
+  .pc-badge-corner span{
+    font-family: var(--pc-font-mono); font-weight:500;
+    font-size: 9px; letter-spacing:.22em; text-transform:uppercase;
+    margin-top: 4px; opacity:.85;
+  }
+
+  .pc-card__body{ padding: 22px 22px 18px; display:flex; flex-direction:column; gap: 12px; flex: 1; }
+  .pc-card__meta{ display:flex; align-items:center; gap: 10px; font-family: var(--pc-font-mono); font-size: 10px; letter-spacing:.22em; text-transform:uppercase; color: var(--pc-ink-500); }
+  .pc-card__meta .store{ color: var(--pc-emerald-800); font-weight: 600; }
+  .pc-card__title{
+    font-family: var(--pc-font-serif); font-weight: 500;
+    font-size: 24px; line-height: 1.15;
+    color: var(--pc-emerald-900); margin:0;
+    letter-spacing:-.01em;
+  }
+  .pc-card__title em{ font-style: italic; color: var(--pc-emerald-700); }
+  .pc-card__desc{ font-size: 14px; color: var(--pc-ink-700); margin:0; line-height: 1.55; }
+  .pc-card__tags{ display:flex; flex-wrap:wrap; gap:6px; margin-top: 2px; }
+  .pc-card__tags span{
+    font-size: 11px; font-weight: 600;
+    background: var(--pc-emerald-50); color: var(--pc-emerald-800);
+    padding: 4px 9px; border-radius: 999px;
+    letter-spacing:.02em;
+  }
+
+  .pc-card__priceline{
+    display:flex; align-items:baseline; gap: 12px;
+    border-top: 1px dashed rgba(6,78,59,.18);
+    padding-top: 14px;
+    margin-top: auto;
+  }
+  .pc-card__price{
+    font-family: var(--pc-font-sans); font-weight: 800;
+    font-size: 28px; color: var(--pc-apple-700);
+    letter-spacing:-.02em; font-variant-numeric: tabular-nums;
+    line-height: 1; margin:0;
+  }
+  .pc-card__price-prefix{ font-size: 13px; font-weight: 600; color: var(--pc-apple-700); margin-right: 2px; }
+  .pc-card__price-strike{ font-family: var(--pc-font-sans); font-size: 14px; color: var(--pc-ink-500); text-decoration: line-through; margin:0; }
+
+  .pc-card__footer{ display:flex; gap: 10px; align-items:center; padding: 0 22px 22px; }
+  .pc-card__footer--single .pc-btn{ width: 100%; justify-content: center; }
+  .pc-card__code{
+    flex: 1;
+    font-family: var(--pc-font-mono); font-weight: 500;
+    font-size: 13px; letter-spacing:.18em;
+    background: var(--pc-cream-100);
+    border: 1.5px dashed var(--pc-gold-500);
+    color: var(--pc-emerald-900);
+    padding: 12px 14px;
+    border-radius: var(--pc-r-sm);
+    text-align:center;
+    text-transform:uppercase;
+    cursor: pointer;
+    position:relative;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .pc-card__code:hover{ background: var(--pc-gold-100); border-color: var(--pc-gold-600); }
+  .pc-card__code.copied{ background: var(--pc-emerald-50); border-color: var(--pc-emerald-600); color: var(--pc-emerald-800); }
+  .pc-card__code.copied::after{
+    content: "Copiado!"; position:absolute; inset:0;
+    display:grid; place-items:center;
+    background: var(--pc-emerald-50);
+    color: var(--pc-emerald-800);
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px;
+    letter-spacing: .04em;
+    border-radius: var(--pc-r-sm);
+  }
+
+  /* Card featured (oferta-herói destaque) */
+  .pc-card--featured{
+    background: linear-gradient(170deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+    border-color: transparent;
+  }
+  .pc-card--featured .pc-card__media{
+    background:
+      radial-gradient(80% 60% at 80% 20%, rgba(245,158,11,.22), transparent 60%),
+      radial-gradient(70% 50% at 20% 90%, rgba(31,166,131,.30), transparent 60%),
+      linear-gradient(160deg, #0A3D2D 0%, #03261D 100%);
+    color: rgba(255,251,235,.55);
+  }
+  .pc-card--featured .pc-card__title{ color: var(--pc-cream-50); }
+  .pc-card--featured .pc-card__title em{ color: var(--pc-gold-400); }
+  .pc-card--featured .pc-card__desc{ color: rgba(255,251,235,.72); }
+  .pc-card--featured .pc-card__meta{ color: rgba(255,251,235,.55); }
+  .pc-card--featured .pc-card__meta .store{ color: var(--pc-gold-400); }
+  .pc-card--featured .pc-card__priceline{ border-top-color: rgba(255,251,235,.15); }
+  .pc-card--featured .pc-card__price,
+  .pc-card--featured .pc-card__price-prefix{ color: var(--pc-gold-400); }
+  .pc-card--featured .pc-card__price-strike{ color: rgba(255,251,235,.5); }
+  .pc-card--featured .pc-card__code{
+    background: rgba(245,158,11,.10);
+    border-color: var(--pc-gold-400);
+    color: var(--pc-gold-400);
+  }
+  .pc-card--featured .pc-card__code:hover{ background: rgba(245,158,11,.20); }
+  .pc-card--featured .pc-card__tags span{ background: rgba(245,158,11,.12); color: var(--pc-gold-400); }
+  .pc-card--featured .pc-card__media .save{ background: rgba(255,251,235,.12); color: var(--pc-cream-50); }
+  .pc-card--featured .pc-card__media .save:hover{ background: rgba(255,251,235,.22); color: var(--pc-gold-400); }
+
+  /* Loading state */
+  .skeleton{
+    background: linear-gradient(90deg, var(--pc-cream-100) 0%, var(--pc-cream-200) 50%, var(--pc-cream-100) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+    border-radius: var(--pc-r-sm);
+  }
+  @keyframes shimmer{ 0%{ background-position: 100% 0; } 100%{ background-position: -100% 0; } }
+  .skel-card{ background: #fff; border-radius: var(--pc-r-lg); overflow:hidden; border: 1px solid rgba(6,78,59,.08); box-shadow: var(--pc-shadow-md); }
+  .skel-card .skel-media{ aspect-ratio: 4/3; }
+  .skel-card .skel-body{ padding: 22px; display:flex; flex-direction:column; gap: 10px; }
+  .skel-card .skel-line{ height: 12px; border-radius: 4px; }
+  .skel-card .skel-line.t{ height: 20px; width: 80%; }
+  .skel-card .skel-line.s{ width: 60%; }
+  .skel-card .skel-line.p{ height: 28px; width: 40%; margin-top: 8px; }
+
+  /* Empty / error state */
+  .offers-empty{
+    text-align:center; padding: 80px 0;
+    color: var(--pc-ink-500); font-size: 15px;
+  }
+  .offers-empty b{ display:block; font-family: var(--pc-font-serif); font-style: italic; font-weight:500; font-size: 28px; color: var(--pc-emerald-900); margin-bottom: 8px; }
+
+  /* Aviso de afiliado — abaixo dos cards */
+  .affiliate-notice{
+    margin-top: 40px;
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 22px;
+    background: var(--pc-cream-100);
+    border: 1px dashed rgba(6,78,59,.22);
+    border-radius: var(--pc-r-md);
+    color: var(--pc-ink-700);
+  }
+  .affiliate-notice .badge{
+    flex: none;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display: grid; place-items: center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
+    font-size: 15px; line-height: 1;
+    margin-top: 2px;
+  }
+  .affiliate-notice p{
+    margin: 0; font-size: 13.5px; line-height: 1.55;
+    max-width: 80ch;
+  }
+  .affiliate-notice b{ color: var(--pc-emerald-900); font-weight: 700; }
+  .affiliate-notice em{ font-style: italic; color: var(--pc-apple-700); font-weight: 600; }
+  .affiliate-notice a{
+    color: var(--pc-emerald-800); font-weight: 600;
+    border-bottom: 1px dashed rgba(6,78,59,.4);
+    transition: color .15s ease;
+  }
+  .affiliate-notice a:hover{ color: var(--pc-apple-700); border-color: var(--pc-apple-700); }
+  @media (max-width: 560px){ .affiliate-notice{ padding: 16px; } .affiliate-notice p{ font-size: 13px; } }
+
+  /* ============================================================
+     TELEGRAM CTA
+     ============================================================ */
+  .tg{
+    margin: 40px 0 0;
+    background:
+      radial-gradient(40% 80% at 90% 50%, rgba(245,158,11,.18), transparent 60%),
+      linear-gradient(165deg, #0A3D2D 0%, #03261D 100%);
+    border-radius: var(--pc-r-lg);
+    overflow:hidden;
+    position:relative;
+    color: var(--pc-cream-50);
+  }
+  .tg-inner{
+    display:grid; grid-template-columns: 1.2fr 1fr;
+    gap: 56px; align-items:center;
+    padding: 72px 64px;
+  }
+  .tg .eyebrow{ color: var(--pc-gold-400); }
+  .tg h3{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(40px, 4.5vw, 60px); line-height: 1;
+    margin: 14px 0 0; letter-spacing:-.015em;
+  }
+  .tg h3 .accent{ color: var(--pc-gold-400); }
+  .tg p{
+    margin-top: 20px; max-width: 48ch;
+    font-size: 17px; line-height: 1.55;
+    color: rgba(255,251,235,.78);
+  }
+  .tg-list{
+    margin-top: 28px; display:grid; gap: 12px;
+  }
+  .tg-list li{
+    display:flex; align-items:center; gap: 12px;
+    font-size: 15px; color: rgba(255,251,235,.85);
+  }
+  .tg-list li::before{
+    content:""; flex:none;
+    width:8px; height:8px; border-radius:50%;
+    background: var(--pc-gold-500);
+  }
+  .tg-cta{ margin-top: 36px; display:flex; flex-wrap:wrap; gap: 12px; align-items:center; }
+  .tg-handle{
+    font-family: var(--pc-font-mono); font-size: 13px;
+    color: rgba(255,251,235,.55);
+  }
+  .tg-handle b{ color: var(--pc-gold-400); font-weight: 500; }
+
+  /* Mock do "chat" do bot */
+  .tg-mock{
+    background: rgba(255,251,235,.04);
+    border: 1px solid rgba(255,251,235,.10);
+    border-radius: var(--pc-r-lg);
+    padding: 24px;
+    backdrop-filter: blur(4px);
+  }
+  .tg-mock-head{
+    display:flex; align-items:center; gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,251,235,.10);
+  }
+  .tg-mock-avatar{
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-weight: 600; font-style: italic;
+    font-size: 22px;
+  }
+  .tg-mock-name b{ display:block; font-size: 14px; color: var(--pc-cream-50); }
+  .tg-mock-name span{ font-family: var(--pc-font-mono); font-size: 11px; color: rgba(255,251,235,.5); }
+  .tg-msgs{ margin-top: 16px; display:grid; gap: 10px; }
+  .tg-msg{
+    background: rgba(255,251,235,.08);
+    color: rgba(255,251,235,.92);
+    padding: 12px 14px;
+    border-radius: 14px 14px 14px 4px;
+    font-size: 14px;
+    max-width: 90%;
+    line-height: 1.45;
+  }
+  .tg-msg em{ font-style: normal; color: var(--pc-gold-400); font-weight: 600; }
+  .tg-msg.user{
+    background: var(--pc-apple-600);
+    color: var(--pc-cream-50);
+    border-radius: 14px 14px 4px 14px;
+    margin-left: auto;
+  }
+  .tg-msg .code{
+    display:inline-block;
+    font-family: var(--pc-font-mono); font-size: 12px;
+    background: rgba(3,38,29,.4);
+    padding: 3px 8px; border-radius: 4px;
+    color: var(--pc-gold-400);
+    letter-spacing: .12em;
+    border: 1px dashed rgba(245,158,11,.45);
+  }
+  .tg-typing{
+    display:inline-flex; gap:4px; padding: 12px 14px;
+    background: rgba(255,251,235,.08);
+    border-radius: 14px 14px 14px 4px;
+    width: fit-content;
+  }
+  .tg-typing span{
+    width:6px; height:6px; border-radius:50%; background: rgba(255,251,235,.6);
+    animation: blink 1.2s infinite ease-in-out;
+  }
+  .tg-typing span:nth-child(2){ animation-delay: .15s; }
+  .tg-typing span:nth-child(3){ animation-delay: .3s; }
+  @keyframes blink{ 0%,80%,100%{ opacity:.25; transform:translateY(0); } 40%{ opacity:1; transform:translateY(-3px); } }
+
+  @media (max-width: 900px){
+    .tg-inner{ grid-template-columns: 1fr; padding: 48px 32px; gap: 32px; }
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer.foot{
+    margin-top: 96px;
+    background: var(--pc-emerald-900);
+    color: rgba(255,251,235,.78);
+    padding: 64px 0 32px;
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: 48px;
+  }
+  .foot-col h4{
+    font-family: var(--pc-font-sans); font-weight: 700;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--pc-gold-400);
+    margin: 0 0 18px;
+  }
+  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--pc-gold-400); }
+  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
+  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
+  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
+
+  .foot-bottom{
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid rgba(255,251,235,.10);
+    display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: rgba(255,251,235,.45);
+    letter-spacing: .12em; text-transform: uppercase;
+  }
+  .foot-disclosure{
+    margin-top: 48px;
+    padding: 16px 20px;
+    border: 1px dashed rgba(245,158,11,.35);
+    border-radius: var(--pc-r-md);
+    background: rgba(245,158,11,.04);
+    font-size: 12.5px;
+    color: rgba(255,251,235,.7);
+    line-height: 1.55;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .foot-disclosure span:first-child{
+    color: var(--pc-gold-400);
+    font-size: 13px;
+    flex: none;
+  }
+  .foot-disclosure em{
+    font-style: italic;
+    color: var(--pc-gold-400);
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px){
+    .foot-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px){
+    .foot-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ============================================================
+     Toast
+     ============================================================ */
+  .toast{
+    position: fixed; bottom: 32px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--pc-emerald-900);
+    color: var(--pc-cream-50);
+    padding: 14px 20px;
+    border-radius: var(--pc-r-pill);
+    font-size: 14px; font-weight: 600;
+    box-shadow: var(--pc-shadow-lg);
+    border: 1px solid rgba(245,158,11,.3);
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease, transform .25s ease;
+    z-index: 100;
+    display:flex; align-items:center; gap: 10px;
+  }
+  .toast.show{ opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast b{ color: var(--pc-gold-400); font-family: var(--pc-font-mono); letter-spacing: .14em; font-weight: 500; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="#" class="logo-lockup">
+        <div class="logo-mark">P</div>
+        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link active" href="#ofertas">Ofertas</a>
+        <a class="nav-link" href="#">Lojas</a>
+        <a class="nav-link" href="#">Categorias</a>
+        <a class="nav-link" href="#telegram">Bot Telegram</a>
+        <a class="nav-link" href="#">Blog</a>
+      </div>
+      <div class="nav-cta">
+        <label class="nav-search" aria-label="Buscar">
+          <span class="ic">⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar cupom ou loja…" />
+          <kbd>/</kbd>
+        </label>
+        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ HERO ═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-ornament o1"></div>
+  <div class="hero-ornament o2"></div>
+  <div class="hero-ornament o3"></div>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Curadoria diária · cupons verificados</p>
+        <h1>Onde cada oferta<br/>é uma <span class="apple">maçã</span> <span class="accent">proibida</span>.</h1>
+        <p class="sub">Encontre os cupons mais cobiçados antes que ninguém. Moda, beleza, eletrônicos, mercado — sempre com código e prazo verificados pela nossa equipe.</p>
+        <div class="hero-cta">
+          <a href="#ofertas" class="pc-btn pc-btn--lg">Ver ofertas do dia <span class="arrow">→</span></a>
+          <a href="#telegram" class="pc-btn pc-btn--lg ghost-light">Receber no Telegram</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>1.240+</b>cupons ativos hoje</div>
+          <div class="stat"><b>R$ 87M</b>economia gerada em 2025</div>
+          <div class="stat"><b>98%</b>códigos verificados</div>
+        </div>
+      </div>
+
+      <!-- ═══ Mascote · Eva & a Serpente ═══ -->
+      <div class="mascot" aria-label="Eva e a serpente — mascote do Paraíso dos Cupons">
+        <img src="mascote.png" alt="Mascote do Paraíso dos Cupons: Eva segurando uma maçã com símbolo de porcentagem ao lado de uma serpente verde sorridente" class="mascot-img" />
+        <div class="mascot-ribbon"><span class="dot"></span>Novo cupom</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ CATEGORIAS ═══════════════════════════════════════════════ -->
+<div class="cats-strip">
+  <div class="container">
+    <div class="cats-row" id="catsRow">
+      <button class="cat-pill active" data-cat="todas">Todas <span class="count" data-count="todas">—</span></button>
+      <button class="cat-pill" data-cat="Eletrônicos">Eletrônicos <span class="count" data-count="Eletrônicos">—</span></button>
+      <button class="cat-pill" data-cat="Moda">Moda <span class="count" data-count="Moda">—</span></button>
+      <button class="cat-pill" data-cat="Beleza">Beleza <span class="count" data-count="Beleza">—</span></button>
+      <button class="cat-pill" data-cat="Mercado">Mercado <span class="count" data-count="Mercado">—</span></button>
+      <button class="cat-pill" data-cat="Casa">Casa <span class="count" data-count="Casa">—</span></button>
+      <button class="cat-pill" data-cat="Bebidas">Bebidas <span class="count" data-count="Bebidas">—</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ OFERTAS ═══════════════════════════════════════════════ -->
+<section class="offers-section" id="ofertas">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">As mais cobiçadas</p>
+        <h2>Ofertas do <em>jardim</em>, hoje</h2>
+      </div>
+      <p>Atualizado em tempo real. Códigos testados nas últimas 24h. Toque no cupom para copiar.</p>
+    </div>
+
+    <div class="offer-grid" id="offerGrid">
+      <!-- Skeletons iniciais (3) — substituídos depois do fetch -->
+      <div class="skel-card"><div class="skeleton skel-media"></div><div class="skel-body"><div class="skeleton skel-line s"></div><div class="skeleton skel-line t"></div><div class="skeleton skel-line"></div><div class="skeleton skel-line p"></div></div></div>
+      <div class="skel-card"><div class="skeleton skel-media"></div><div class="skel-body"><div class="skeleton skel-line s"></div><div class="skeleton skel-line t"></div><div class="skeleton skel-line"></div><div class="skeleton skel-line p"></div></div></div>
+      <div class="skel-card"><div class="skeleton skel-media"></div><div class="skel-body"><div class="skeleton skel-line s"></div><div class="skeleton skel-line t"></div><div class="skeleton skel-line"></div><div class="skeleton skel-line p"></div></div></div>
+    </div>
+
+    <!-- Aviso de afiliado -->
+    <aside class="affiliate-notice" role="note" aria-label="Aviso sobre links de afiliados">
+      <span class="badge">i</span>
+      <p>
+        <b>Transparência:</b> este site contém links de afiliados. Ao comprar através deles, podemos receber uma comissão — <em>sem custo adicional para você</em>. Isso ajuda a manter a curadoria diária no ar. Leia nossa <a href="#">divulgação completa</a>.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ TELEGRAM ═══════════════════════════════════════════════ -->
+<section id="telegram">
+  <div class="container">
+    <div class="tg">
+      <div class="tg-inner">
+        <div>
+          <p class="eyebrow">Bot exclusivo · Telegram</p>
+          <h3>O cupom chega antes<br/>de <span class="accent">você procurar</span>.</h3>
+          <p>Conecte com <b>@eveseeksapple</b> e receba os cupons mais quentes direto no seu Telegram. Avisos de queda de preço, códigos verificados e alertas só para as ofertas-maçã.</p>
+          <ul class="tg-list">
+            <li>Alertas por categoria — você escolhe</li>
+            <li>Lembretes 30 min antes de a oferta expirar</li>
+            <li>Códigos exclusivos do canal (não saem no site)</li>
+            <li>Zero spam — média de 4 mensagens por dia</li>
+          </ul>
+          <div class="tg-cta">
+            <a class="pc-btn pc-btn--gold pc-btn--lg" href="https://t.me/eveseeksapple" target="_blank" rel="noopener">
+              Falar com @eveseeksapple <span class="arrow">→</span>
+            </a>
+            <span class="tg-handle">ou busque por <b>@eveseeksapple</b> no Telegram</span>
+          </div>
+        </div>
+
+        <!-- Mock do chat -->
+        <div class="tg-mock" aria-hidden="true">
+          <div class="tg-mock-head">
+            <div class="tg-mock-avatar">E</div>
+            <div class="tg-mock-name">
+              <b>Eva — Paraíso dos Cupons</b>
+              <span>@eveseeksapple · online</span>
+            </div>
+          </div>
+          <div class="tg-msgs">
+            <div class="tg-msg">Boa tarde 🍎 Achei <em>3 maçãs proibidas</em> para você hoje.</div>
+            <div class="tg-msg user">/ofertas eletrônicos</div>
+            <div class="tg-msg">
+              <b>Pomum Pro 256GB</b> — <em>-38% só hoje</em><br/>
+              Código: <span class="code">POMUM38</span>
+            </div>
+            <div class="tg-typing" aria-label="digitando">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a href="#" class="logo-lockup">
+          <div class="logo-mark">P</div>
+          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+        </a>
+        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="#ofertas">Ofertas do dia</a></li>
+          <li><a href="#">Todas as lojas</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#telegram">Bot do Telegram</a></li>
+          <li><a href="#">Blog &amp; guias</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
+          <li><a href="#">Reportar cupom inválido</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Divulgação de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-disclosure">
+      <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Paraíso dos Cupons · Todos os direitos reservados</span>
+      <span>Feito com 🍎 no Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <b>✓</b><span id="toastMsg">Cupom copiado!</span>
+</div>
+
+<!-- ═══════════════════════════════════════════════ JS ═══════════════════════════════════════════════ -->
+<script>
+(() => {
+  /* ----------------------------------------------------------
+     Utilidades
+  ---------------------------------------------------------- */
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  const formatBRL = (n) => {
+    if (n == null) return "";
+    return n.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+
+  const escapeHtml = (s = "") => String(s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+
+  /* ----------------------------------------------------------
+     Render do card
+  ---------------------------------------------------------- */
+  function renderCard(o) {
+    const featured = !!o.destaque;
+    const hasOriginal = o.preco_original != null;
+    const cat = o.categoria || "";
+    const link = o.link_afiliado || "#";
+    const img = o.imagem_url || "";
+
+    return `
+    <article class="pc-card ${featured ? "pc-card--featured" : ""}" data-cat="${escapeHtml(cat)}">
+      <a class="pc-card__media" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(o.titulo)} na loja ${escapeHtml(o.loja)}">
+        ${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.remove()"/>` : ""}
+        <div class="corner">
+          <span class="pc-badge-corner">-${o.desconto}%<span>desconto</span></span>
+        </div>
+        <button class="save" type="button" aria-label="Salvar oferta" onclick="event.preventDefault(); event.stopPropagation();">♡</button>
+        ${!img ? `<span class="ph">[ ${escapeHtml(cat.toLowerCase())} ]</span>` : ""}
+      </a>
+      <div class="pc-card__body">
+        <div class="pc-card__meta">
+          <span class="store">${escapeHtml(o.loja)}</span>
+          <span>·</span>
+          <span>${escapeHtml(cat)}</span>
+        </div>
+        <h3 class="pc-card__title">${escapeHtml(o.titulo)}</h3>
+        <div class="pc-card__priceline">
+          <p class="pc-card__price"><span class="pc-card__price-prefix">R$</span>${formatBRL(o.preco_final)}</p>
+          ${hasOriginal ? `<p class="pc-card__price-strike">R$ ${formatBRL(o.preco_original)}</p>` : ""}
+        </div>
+      </div>
+      <div class="pc-card__footer pc-card__footer--single">
+        <a class="pc-btn ${featured ? "pc-btn--gold" : ""}" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ir para a oferta ${escapeHtml(o.titulo)}">Ir para a oferta <span class="arrow">→</span></a>
+      </div>
+    </article>`;
+  }
+
+  /* ----------------------------------------------------------
+     Estado
+  ---------------------------------------------------------- */
+  let allOffers = [];
+  let activeCategory = "todas";
+  let searchTerm = "";
+
+  /* ----------------------------------------------------------
+     Render lista filtrada
+  ---------------------------------------------------------- */
+  function renderOffers() {
+    const grid = $("#offerGrid");
+    const q = searchTerm.trim().toLowerCase();
+
+    let filtered = allOffers.filter(o => {
+      const matchCat = activeCategory === "todas" || o.categoria === activeCategory;
+      const matchQ = !q ||
+        (o.titulo || "").toLowerCase().includes(q) ||
+        (o.loja || "").toLowerCase().includes(q) ||
+        (o.categoria || "").toLowerCase().includes(q);
+      return matchCat && matchQ;
+    });
+
+    // destacar featured no topo
+    filtered.sort((a,b) => (b.destaque ? 1 : 0) - (a.destaque ? 1 : 0));
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `<div class="offers-empty" style="grid-column: 1/-1;">
+        <b>Nada por aqui ainda</b>
+        Tente outra categoria ou termo de busca.
+      </div>`;
+      return;
+    }
+
+    grid.innerHTML = filtered.map(renderCard).join("");
+    attachCardEvents(grid);
+  }
+
+  /* ----------------------------------------------------------
+     Eventos do card (copiar código, salvar)
+  ---------------------------------------------------------- */
+  function attachCardEvents(grid) {
+    $$(".pc-card .save", grid).forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const saved = btn.classList.toggle("saved");
+        btn.textContent = saved ? "♥" : "♡";
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Toast
+  ---------------------------------------------------------- */
+  let toastTimer;
+  function showToast(html) {
+    const toast = $("#toast");
+    $("#toastMsg").innerHTML = html;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+  }
+
+  /* ----------------------------------------------------------
+     Contagens por categoria
+  ---------------------------------------------------------- */
+  function updateCategoryCounts() {
+    const counts = { todas: allOffers.length };
+    allOffers.forEach(o => { counts[o.categoria] = (counts[o.categoria] || 0) + 1; });
+    $$("[data-count]").forEach(el => {
+      const cat = el.dataset.count;
+      el.textContent = counts[cat] || 0;
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Categoria + busca
+  ---------------------------------------------------------- */
+  $$(".cat-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      $$(".cat-pill").forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      activeCategory = pill.dataset.cat;
+      renderOffers();
+    });
+  });
+
+  const searchInput = $("#searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchTerm = e.target.value;
+      renderOffers();
+    });
+    // atalho "/"
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "/" && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------
+     Carregar ofertas.json
+  ---------------------------------------------------------- */
+  async function loadOffers() {
+    try {
+      const res = await fetch("ofertas.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      allOffers = await res.json();
+    } catch (err) {
+      console.warn("Falha no fetch — usando fallback inline.", err);
+      // Fallback inline para funcionar mesmo sem servidor (file://)
+      allOffers = INLINE_FALLBACK;
+    }
+    updateCategoryCounts();
+    renderOffers();
+  }
+
+  /* ----------------------------------------------------------
+     Fallback inline (caso fetch falhe — file://, sem servidor)
+  ---------------------------------------------------------- */
+  const INLINE_FALLBACK = [
+    {"titulo":"Smartphone Pomum Pro 256GB","loja":"TechParaíso","desconto":38,"preco_original":4099.00,"preco_final":2499.00,"link_afiliado":"https://techparaiso.com.br/pomum-pro-256?ref=paraisodoscupons","categoria":"Eletrônicos","imagem_url":"https://picsum.photos/seed/pomum-pro/720/540","destaque":true},
+    {"titulo":"Perfume floral Édenne 100ml","loja":"Beleza Pura","desconto":55,"preco_original":329.90,"preco_final":149.90,"link_afiliado":"https://belezapura.com.br/edenne-floral-100?ref=paraisodoscupons","categoria":"Beleza","imagem_url":"https://picsum.photos/seed/edenne-perfume/720/540","destaque":false},
+    {"titulo":"Túnica linho natural — coleção verão","loja":"Vestir Éden","desconto":46,"preco_original":349.00,"preco_final":189.00,"link_afiliado":"https://vestireden.com.br/tunica-linho-verao?ref=paraisodoscupons","categoria":"Moda","imagem_url":"https://picsum.photos/seed/tunica-linho/720/540","destaque":true},
+    {"titulo":"Vinho Romã Reserva — kit 6 garrafas","loja":"Adega Edênica","desconto":40,"preco_original":599.00,"preco_final":359.00,"link_afiliado":"https://adegaedenica.com.br/roma-reserva-kit6?ref=paraisodoscupons","categoria":"Bebidas","imagem_url":"https://picsum.photos/seed/vinho-roma/720/540","destaque":false}
+  ];
+
+  loadOffers();
+})();
+</script>
+
+</body>
+</html>

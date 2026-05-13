@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Política de Privacidade — Paraíso dos Cupons</title>
+<meta name="description" content="Política de Privacidade do Paraíso dos Cupons em conformidade com a LGPD." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  /* ════════ TOKENS — Paraíso dos Cupons ════════ */
+  :root{
+    --pc-emerald-900:#03261D; --pc-emerald-800:#064E3B; --pc-emerald-700:#0B6B52;
+    --pc-emerald-600:#15876A; --pc-emerald-500:#1FA683; --pc-emerald-100:#D6EDE3; --pc-emerald-50:#EAF4EE;
+    --pc-apple-700:#A21C1C; --pc-apple-600:#DC2626; --pc-apple-500:#EF4444; --pc-apple-100:#FCE4E4;
+    --pc-gold-700:#B45309; --pc-gold-600:#D97706; --pc-gold-500:#F59E0B; --pc-gold-400:#FBBF24; --pc-gold-100:#FEF3C7;
+    --pc-cream-50:#FFFBEB; --pc-cream-100:#FAF3DE; --pc-cream-200:#F1E7C8; --pc-cream-300:#E5D6A6;
+    --pc-ink-900:#1B2A24; --pc-ink-700:#3D4E47; --pc-ink-500:#6B7A73; --pc-ink-300:#A8B3AD;
+    --pc-font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --pc-font-sans:  "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --pc-font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --pc-r-sm:6px; --pc-r-md:10px; --pc-r-lg:16px; --pc-r-pill:999px;
+    --pc-shadow-sm: 0 1px 2px rgba(3,38,29,.06), 0 1px 1px rgba(3,38,29,.04);
+    --pc-shadow-md: 0 6px 16px -8px rgba(3,38,29,.22), 0 2px 6px -2px rgba(3,38,29,.10);
+    --pc-shadow-apple: 0 10px 24px -10px rgba(220,38,38,.45);
+    --pc-shadow-gold: 0 10px 30px -12px rgba(245,158,11,.55);
+    --pc-container: 1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: var(--pc-font-sans);
+    color: var(--pc-ink-900);
+    background: var(--pc-cream-50);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    font-size:16px; line-height:1.55;
+  }
+  a{ color: inherit; text-decoration: none; }
+  .container{ max-width: var(--pc-container); margin: 0 auto; padding: 0 32px; }
+
+  /* ════════ BOTÃO ════════ */
+  .pc-btn{
+    --bg: var(--pc-apple-600); --bg-hover: var(--pc-apple-700); --fg: var(--pc-cream-50); --bd: transparent;
+    appearance:none; border:1px solid var(--bd);
+    background: var(--bg); color: var(--fg);
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px;
+    padding: 14px 22px; border-radius: var(--pc-r-pill);
+    cursor: pointer; display:inline-flex; align-items:center; gap: 10px; line-height: 1;
+    transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
+    box-shadow: var(--pc-shadow-apple);
+  }
+  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
+  .pc-btn .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; transform: translateY(-1px); }
+  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); box-shadow: 0 10px 24px -14px rgba(3,38,29,.55); }
+  .pc-btn--gold{ --bg: var(--pc-gold-500); --bg-hover: var(--pc-gold-600); --fg: var(--pc-emerald-900); box-shadow: var(--pc-shadow-gold); }
+  .pc-btn--ghost{ --bg: transparent; --bg-hover: rgba(6,78,59,.06); --fg: var(--pc-emerald-800); --bd: var(--pc-emerald-800); box-shadow: none; }
+  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
+
+  /* ════════ NAVBAR (idêntica ao index) ════════ */
+  .nav-wrap{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,251,235,.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6,78,59,.08);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height: 76px; }
+  .logo-lockup{ display:flex; align-items:center; gap: 14px; color: var(--pc-emerald-900); }
+  .logo-mark{
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 22px;
+    box-shadow: inset 0 0 0 1px rgba(3,38,29,.15);
+  }
+  .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
+  .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
+  .nav-links{ display:flex; align-items:center; gap: 8px; }
+  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease; }
+  .nav-link:hover{ background: rgba(6,78,59,.07); }
+  .nav-link.active{ color: var(--pc-apple-700); }
+  .nav-cta{ display:flex; align-items:center; gap: 12px; }
+  .nav-search{
+    display:flex; align-items:center; gap: 10px;
+    background: #fff; border:1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px;
+    min-width: 280px; box-shadow: var(--pc-shadow-sm);
+  }
+  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
+  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
+  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
+  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+
+  /* ════════ PAGE HEADER (legal doc) ════════ */
+  .doc-hero{
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 80% at 92% 8%, rgba(245,158,11,.18), transparent 60%),
+      radial-gradient(70% 60% at 5% 100%, rgba(31,166,131,.18), transparent 70%),
+      linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+    padding: 80px 0 96px;
+  }
+  .doc-hero::before, .doc-hero::after{
+    content:""; position:absolute; border-radius: 50%; pointer-events:none;
+  }
+  .doc-hero::before{ width: 420px; height: 420px; right: -160px; top: -160px; border: 1px solid rgba(245,158,11,.22); }
+  .doc-hero::after{ width: 260px; height: 260px; right: -60px; top: 60px; border: 1px solid rgba(214,237,227,.12); }
+  .doc-hero .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-gold-400); margin: 0;
+    display:inline-flex; align-items:center; gap: 12px;
+  }
+  .doc-hero .eyebrow .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-gold-500); }
+  .doc-hero h1{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(48px, 6vw, 80px); line-height: .98;
+    letter-spacing:-.02em; margin: 22px 0 0; max-width: 14ch;
+  }
+  .doc-hero h1 em{ color: var(--pc-gold-500); font-style: italic; }
+  .doc-hero .sub{ margin-top: 24px; font-size: 18px; line-height: 1.5; color: rgba(255,251,235,.78); max-width: 60ch; }
+
+  .doc-meta{
+    margin-top: 48px;
+    display:grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    border-top: 1px solid rgba(255,251,235,.15);
+    padding-top: 28px;
+    max-width: 880px;
+  }
+  .doc-meta div{ font-size: 13px; color: rgba(255,251,235,.6); }
+  .doc-meta strong{ display:block; color: var(--pc-cream-50); font-size: 15px; font-weight: 600; margin-bottom: 4px; letter-spacing:.02em; }
+
+  .doc-crumb{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: rgba(255,251,235,.55); margin-bottom: 8px;
+  }
+  .doc-crumb a{ color: var(--pc-gold-400); }
+  .doc-crumb a:hover{ text-decoration: underline; }
+
+  /* ════════ LAYOUT 2-COL (TOC + conteúdo) ════════ */
+  .doc-layout{
+    display:grid; grid-template-columns: 260px 1fr;
+    gap: 64px; padding: 64px 0 96px;
+    align-items:start;
+  }
+  .toc{
+    position: sticky; top: 100px;
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-md);
+    padding: 24px;
+    box-shadow: var(--pc-shadow-sm);
+  }
+  .toc h4{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--pc-emerald-700); margin: 0 0 16px;
+  }
+  .toc ol{ list-style: none; counter-reset: toc; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .toc li{ counter-increment: toc; }
+  .toc a{
+    display:block; padding: 8px 10px 8px 36px;
+    font-size: 13.5px; color: var(--pc-ink-700);
+    border-radius: var(--pc-r-sm);
+    position: relative; line-height: 1.35;
+    transition: background .15s ease, color .15s ease;
+  }
+  .toc a::before{
+    content: counter(toc, decimal-leading-zero);
+    position:absolute; left: 10px; top: 8px;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: var(--pc-emerald-700); font-weight: 500;
+    letter-spacing: .04em;
+  }
+  .toc a:hover{ background: var(--pc-emerald-50); color: var(--pc-emerald-900); }
+  .toc a.active{ background: var(--pc-emerald-50); color: var(--pc-emerald-900); font-weight: 600; }
+  .toc a.active::before{ color: var(--pc-apple-600); font-weight: 700; }
+
+  /* ════════ CONTEÚDO ════════ */
+  .doc-content{ max-width: 760px; }
+  .doc-content section{ padding-bottom: 56px; }
+  .doc-content section + section{ border-top: 1px dashed rgba(6,78,59,.18); padding-top: 56px; }
+  .doc-content h2{
+    font-family: var(--pc-font-serif); font-weight: 500;
+    font-size: 38px; line-height: 1.1;
+    letter-spacing:-.015em;
+    color: var(--pc-emerald-900);
+    margin: 0 0 18px;
+    position: relative;
+    padding-left: 0;
+    scroll-margin-top: 100px;
+  }
+  .doc-content h2 .num{
+    display:inline-block; margin-right: 16px;
+    font-family: var(--pc-font-mono); font-style: normal; font-weight: 500;
+    font-size: 14px; letter-spacing: .12em;
+    color: var(--pc-apple-600);
+    vertical-align: 6px;
+  }
+  .doc-content h3{
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 17px;
+    margin: 32px 0 12px; color: var(--pc-emerald-900);
+    letter-spacing: .01em;
+  }
+  .doc-content p{ font-size: 16px; line-height: 1.65; color: var(--pc-ink-900); margin: 0 0 14px; }
+  .doc-content p + p{ margin-top: 14px; }
+  .doc-content ul, .doc-content ol{ padding-left: 22px; margin: 8px 0 18px; }
+  .doc-content li{ margin-bottom: 10px; line-height: 1.6; font-size: 15.5px; color: var(--pc-ink-900); }
+  .doc-content li::marker{ color: var(--pc-gold-600); font-weight: 700; }
+  .doc-content strong{ color: var(--pc-emerald-900); font-weight: 700; }
+  .doc-content a:not(.pc-btn){
+    color: var(--pc-apple-700); text-decoration: underline;
+    text-decoration-color: rgba(220,38,38,.35); text-underline-offset: 3px;
+  }
+  .doc-content a:not(.pc-btn):hover{ text-decoration-color: var(--pc-apple-700); }
+  .doc-content code{
+    font-family: var(--pc-font-mono); font-size: 13px;
+    background: var(--pc-cream-100); padding: 2px 8px; border-radius: 4px;
+    color: var(--pc-emerald-900); border: 1px solid var(--pc-cream-200);
+  }
+
+  /* Callouts */
+  .callout{
+    background: var(--pc-emerald-50);
+    border-left: 4px solid var(--pc-emerald-700);
+    padding: 18px 22px;
+    border-radius: 4px var(--pc-r-md) var(--pc-r-md) 4px;
+    margin: 22px 0;
+  }
+  .callout .label{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-emerald-700); margin-bottom: 6px;
+  }
+  .callout p:last-child{ margin-bottom: 0; }
+  .callout--gold{ background: var(--pc-gold-100); border-color: var(--pc-gold-600); }
+  .callout--gold .label{ color: var(--pc-gold-700); }
+  .callout--apple{ background: var(--pc-apple-100); border-color: var(--pc-apple-600); }
+  .callout--apple .label{ color: var(--pc-apple-700); }
+
+  /* Tabela de dados */
+  .data-table{
+    width:100%; border-collapse: collapse; margin: 16px 0 8px;
+    background: #fff; border: 1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-md); overflow: hidden;
+    box-shadow: var(--pc-shadow-sm);
+  }
+  .data-table th, .data-table td{
+    text-align: left; padding: 14px 18px; vertical-align: top;
+    border-bottom: 1px solid var(--pc-cream-200);
+    font-size: 14px;
+  }
+  .data-table th{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing:.18em; text-transform: uppercase;
+    color: var(--pc-emerald-800); font-weight: 600;
+    background: var(--pc-emerald-50);
+  }
+  .data-table tr:last-child td{ border-bottom: none; }
+  .data-table td b{ color: var(--pc-emerald-900); display: block; margin-bottom: 2px; font-size: 14.5px; }
+  .data-table td span{ color: var(--pc-ink-700); font-size: 13px; line-height: 1.5; }
+
+  /* Cartões de direitos */
+  .rights-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    margin: 18px 0 6px;
+  }
+  .right-card{
+    background: #fff; border: 1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-md); padding: 18px;
+  }
+  .right-card .ix{
+    font-family: var(--pc-font-serif); font-style: italic;
+    font-size: 26px; color: var(--pc-gold-500); line-height: 1;
+    margin-bottom: 8px;
+  }
+  .right-card h4{
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 14px;
+    margin: 0 0 6px; color: var(--pc-emerald-900);
+  }
+  .right-card p{ font-size: 13px; color: var(--pc-ink-700); line-height: 1.5; margin: 0; }
+
+  /* Contato block */
+  .contact-block{
+    background: linear-gradient(170deg, var(--pc-emerald-800), var(--pc-emerald-900));
+    color: var(--pc-cream-50);
+    padding: 32px;
+    border-radius: var(--pc-r-md);
+    margin-top: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .contact-block h3{ color: var(--pc-cream-50); margin: 0 0 10px; font-family: var(--pc-font-serif); font-weight: 500; font-style: italic; font-size: 24px; }
+  .contact-block p{ color: rgba(255,251,235,.78); font-size: 14px; margin: 0; line-height: 1.55; }
+  .contact-block .field{ margin-top: 10px; }
+  .contact-block .field b{ display:block; font-family: var(--pc-font-mono); font-size: 10px; letter-spacing:.22em; text-transform:uppercase; color: var(--pc-gold-400); margin-bottom: 6px; }
+  .contact-block .field a, .contact-block .field span{ color: var(--pc-cream-50); font-size: 15px; }
+  .contact-block .field a{ border-bottom: 1px dashed rgba(245,158,11,.5); }
+  .contact-block .field a:hover{ color: var(--pc-gold-400); }
+
+  /* Última atualização (badge) */
+  .updated-badge{
+    display:inline-flex; align-items:center; gap: 8px;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    padding: 6px 12px 6px 8px;
+    border-radius: 4px var(--pc-r-pill) var(--pc-r-pill) 4px;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing: .14em; text-transform: uppercase; font-weight: 500;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .updated-badge::before{
+    content:""; position:absolute; left:-7px; top:50%; transform:translateY(-50%);
+    width:0; height:0;
+    border-top: 7px solid transparent; border-bottom: 7px solid transparent;
+    border-right: 7px solid var(--pc-gold-500);
+  }
+  .updated-badge .dot{ width:6px; height:6px; border-radius:50%; background: var(--pc-emerald-900); }
+
+  /* ════════ FOOTER (idêntica ao index) ════════ */
+  footer.foot{ margin-top: 0; background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
+  .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
+  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--pc-gold-400); }
+  .foot-col a.active{ color: var(--pc-gold-400); }
+  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
+  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
+  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
+  .foot-bottom{
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid rgba(255,251,235,.10);
+    display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase;
+  }
+  .foot-disclosure{
+    margin-top: 48px;
+    padding: 16px 20px;
+    border: 1px dashed rgba(245,158,11,.35);
+    border-radius: var(--pc-r-md);
+    background: rgba(245,158,11,.04);
+    font-size: 12.5px;
+    color: rgba(255,251,235,.7);
+    line-height: 1.55;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
+  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
+  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+
+  /* Responsivo doc */
+  @media (max-width: 980px){
+    .doc-layout{ grid-template-columns: 1fr; gap: 32px; padding: 40px 0 64px; }
+    .toc{ position: static; }
+    .doc-meta{ grid-template-columns: repeat(2, 1fr); }
+    .rights-grid{ grid-template-columns: 1fr; }
+    .contact-block{ grid-template-columns: 1fr; padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo-lockup">
+        <div class="logo-mark">P</div>
+        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+        <a class="nav-link" href="index.html">Lojas</a>
+        <a class="nav-link" href="index.html">Categorias</a>
+        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
+        <a class="nav-link" href="index.html">Blog</a>
+      </div>
+      <div class="nav-cta">
+        <label class="nav-search" aria-label="Buscar">
+          <span class="ic">⌕</span>
+          <input type="search" placeholder="Buscar cupom ou loja…" />
+          <kbd>/</kbd>
+        </label>
+        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ HERO DO DOCUMENTO ═══════════════════════════════════════════════ -->
+<header class="doc-hero">
+  <div class="container">
+    <p class="doc-crumb"><a href="index.html">Início</a> &nbsp;/&nbsp; Legal &nbsp;/&nbsp; Política de Privacidade</p>
+    <p class="eyebrow"><span class="dot"></span>Legal · LGPD · documento vigente</p>
+    <h1>Política de <em>Privacidade</em></h1>
+    <p class="sub">Como o Paraíso dos Cupons trata, protege e respeita seus dados pessoais — em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+
+    <div class="doc-meta">
+      <div><strong>Versão</strong>1.0</div>
+      <div><strong>Vigência</strong>A partir de 12/05/2026</div>
+      <div><strong>Última revisão</strong>12 de maio de 2026</div>
+      <div><strong>Idioma</strong>Português (BR)</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ CORPO ═══════════════════════════════════════════════ -->
+<main class="container">
+  <div class="doc-layout">
+
+    <!-- TOC -->
+    <aside class="toc" aria-label="Sumário">
+      <h4>Nesta página</h4>
+      <ol>
+        <li><a href="#sec-1">Quem somos</a></li>
+        <li><a href="#sec-2">Dados que coletamos</a></li>
+        <li><a href="#sec-3">Finalidades</a></li>
+        <li><a href="#sec-4">Base legal</a></li>
+        <li><a href="#sec-5">Compartilhamento</a></li>
+        <li><a href="#sec-6">Cookies</a></li>
+        <li><a href="#sec-7">Seus direitos</a></li>
+        <li><a href="#sec-8">Retenção</a></li>
+        <li><a href="#sec-9">Segurança</a></li>
+        <li><a href="#sec-10">Crianças e adolescentes</a></li>
+        <li><a href="#sec-11">Transferência internacional</a></li>
+        <li><a href="#sec-12">Mudanças desta política</a></li>
+        <li><a href="#sec-13">Contato &amp; encarregado</a></li>
+      </ol>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <article class="doc-content">
+
+      <div class="updated-badge"><span class="dot"></span>Atualizada em 12/05/2026</div>
+
+      <p>Esta Política descreve, em linguagem clara e objetiva, como o <strong>Paraíso dos Cupons</strong> ("nós") coleta, utiliza, armazena, compartilha e protege os dados pessoais de quem interage com o site <code>paraisodoscupons.com.br</code> e com nosso bot de Telegram <code>@eveseeksapple</code> ("você", "usuário", "titular"). Ao usar nossos serviços, você declara ter lido e compreendido este documento.</p>
+
+      <!-- 1 -->
+      <section id="sec-1">
+        <h2><span class="num">01</span>Quem somos</h2>
+        <p>O <strong>Paraíso dos Cupons</strong> é um serviço de curadoria de cupons e promoções operado de forma independente. Atuamos como <strong>controlador</strong> dos dados pessoais tratados nesta plataforma, nos termos do art. 5º, VI, da LGPD.</p>
+        <p>Não somos vinculados a nenhuma das lojas anunciadas. Os cupons são coletados em fontes públicas, validados pela equipe e organizados em listagens. Nosso modelo de receita é baseado em comissões de afiliação — explicado em detalhes em nossa <a href="#">divulgação de afiliados</a>.</p>
+      </section>
+
+      <!-- 2 -->
+      <section id="sec-2">
+        <h2><span class="num">02</span>Dados que coletamos</h2>
+        <p>Coletamos a <strong>menor quantidade de dados possível</strong> para que o serviço funcione. Não pedimos CPF, telefone, endereço, dados bancários ou qualquer outra informação que não seja estritamente necessária.</p>
+
+        <h3>2.1. Dados fornecidos por você (bot do Telegram)</h3>
+        <table class="data-table" aria-label="Dados coletados via Telegram">
+          <thead>
+            <tr><th>Dado</th><th>Quando é coletado</th><th>Como é usado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Nome de usuário do Telegram</b><span>handle público (<code>@seu_usuario</code>) e ID interno do Telegram</span></td>
+              <td><span>Quando você inicia conversa com <code>@eveseeksapple</code></span></td>
+              <td><span>Identificar você unicamente para enviar as mensagens corretas e respeitar suas preferências.</span></td>
+            </tr>
+            <tr>
+              <td><b>Palavras-chave cadastradas</b><span>termos como "perfume floral", "iphone 15", "tênis 42"</span></td>
+              <td><span>Quando você envia <code>/alerta &lt;termo&gt;</code> ou usa o menu do bot</span></td>
+              <td><span>Filtrar cupons e te avisar apenas quando aparecer uma oferta que combine com o que você pediu.</span></td>
+            </tr>
+            <tr>
+              <td><b>Preferências de notificação</b><span>frequência, categorias favoritas, horário de "silêncio"</span></td>
+              <td><span>Configurações do bot</span></td>
+              <td><span>Ajustar a entrega para que você receba só o que importa, no momento certo.</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>2.2. Dados coletados automaticamente (site)</h3>
+        <ul>
+          <li><strong>Dados de navegação anônimos:</strong> páginas vistas, cliques em cupons, origem do tráfego, tempo de permanência — agregados para entender o que é útil aos usuários.</li>
+          <li><strong>Dados técnicos do dispositivo:</strong> tipo de navegador, sistema operacional, resolução de tela e idioma — para garantir que o site funcione corretamente.</li>
+          <li><strong>Endereço IP:</strong> armazenado de forma <strong>parcialmente anonimizada</strong> (último octeto removido) e usado apenas para segurança e prevenção de fraudes.</li>
+        </ul>
+
+        <h3>2.3. Dados que não coletamos</h3>
+        <div class="callout callout--apple">
+          <p class="label">Importante</p>
+          <p>Não solicitamos nem armazenamos: <strong>CPF, RG, telefone, endereço físico, e-mail, dados bancários, número de cartão</strong> ou qualquer dado pessoal sensível (origem racial, religião, saúde, orientação sexual, biometria etc.). Se algum desses for solicitado em nome do Paraíso dos Cupons, trata-se de tentativa de fraude — denuncie pelo nosso canal de contato.</p>
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section id="sec-3">
+        <h2><span class="num">03</span>Para que usamos seus dados</h2>
+        <p>Cada dado coletado tem uma finalidade específica, declarada antes ou no momento da coleta:</p>
+        <ul>
+          <li><strong>Entregar o serviço:</strong> enviar cupons relevantes via Telegram, com base nas palavras-chave que você cadastrou.</li>
+          <li><strong>Personalizar alertas:</strong> respeitar suas preferências de horário, frequência e categoria.</li>
+          <li><strong>Melhorar a curadoria:</strong> entender quais cupons foram úteis para destacar ofertas similares no futuro (em base agregada, nunca individual).</li>
+          <li><strong>Comunicação operacional:</strong> avisar sobre mudanças no serviço, manutenções programadas ou alterações importantes nesta política.</li>
+          <li><strong>Segurança:</strong> identificar abusos, spam e tentativas de fraude no bot e no site.</li>
+        </ul>
+        <p>Não usamos seus dados para <strong>perfilamento publicitário</strong>, treinamento de IA externa, ou qualquer outra finalidade não listada acima.</p>
+      </section>
+
+      <!-- 4 -->
+      <section id="sec-4">
+        <h2><span class="num">04</span>Base legal do tratamento</h2>
+        <p>Conforme art. 7º da LGPD, fundamentamos cada tratamento em pelo menos uma das bases legais abaixo:</p>
+        <ul>
+          <li><strong>Execução de contrato (art. 7º, V):</strong> para entregar o serviço que você solicitou ao iniciar o bot ou cadastrar palavras-chave.</li>
+          <li><strong>Consentimento (art. 7º, I):</strong> para envio de notificações e qualquer comunicação não estritamente operacional. Você pode revogar a qualquer momento enviando <code>/parar</code> ao bot ou solicitando exclusão.</li>
+          <li><strong>Legítimo interesse (art. 7º, IX):</strong> para análises agregadas de uso do site, prevenção de fraude e segurança, sempre realizadas com a menor invasão possível.</li>
+          <li><strong>Cumprimento de obrigação legal (art. 7º, II):</strong> quando exigido por autoridades competentes mediante ordem judicial ou requisição legítima.</li>
+        </ul>
+      </section>
+
+      <!-- 5 -->
+      <section id="sec-5">
+        <h2><span class="num">05</span>Compartilhamento de dados</h2>
+        <div class="callout callout--gold">
+          <p class="label">★ Compromisso central</p>
+          <p><strong>Nós nunca vendemos seus dados.</strong> Não cedemos, alugamos ou trocamos informações pessoais com anunciantes, lojas parceiras, agências de marketing ou qualquer terceiro com finalidade comercial.</p>
+        </div>
+        <p>Os únicos compartilhamentos possíveis são:</p>
+        <ul>
+          <li><strong>Operadores indispensáveis ao funcionamento:</strong> provedor de hospedagem (GitHub Pages), plataforma de bot (API do Telegram) e ferramenta de analytics anônimo. Esses operadores tratam dados estritamente conforme nossas instruções.</li>
+          <li><strong>Obrigação legal ou ordem judicial:</strong> quando expressamente determinado por autoridade competente, no estrito limite do solicitado.</li>
+          <li><strong>Proteção de direitos:</strong> em casos excepcionais para apurar fraudes, abusos ou violações dos nossos termos de uso.</li>
+        </ul>
+      </section>
+
+      <!-- 6 -->
+      <section id="sec-6">
+        <h2><span class="num">06</span>Cookies e tecnologias similares</h2>
+        <p>O site utiliza cookies <strong>essenciais</strong> (para lembrar preferências como categoria ativa e cupons favoritos) e cookies <strong>analíticos anônimos</strong> (para entender o que é útil ao público em geral).</p>
+        <p>Não usamos cookies de publicidade, retargeting ou de redes sociais para rastreamento entre sites. Você pode bloquear ou apagar cookies a qualquer momento nas configurações do seu navegador, sem prejuízo da maior parte das funcionalidades do site.</p>
+        <p>Mais detalhes na nossa <a href="#">Política de Cookies</a>.</p>
+      </section>
+
+      <!-- 7 -->
+      <section id="sec-7">
+        <h2><span class="num">07</span>Seus direitos como titular</h2>
+        <p>A LGPD garante a você, titular dos dados, um conjunto de direitos que respeitamos plenamente. Você pode exercê-los gratuitamente, a qualquer momento, pelo contato indicado ao final desta página.</p>
+
+        <div class="rights-grid">
+          <div class="right-card">
+            <div class="ix">i.</div>
+            <h4>Confirmação e acesso</h4>
+            <p>Saber se tratamos seus dados e obter cópia legível de tudo o que está armazenado.</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">ii.</div>
+            <h4>Correção</h4>
+            <p>Pedir correção de dados incompletos, inexatos ou desatualizados.</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">iii.</div>
+            <h4>Anonimização ou eliminação</h4>
+            <p>Solicitar a remoção de dados desnecessários ou tratados sem base legal.</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">iv.</div>
+            <h4>Portabilidade</h4>
+            <p>Receber seus dados em formato estruturado e interoperável (JSON ou CSV).</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">v.</div>
+            <h4>Eliminação total</h4>
+            <p>Apagar seus dados pessoais tratados com base no seu consentimento.</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">vi.</div>
+            <h4>Informação de compartilhamento</h4>
+            <p>Saber com quais entidades públicas e privadas compartilhamos seus dados.</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">vii.</div>
+            <h4>Revogar consentimento</h4>
+            <p>Retirar o consentimento a qualquer momento, com efeito imediato.</p>
+          </div>
+          <div class="right-card">
+            <div class="ix">viii.</div>
+            <h4>Oposição</h4>
+            <p>Opor-se a tratamentos realizados com base em legítimo interesse.</p>
+          </div>
+        </div>
+
+        <p>Você também pode enviar <code>/excluir</code> diretamente para o bot <code>@eveseeksapple</code> para que <strong>todos</strong> os seus dados sejam apagados em até 48 horas, sem necessidade de justificativa.</p>
+      </section>
+
+      <!-- 8 -->
+      <section id="sec-8">
+        <h2><span class="num">08</span>Por quanto tempo guardamos</h2>
+        <p>Mantemos seus dados pelo <strong>menor tempo necessário</strong> para a finalidade pela qual foram coletados:</p>
+        <ul>
+          <li><strong>Nome de usuário e palavras-chave:</strong> enquanto o seu cadastro estiver ativo no bot. Cadastros inativos por mais de 12 meses são apagados automaticamente.</li>
+          <li><strong>Logs de segurança e IP anonimizado:</strong> 6 meses, salvo investigação em curso ou determinação legal.</li>
+          <li><strong>Dados analíticos agregados:</strong> indefinidamente, pois não permitem identificar pessoas.</li>
+        </ul>
+        <p>Após esses prazos, ou mediante seu pedido de exclusão, os dados são eliminados de forma irreversível das nossas bases ativas e cópias de segurança no próximo ciclo.</p>
+      </section>
+
+      <!-- 9 -->
+      <section id="sec-9">
+        <h2><span class="num">09</span>Segurança</h2>
+        <p>Adotamos medidas técnicas e organizacionais razoáveis para proteger seus dados contra acessos não autorizados, perda, alteração ou destruição. Entre elas:</p>
+        <ul>
+          <li>Comunicação cifrada (HTTPS/TLS) em todo o site e na API do bot.</li>
+          <li>Acesso aos dados restrito a um grupo mínimo de pessoas, mediante autenticação forte.</li>
+          <li>Monitoramento contínuo de tentativas de acesso anômalo.</li>
+          <li>Política interna de tratamento incidente: em caso de incidente de segurança que possa gerar risco relevante, comunicamos a ANPD e os titulares afetados em prazo razoável.</li>
+        </ul>
+      </section>
+
+      <!-- 10 -->
+      <section id="sec-10">
+        <h2><span class="num">10</span>Crianças e adolescentes</h2>
+        <p>O serviço é direcionado a pessoas com <strong>18 anos ou mais</strong>. Não tratamos, intencionalmente, dados de crianças ou adolescentes. Caso você seja responsável legal por um menor que tenha interagido com o bot, entre em contato para solicitarmos a exclusão imediata dos dados.</p>
+      </section>
+
+      <!-- 11 -->
+      <section id="sec-11">
+        <h2><span class="num">11</span>Transferência internacional</h2>
+        <p>Alguns dos nossos operadores (como GitHub Pages e Telegram) podem armazenar dados em servidores fora do Brasil. Sempre que isso ocorre, exigimos que esses provedores ofereçam garantias adequadas de proteção, equivalentes ou superiores ao previsto na LGPD (cláusulas contratuais padrão, certificações de privacidade reconhecidas, etc.).</p>
+      </section>
+
+      <!-- 12 -->
+      <section id="sec-12">
+        <h2><span class="num">12</span>Mudanças nesta política</h2>
+        <p>Esta política pode ser atualizada para refletir mudanças no serviço, na legislação ou em boas práticas. Versões anteriores ficam disponíveis em arquivo. Mudanças relevantes são comunicadas:</p>
+        <ul>
+          <li>com aviso destacado no topo do site por pelo menos 30 dias; e</li>
+          <li>com mensagem direta no bot do Telegram aos usuários ativos.</li>
+        </ul>
+        <p>Sua continuidade no uso do serviço após a vigência da nova versão indica concordância. Caso discorde, você pode solicitar a exclusão dos seus dados a qualquer momento.</p>
+      </section>
+
+      <!-- 13 -->
+      <section id="sec-13">
+        <h2><span class="num">13</span>Contato &amp; encarregado de dados</h2>
+        <p>Para exercer qualquer direito, esclarecer dúvidas ou fazer reclamações relacionadas ao tratamento de seus dados pessoais, fale com nosso encarregado (DPO):</p>
+
+        <div class="contact-block">
+          <div>
+            <h3>Encarregado pelo<br/>tratamento de dados</h3>
+            <p>Atendemos solicitações relacionadas à LGPD em até <strong style="color: var(--pc-gold-400)">15 dias úteis</strong> a partir do recebimento.</p>
+          </div>
+          <div>
+            <div class="field">
+              <b>E-mail</b>
+              <a href="mailto:privacidade@paraisodoscupons.com.br">privacidade@paraisodoscupons.com.br</a>
+            </div>
+            <div class="field">
+              <b>Contato geral</b>
+              <a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a>
+            </div>
+            <div class="field">
+              <b>Bot do Telegram</b>
+              <a href="https://t.me/eveseeksapple" target="_blank" rel="noopener">@eveseeksapple — comando /excluir</a>
+            </div>
+            <div class="field">
+              <b>ANPD</b>
+              <span>Você também pode acionar a Autoridade Nacional de Proteção de Dados em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener" style="color: var(--pc-cream-50);">gov.br/anpd</a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top: 32px;">
+          <p class="label">Documento legal</p>
+          <p>Esta Política de Privacidade é parte integrante dos <a href="#">Termos de Uso</a> do Paraíso dos Cupons e foi redigida em conformidade com a Lei nº 13.709/2018 (LGPD), o Marco Civil da Internet (Lei nº 12.965/2014) e o Código de Defesa do Consumidor (Lei nº 8.078/1990).</p>
+        </div>
+
+        <div style="margin-top: 40px; display:flex; flex-wrap:wrap; gap: 14px;">
+          <a href="index.html" class="pc-btn pc-btn--secondary">Voltar para a home <span class="arrow">→</span></a>
+          <a href="mailto:privacidade@paraisodoscupons.com.br" class="pc-btn pc-btn--ghost">Falar com o encarregado</a>
+        </div>
+      </section>
+
+    </article>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a href="index.html" class="logo-lockup">
+          <div class="logo-mark">P</div>
+          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+        </a>
+        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="index.html#ofertas">Ofertas do dia</a></li>
+          <li><a href="index.html">Todas as lojas</a></li>
+          <li><a href="index.html">Categorias</a></li>
+          <li><a href="index.html#telegram">Bot do Telegram</a></li>
+          <li><a href="index.html">Blog &amp; guias</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
+          <li><a href="#">Reportar cupom inválido</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politica-de-privacidade.html" class="active">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Divulgação de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-disclosure">
+      <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Paraíso dos Cupons · Todos os direitos reservados</span>
+      <span>Feito com 🍎 no Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Highlight do TOC conforme rola a página
+  (() => {
+    const links = [...document.querySelectorAll('.toc a')];
+    const sections = links.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+
+    const setActive = (id) => {
+      links.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      // pega a seção mais visível
+      const visible = entries.filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActive(visible.target.id);
+    }, { rootMargin: '-100px 0px -60% 0px', threshold: [0, .25, .5, 1] });
+
+    sections.forEach(s => io.observe(s));
+
+    // scroll suave
+    links.forEach(l => {
+      l.addEventListener('click', (e) => {
+        const id = l.getAttribute('href').slice(1);
+        const target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 90;
+          window.scrollTo({ top, behavior: 'smooth' });
+          history.replaceState(null, '', '#' + id);
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

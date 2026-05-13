@@ -1,0 +1,46 @@
+[
+  {
+    "titulo": "Smartphone Pomum Pro 256GB",
+    "loja": "TechParaíso",
+    "desconto": 38,
+    "preco_original": 4099.00,
+    "preco_final": 2499.00,
+    "link_afiliado": "https://techparaiso.com.br/pomum-pro-256?ref=paraisodoscupons",
+    "categoria": "Eletrônicos",
+    "imagem_url": "https://picsum.photos/seed/pomum-pro/720/540",
+    "destaque": true
+  },
+  {
+    "titulo": "Perfume floral Édenne 100ml",
+    "loja": "Beleza Pura",
+    "desconto": 55,
+    "preco_original": 329.90,
+    "preco_final": 149.90,
+    "link_afiliado": "https://belezapura.com.br/edenne-floral-100?ref=paraisodoscupons",
+    "categoria": "Beleza",
+    "imagem_url": "https://picsum.photos/seed/edenne-perfume/720/540",
+    "destaque": false
+  },
+  {
+    "titulo": "Túnica linho natural — coleção verão",
+    "loja": "Vestir Éden",
+    "desconto": 46,
+    "preco_original": 349.00,
+    "preco_final": 189.00,
+    "link_afiliado": "https://vestireden.com.br/tunica-linho-verao?ref=paraisodoscupons",
+    "categoria": "Moda",
+    "imagem_url": "https://picsum.photos/seed/tunica-linho/720/540",
+    "destaque": true
+  },
+  {
+    "titulo": "Vinho Romã Reserva — kit 6 garrafas",
+    "loja": "Adega Edênica",
+    "desconto": 40,
+    "preco_original": 599.00,
+    "preco_final": 359.00,
+    "link_afiliado": "https://adegaedenica.com.br/roma-reserva-kit6?ref=paraisodoscupons",
+    "categoria": "Bebidas",
+    "imagem_url": "https://picsum.photos/seed/vinho-roma/720/540",
+    "destaque": false
+  }
+]

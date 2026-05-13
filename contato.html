@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contato — Paraíso dos Cupons</title>
+<meta name="description" content="Fale com o Paraíso dos Cupons. Dúvidas, parcerias, cupons inválidos ou solicitações LGPD." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  /* ════════ TOKENS ════════ */
+  :root{
+    --pc-emerald-900:#03261D; --pc-emerald-800:#064E3B; --pc-emerald-700:#0B6B52;
+    --pc-emerald-600:#15876A; --pc-emerald-500:#1FA683; --pc-emerald-100:#D6EDE3; --pc-emerald-50:#EAF4EE;
+    --pc-apple-700:#A21C1C; --pc-apple-600:#DC2626; --pc-apple-500:#EF4444; --pc-apple-100:#FCE4E4;
+    --pc-gold-700:#B45309; --pc-gold-600:#D97706; --pc-gold-500:#F59E0B; --pc-gold-400:#FBBF24; --pc-gold-100:#FEF3C7;
+    --pc-cream-50:#FFFBEB; --pc-cream-100:#FAF3DE; --pc-cream-200:#F1E7C8; --pc-cream-300:#E5D6A6;
+    --pc-ink-900:#1B2A24; --pc-ink-700:#3D4E47; --pc-ink-500:#6B7A73; --pc-ink-300:#A8B3AD;
+    --pc-font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --pc-font-sans:  "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --pc-font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --pc-r-sm:6px; --pc-r-md:10px; --pc-r-lg:16px; --pc-r-pill:999px;
+    --pc-shadow-sm: 0 1px 2px rgba(3,38,29,.06), 0 1px 1px rgba(3,38,29,.04);
+    --pc-shadow-md: 0 6px 16px -8px rgba(3,38,29,.22), 0 2px 6px -2px rgba(3,38,29,.10);
+    --pc-shadow-lg: 0 24px 48px -24px rgba(3,38,29,.35), 0 8px 16px -8px rgba(3,38,29,.18);
+    --pc-shadow-apple: 0 10px 24px -10px rgba(220,38,38,.45);
+    --pc-shadow-gold: 0 10px 30px -12px rgba(245,158,11,.55);
+    --pc-container: 1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: var(--pc-font-sans); color: var(--pc-ink-900);
+    background: var(--pc-cream-50);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    font-size:16px; line-height:1.55;
+  }
+  a{ color: inherit; text-decoration: none; }
+  .container{ max-width: var(--pc-container); margin: 0 auto; padding: 0 32px; }
+
+  /* ════════ BOTÃO ════════ */
+  .pc-btn{
+    --bg: var(--pc-apple-600); --bg-hover: var(--pc-apple-700); --fg: var(--pc-cream-50); --bd: transparent;
+    appearance:none; border:1px solid var(--bd);
+    background: var(--bg); color: var(--fg);
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px;
+    padding: 14px 22px; border-radius: var(--pc-r-pill);
+    cursor: pointer; display:inline-flex; align-items:center; justify-content:center; gap: 10px; line-height: 1;
+    transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
+    box-shadow: var(--pc-shadow-apple);
+  }
+  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
+  .pc-btn:focus-visible{ outline: 2px solid var(--pc-gold-500); outline-offset: 3px; }
+  .pc-btn .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; transform: translateY(-1px); }
+  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); box-shadow: 0 10px 24px -14px rgba(3,38,29,.55); }
+  .pc-btn--gold{ --bg: var(--pc-gold-500); --bg-hover: var(--pc-gold-600); --fg: var(--pc-emerald-900); box-shadow: var(--pc-shadow-gold); }
+  .pc-btn--ghost{ --bg: transparent; --bg-hover: rgba(6,78,59,.06); --fg: var(--pc-emerald-800); --bd: var(--pc-emerald-800); box-shadow: none; }
+  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
+  .pc-btn--lg{ font-size: 17px; padding: 18px 28px; }
+  .pc-btn[disabled]{ opacity: .55; cursor: not-allowed; transform:none; }
+
+  /* ════════ NAVBAR ════════ */
+  .nav-wrap{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,251,235,.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6,78,59,.08);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height: 76px; }
+  .logo-lockup{ display:flex; align-items:center; gap: 14px; color: var(--pc-emerald-900); }
+  .logo-mark{
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 22px;
+    box-shadow: inset 0 0 0 1px rgba(3,38,29,.15);
+  }
+  .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
+  .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
+  .nav-links{ display:flex; align-items:center; gap: 8px; }
+  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease; }
+  .nav-link:hover{ background: rgba(6,78,59,.07); }
+  .nav-link.active{ color: var(--pc-apple-700); }
+  .nav-cta{ display:flex; align-items:center; gap: 12px; }
+  .nav-search{
+    display:flex; align-items:center; gap: 10px;
+    background: #fff; border:1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px;
+    min-width: 280px; box-shadow: var(--pc-shadow-sm);
+  }
+  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
+  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
+  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
+  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+
+  /* ════════ HERO ════════ */
+  .doc-hero{
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 80% at 92% 8%, rgba(245,158,11,.18), transparent 60%),
+      radial-gradient(70% 60% at 5% 100%, rgba(31,166,131,.18), transparent 70%),
+      linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+    padding: 80px 0 96px;
+  }
+  .doc-hero::before, .doc-hero::after{
+    content:""; position:absolute; border-radius: 50%; pointer-events:none;
+  }
+  .doc-hero::before{ width: 420px; height: 420px; right: -160px; top: -160px; border: 1px solid rgba(245,158,11,.22); }
+  .doc-hero::after{ width: 260px; height: 260px; right: -60px; top: 60px; border: 1px solid rgba(214,237,227,.12); }
+  .doc-hero .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-gold-400); margin: 0;
+    display:inline-flex; align-items:center; gap: 12px;
+  }
+  .doc-hero .eyebrow .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-gold-500); }
+  .doc-hero h1{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(48px, 6vw, 80px); line-height: .98;
+    letter-spacing:-.02em; margin: 22px 0 0; max-width: 14ch;
+  }
+  .doc-hero h1 em{ color: var(--pc-gold-500); font-style: italic; }
+  .doc-hero h1 .apple{ color: var(--pc-apple-500); font-style: italic; }
+  .doc-hero .sub{ margin-top: 24px; font-size: 18px; line-height: 1.5; color: rgba(255,251,235,.78); max-width: 60ch; }
+  .doc-crumb{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: rgba(255,251,235,.55); margin-bottom: 8px;
+  }
+  .doc-crumb a{ color: var(--pc-gold-400); }
+  .doc-crumb a:hover{ text-decoration: underline; }
+
+  /* ════════ LAYOUT 2 colunas (info + form) ════════ */
+  .contact-layout{
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 56px;
+    padding: 72px 0 96px;
+    align-items: start;
+  }
+
+  /* ════════ COLUNA INFO ════════ */
+  .info-stack{ display:grid; gap: 16px; position: sticky; top: 100px; }
+  .info-eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing:.22em; text-transform:uppercase;
+    color: var(--pc-emerald-700); margin: 0;
+  }
+  .info-title{
+    font-family: var(--pc-font-serif); font-weight: 500;
+    font-size: 38px; line-height: 1.05;
+    letter-spacing:-.015em; color: var(--pc-emerald-900);
+    margin: 8px 0 12px;
+  }
+  .info-title em{ font-style: italic; color: var(--pc-apple-600); }
+  .info-lead{ font-size: 15px; color: var(--pc-ink-700); margin: 0 0 12px; line-height: 1.6; max-width: 38ch; }
+
+  .info-card{
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-md);
+    padding: 22px 22px 22px 22px;
+    display: flex; gap: 16px; align-items: flex-start;
+    transition: transform .15s ease, box-shadow .2s ease, border-color .15s ease;
+  }
+  .info-card:hover{ transform: translateY(-1px); box-shadow: var(--pc-shadow-md); border-color: var(--pc-gold-500); }
+  .info-card .ic{
+    flex: none;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--pc-emerald-50); color: var(--pc-emerald-800);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-weight: 600; font-style: italic;
+    font-size: 22px; line-height: 1;
+  }
+  .info-card .ic--gold{ background: var(--pc-gold-100); color: var(--pc-gold-700); }
+  .info-card .ic--apple{ background: var(--pc-apple-100); color: var(--pc-apple-700); }
+  .info-card h3{
+    margin: 0 0 4px;
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px;
+    color: var(--pc-emerald-900);
+  }
+  .info-card a, .info-card .val{
+    font-size: 14.5px; color: var(--pc-ink-700);
+    word-break: break-word;
+  }
+  .info-card a{
+    color: var(--pc-apple-700);
+    border-bottom: 1px dashed rgba(220,38,38,.35);
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .info-card a:hover{ color: var(--pc-apple-600); border-color: var(--pc-apple-600); }
+  .info-card .hint{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: var(--pc-ink-500); letter-spacing: .12em; text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  /* SLA / tempo de resposta */
+  .sla{
+    background: linear-gradient(170deg, var(--pc-emerald-800), var(--pc-emerald-900));
+    color: var(--pc-cream-50);
+    border-radius: var(--pc-r-md);
+    padding: 22px;
+    display: flex; gap: 16px; align-items: center;
+    margin-top: 4px;
+  }
+  .sla .clock{
+    flex: none;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display: grid; place-items: center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 26px;
+  }
+  .sla div b{
+    display:block; font-family: var(--pc-font-mono); font-size: 10px;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--pc-gold-400); margin-bottom: 4px;
+  }
+  .sla div p{ margin: 0; font-size: 14.5px; line-height: 1.45; color: rgba(255,251,235,.85); }
+  .sla div p strong{ color: var(--pc-cream-50); }
+
+  /* ════════ FORM CARD ════════ */
+  .form-card{
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-lg);
+    box-shadow: var(--pc-shadow-md);
+    overflow: hidden;
+    position: relative;
+  }
+  .form-card::before{
+    content:""; position:absolute; top:0; left:0; right:0; height: 6px;
+    background: linear-gradient(90deg, var(--pc-emerald-700) 0%, var(--pc-gold-500) 50%, var(--pc-apple-600) 100%);
+  }
+  .form-card-head{
+    padding: 32px 36px 4px;
+    border-bottom: 1px dashed rgba(6,78,59,.18);
+    margin-bottom: 4px;
+  }
+  .form-card-head .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing:.22em; text-transform:uppercase;
+    color: var(--pc-emerald-700); margin: 0;
+  }
+  .form-card-head h2{
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 30px; line-height: 1.1; letter-spacing:-.015em;
+    color: var(--pc-emerald-900); margin: 8px 0 8px;
+  }
+  .form-card-head p{ font-size: 14.5px; color: var(--pc-ink-700); margin: 0 0 28px; max-width: 50ch; line-height: 1.55; }
+
+  form.contact-form{ padding: 28px 36px 36px; }
+
+  .field{ display: grid; gap: 8px; margin-bottom: 20px; }
+  .field label{
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--pc-emerald-700);
+  }
+  .field label .req{ color: var(--pc-apple-600); margin-left: 4px; }
+  .field label .opt{ color: var(--pc-ink-500); font-weight: 400; }
+  .field input,
+  .field select,
+  .field textarea{
+    width: 100%;
+    border: 1.5px solid var(--pc-cream-200);
+    background: var(--pc-cream-50);
+    border-radius: var(--pc-r-sm);
+    padding: 14px 16px;
+    font-family: inherit; font-size: 15px;
+    color: var(--pc-ink-900); line-height: 1.4;
+    transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .field input::placeholder, .field textarea::placeholder{ color: var(--pc-ink-500); }
+  .field input:hover,
+  .field select:hover,
+  .field textarea:hover{ border-color: var(--pc-cream-300); }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus{
+    outline: none;
+    background: #fff;
+    border-color: var(--pc-emerald-600);
+    box-shadow: 0 0 0 4px rgba(31,166,131,.15);
+  }
+  .field textarea{ min-height: 152px; resize: vertical; font-family: inherit; }
+  .field select{
+    appearance: none; -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23064E3B' stroke-width='2'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 44px;
+    cursor: pointer;
+  }
+
+  .field.invalid input,
+  .field.invalid select,
+  .field.invalid textarea{
+    border-color: var(--pc-apple-500);
+    background: var(--pc-apple-100);
+  }
+  .field .err{
+    display:none; font-size: 12.5px; color: var(--pc-apple-700);
+    font-weight: 600;
+  }
+  .field.invalid .err{ display: block; }
+  .field .help{ font-size: 12px; color: var(--pc-ink-500); }
+
+  .field-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 540px){ .field-row{ grid-template-columns: 1fr; } }
+
+  /* contador de caracteres */
+  .field .count{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: var(--pc-ink-500); letter-spacing: .04em;
+  }
+  .field .count.warn{ color: var(--pc-apple-700); }
+
+  /* honeypot — escondido */
+  .hp{ position:absolute; left:-9999px; top:-9999px; height: 1px; width: 1px; overflow: hidden; }
+
+  /* consentimento LGPD */
+  .consent{
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 16px 18px;
+    background: var(--pc-emerald-50);
+    border-radius: var(--pc-r-sm);
+    border: 1px solid rgba(6,78,59,.12);
+    margin: 4px 0 24px;
+  }
+  .consent input[type="checkbox"]{
+    flex: none;
+    appearance: none; -webkit-appearance: none;
+    width: 20px; height: 20px;
+    border: 1.5px solid var(--pc-emerald-700);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer; margin: 0;
+    transition: background .15s ease, border-color .15s ease;
+    position: relative;
+  }
+  .consent input[type="checkbox"]:checked{
+    background: var(--pc-emerald-700); border-color: var(--pc-emerald-700);
+  }
+  .consent input[type="checkbox"]:checked::after{
+    content:""; position:absolute; left: 5px; top: 1px;
+    width: 5px; height: 11px;
+    border: solid var(--pc-cream-50);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .consent label{ font-size: 13px; line-height: 1.5; color: var(--pc-ink-900); cursor: pointer; }
+  .consent label a{ color: var(--pc-apple-700); border-bottom: 1px dashed rgba(220,38,38,.4); }
+
+  /* footer do form */
+  .form-actions{
+    display:flex; gap: 14px; align-items:center;
+    flex-wrap: wrap;
+  }
+  .form-actions .alt{
+    font-size: 13px; color: var(--pc-ink-500);
+  }
+  .form-actions .alt a{
+    color: var(--pc-emerald-800); font-weight: 600;
+    border-bottom: 1px dashed rgba(6,78,59,.3);
+  }
+  .form-actions .alt a:hover{ color: var(--pc-emerald-900); }
+
+  /* estado de sucesso */
+  .form-success{
+    display: none;
+    padding: 56px 36px;
+    text-align: center;
+  }
+  .form-success.show{ display: block; }
+  .form-success .seal{
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--pc-emerald-700); color: var(--pc-cream-50);
+    margin: 0 auto 24px;
+    display: grid; place-items: center;
+    font-size: 40px; line-height: 1;
+    box-shadow: 0 14px 30px -14px rgba(6,78,59,.55);
+    position: relative;
+  }
+  .form-success .seal::before{
+    content:""; position:absolute; inset:6px; border-radius:50%;
+    border: 1px dashed rgba(255,251,235,.5);
+  }
+  .form-success h3{
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 36px; line-height: 1.1; letter-spacing: -.01em;
+    color: var(--pc-emerald-900); margin: 0 0 12px;
+  }
+  .form-success p{ font-size: 15px; color: var(--pc-ink-700); margin: 0 auto 24px; max-width: 44ch; line-height: 1.55; }
+
+  .form-error{
+    display: none;
+    margin: 0 0 16px;
+    padding: 14px 18px;
+    background: var(--pc-apple-100);
+    color: var(--pc-apple-900);
+    font-size: 14px;
+    border-radius: var(--pc-r-sm);
+    border: 1px solid rgba(220,38,38,.25);
+  }
+  .form-error.show{ display: block; }
+  .form-error b{ font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase; color: var(--pc-apple-700); display:block; margin-bottom: 4px; }
+
+  /* ════════ FAQ rápido ════════ */
+  .faq-section{ padding: 0 0 80px; }
+  .faq-section h3{
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 32px; color: var(--pc-emerald-900);
+    margin: 0 0 28px; letter-spacing: -.01em;
+  }
+  .faq{
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-md);
+    overflow: hidden;
+  }
+  .faq details{
+    padding: 22px 26px;
+    border-bottom: 1px solid var(--pc-cream-200);
+    transition: background .15s ease;
+  }
+  .faq details:last-child{ border-bottom: none; }
+  .faq details[open]{ background: var(--pc-emerald-50); }
+  .faq summary{
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+    font-family: var(--pc-font-sans); font-weight: 700;
+    font-size: 16px; color: var(--pc-emerald-900);
+  }
+  .faq summary::-webkit-details-marker{ display: none; }
+  .faq summary::after{
+    content: "+"; flex: none;
+    font-family: var(--pc-font-serif); font-style: italic;
+    font-weight: 500; font-size: 28px; line-height: 1;
+    color: var(--pc-apple-600);
+    transition: transform .2s ease;
+  }
+  .faq details[open] summary::after{ content: "−"; transform: rotate(0); }
+  .faq details p{
+    margin: 12px 0 0; font-size: 14.5px; color: var(--pc-ink-700); line-height: 1.6;
+    max-width: 68ch;
+  }
+
+  /* ════════ FOOTER ════════ */
+  footer.foot{ background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
+  .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
+  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--pc-gold-400); }
+  .foot-col a.active{ color: var(--pc-gold-400); }
+  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
+  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
+  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
+  .foot-bottom{
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid rgba(255,251,235,.10);
+    display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase;
+  }
+  .foot-disclosure{
+    margin-top: 48px;
+    padding: 16px 20px;
+    border: 1px dashed rgba(245,158,11,.35);
+    border-radius: var(--pc-r-md);
+    background: rgba(245,158,11,.04);
+    font-size: 12.5px;
+    color: rgba(255,251,235,.7);
+    line-height: 1.55;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
+  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
+  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+
+  /* Responsivo */
+  @media (max-width: 980px){
+    .contact-layout{ grid-template-columns: 1fr; gap: 32px; padding: 48px 0 64px; }
+    .info-stack{ position: static; }
+    .form-card-head{ padding: 28px 24px 4px; }
+    form.contact-form{ padding: 24px; }
+    .form-success{ padding: 40px 24px; }
+  }
+
+  /* Toast */
+  .toast{
+    position: fixed; bottom: 32px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--pc-emerald-900); color: var(--pc-cream-50);
+    padding: 14px 20px; border-radius: var(--pc-r-pill);
+    font-size: 14px; font-weight: 600; box-shadow: var(--pc-shadow-lg);
+    border: 1px solid rgba(245,158,11,.3);
+    opacity: 0; pointer-events: none;
+    transition: opacity .2s ease, transform .25s ease;
+    z-index: 100;
+    display:flex; align-items:center; gap: 10px;
+  }
+  .toast.show{ opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast b{ color: var(--pc-gold-400); font-family: var(--pc-font-mono); letter-spacing: .14em; font-weight: 500; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo-lockup">
+        <div class="logo-mark">P</div>
+        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+        <a class="nav-link" href="index.html">Lojas</a>
+        <a class="nav-link" href="index.html">Categorias</a>
+        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
+        <a class="nav-link" href="index.html">Blog</a>
+      </div>
+      <div class="nav-cta">
+        <label class="nav-search" aria-label="Buscar">
+          <span class="ic">⌕</span>
+          <input type="search" placeholder="Buscar cupom ou loja…" />
+          <kbd>/</kbd>
+        </label>
+        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ HERO ═══════════════════════════════════════════════ -->
+<header class="doc-hero">
+  <div class="container">
+    <p class="doc-crumb"><a href="index.html">Início</a> &nbsp;/&nbsp; Contato</p>
+    <p class="eyebrow"><span class="dot"></span>Estamos por aqui · resposta em até 2 dias úteis</p>
+    <h1>Diga <em>oi</em><br/>para o <span class="apple">Paraíso</span>.</h1>
+    <p class="sub">Reportar cupom inválido, sugerir uma loja, propor parceria, exercer direitos LGPD ou só dar um alô — todos os caminhos abaixo chegam direto no time.</p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ CORPO ═══════════════════════════════════════════════ -->
+<main class="container">
+  <div class="contact-layout">
+
+    <!-- COLUNA INFO -->
+    <aside class="info-stack" aria-label="Outros canais de contato">
+      <p class="info-eyebrow">Canais diretos</p>
+      <h2 class="info-title">Antes do formulário, <em>tente um destes</em></h2>
+      <p class="info-lead">Para a maioria dos assuntos, um destes canais te atende mais rápido que o formulário.</p>
+
+      <a href="https://t.me/eveseeksapple" target="_blank" rel="noopener" class="info-card">
+        <div class="ic ic--gold">⌬</div>
+        <div>
+          <h3>Bot do Telegram</h3>
+          <span class="val">Comandos rápidos para alertas, cupons e <code style="font-family: var(--pc-font-mono); font-size: 12px; background: var(--pc-cream-100); padding: 1px 6px; border-radius: 4px;">/excluir</code> dos seus dados.</span>
+          <p class="hint" style="margin: 8px 0 0;">@eveseeksapple · 24h</p>
+        </div>
+      </a>
+
+      <a href="mailto:contato@paraisodoscupons.com.br" class="info-card">
+        <div class="ic">✉</div>
+        <div>
+          <h3>E-mail geral</h3>
+          <span class="val">contato@paraisodoscupons.com.br</span>
+          <p class="hint" style="margin: 8px 0 0;">Resposta em até 48h úteis</p>
+        </div>
+      </a>
+
+      <a href="mailto:privacidade@paraisodoscupons.com.br" class="info-card">
+        <div class="ic ic--apple">§</div>
+        <div>
+          <h3>Encarregado LGPD</h3>
+          <span class="val">privacidade@paraisodoscupons.com.br</span>
+          <p class="hint" style="margin: 8px 0 0;">Direitos de titular · 15 dias</p>
+        </div>
+      </a>
+
+      <div class="sla">
+        <div class="clock">⏱</div>
+        <div>
+          <b>Tempo médio de resposta</b>
+          <p><strong>1 dia útil</strong> para dúvidas gerais · <strong>até 48h</strong> para parcerias · <strong>até 15 dias úteis</strong> para solicitações LGPD.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- FORMULÁRIO -->
+    <section class="form-card" id="formCard">
+
+      <div class="form-card-head">
+        <p class="eyebrow">Formulário</p>
+        <h2>Conta para a gente</h2>
+        <p>Preencha os campos abaixo e nossa equipe responde por e-mail. Os campos marcados com <span style="color: var(--pc-apple-600); font-weight: 700;">*</span> são obrigatórios.</p>
+      </div>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://formspree.io/f/SEU_ID_FORMSPREE"
+        method="POST"
+        novalidate
+      >
+        <!-- Mensagem de erro global -->
+        <div class="form-error" id="formError" role="alert">
+          <b>Não foi possível enviar</b>
+          <span id="formErrorMsg">Tente novamente em alguns instantes ou nos envie um e-mail diretamente.</span>
+        </div>
+
+        <!-- Honeypot anti-spam -->
+        <div class="hp" aria-hidden="true">
+          <label>Não preencha este campo
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="field-row">
+          <!-- Nome -->
+          <div class="field" id="fNome">
+            <label for="nome">Nome <span class="req">*</span></label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required minlength="2" />
+            <span class="err">Informe ao menos o primeiro nome.</span>
+          </div>
+
+          <!-- E-mail -->
+          <div class="field" id="fEmail">
+            <label for="email">E-mail <span class="req">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="seu@email.com" required />
+            <span class="err">E-mail inválido — verifique se digitou corretamente.</span>
+          </div>
+        </div>
+
+        <!-- Assunto -->
+        <div class="field" id="fAssunto">
+          <label for="assunto">Assunto <span class="req">*</span></label>
+          <select id="assunto" name="assunto" required>
+            <option value="" disabled selected>Selecione um assunto…</option>
+            <option value="duvida">Dúvida geral</option>
+            <option value="cupom-invalido">Reportar cupom inválido</option>
+            <option value="sugestao-loja">Sugerir uma loja ou cupom</option>
+            <option value="parceria">Parceria / mídia</option>
+            <option value="lgpd">Direitos LGPD (excluir, acessar, etc.)</option>
+            <option value="trabalhe">Trabalhe conosco</option>
+            <option value="outro">Outro</option>
+          </select>
+          <span class="err">Escolha o assunto que melhor descreve sua mensagem.</span>
+        </div>
+
+        <!-- Mensagem -->
+        <div class="field" id="fMensagem">
+          <label for="mensagem">
+            <span>Mensagem <span class="req">*</span></span>
+            <span class="count" id="count">0 / 1500</span>
+          </label>
+          <textarea id="mensagem" name="mensagem" placeholder="Descreva o que você precisa. Se for sobre um cupom específico, cole o código aqui — fica mais fácil pra gente investigar." required minlength="10" maxlength="1500"></textarea>
+          <span class="err">Conta um pouco mais — pelo menos 10 caracteres.</span>
+        </div>
+
+        <!-- Consentimento LGPD -->
+        <div class="consent">
+          <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent">
+            Concordo em compartilhar os dados acima para que o Paraíso dos Cupons entre em contato sobre minha solicitação. Saiba mais na nossa
+            <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+          </label>
+        </div>
+
+        <!-- Ações -->
+        <div class="form-actions">
+          <button class="pc-btn pc-btn--lg" type="submit" id="submitBtn">
+            <span class="btn-label">Enviar mensagem</span>
+            <span class="arrow">→</span>
+          </button>
+          <span class="alt">ou abrir no seu app de e-mail: <a href="#" id="mailtoFallback">mailto direto</a></span>
+        </div>
+
+      </form>
+
+      <!-- Estado de sucesso -->
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="seal">🍎</div>
+        <h3>Mensagem entregue!</h3>
+        <p>Recebemos sua mensagem e respondemos dentro de <strong>2 dias úteis</strong> no e-mail que você informou. Enquanto isso, dá uma olhada nas ofertas do dia.</p>
+        <div style="display:flex; flex-wrap:wrap; gap: 12px; justify-content:center;">
+          <a class="pc-btn" href="index.html#ofertas">Ver ofertas do dia <span class="arrow">→</span></a>
+          <button class="pc-btn pc-btn--ghost" id="newMessage" type="button">Enviar outra mensagem</button>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- FAQ rápido -->
+  <section class="faq-section">
+    <h3>Perguntas frequentes <em style="font-style: italic; color: var(--pc-apple-600);">antes de mandar</em></h3>
+    <div class="faq">
+      <details>
+        <summary>O cupom não funcionou no checkout — o que fazer?</summary>
+        <p>Primeiro, confira se o cupom ainda está dentro do prazo de validade exibido no card. Se sim, escolha o assunto <strong>"Reportar cupom inválido"</strong> no formulário e cole o código + nome da loja. Investigamos no mesmo dia.</p>
+      </details>
+      <details>
+        <summary>Vocês têm uma loja parceira? Como anunciar?</summary>
+        <p>Trabalhamos com programas de afiliados de marketplaces e algumas lojas selecionadas. Para propor uma parceria direta, use o assunto <strong>"Parceria / mídia"</strong> e conte um pouco sobre a sua loja, ticket médio e categorias.</p>
+      </details>
+      <details>
+        <summary>Quero apagar meu cadastro no bot. Por onde começo?</summary>
+        <p>O caminho mais rápido é enviar <code style="font-family: var(--pc-font-mono); font-size: 13px; background: var(--pc-cream-100); padding: 2px 8px; border-radius: 4px;">/excluir</code> direto para <strong>@eveseeksapple</strong> no Telegram. Apagamos tudo em até 48h. Se preferir, escolha o assunto "Direitos LGPD" no formulário.</p>
+      </details>
+      <details>
+        <summary>Vocês vendem meus dados ou compartilham com anunciantes?</summary>
+        <p>Não. Detalhamos isso na nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>: dados são usados apenas para o serviço (envio de cupons relevantes) e não são vendidos, alugados ou cedidos para nenhum anunciante.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<!-- ═══════════════════════════════════════════════ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a href="index.html" class="logo-lockup">
+          <div class="logo-mark">P</div>
+          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+        </a>
+        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="index.html#ofertas">Ofertas do dia</a></li>
+          <li><a href="index.html">Todas as lojas</a></li>
+          <li><a href="index.html">Categorias</a></li>
+          <li><a href="index.html#telegram">Bot do Telegram</a></li>
+          <li><a href="index.html">Blog &amp; guias</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="contato.html" class="active">Contato</a></li>
+          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
+          <li><a href="#">Reportar cupom inválido</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Divulgação de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-disclosure">
+      <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Paraíso dos Cupons · Todos os direitos reservados</span>
+      <span>Feito com 🍎 no Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <b>✓</b><span id="toastMsg">Enviado!</span>
+</div>
+
+<script>
+(() => {
+  const $ = (s, c=document) => c.querySelector(s);
+  const form    = $("#contactForm");
+  const submit  = $("#submitBtn");
+  const errBox  = $("#formError");
+  const errMsg  = $("#formErrorMsg");
+  const success = $("#formSuccess");
+  const formCard = $("#formCard");
+  const newBtn = $("#newMessage");
+  const txt = $("#mensagem");
+  const count = $("#count");
+  const mailtoLink = $("#mailtoFallback");
+
+  /* ----------------- Contador de caracteres ----------------- */
+  const updateCount = () => {
+    const len = txt.value.length;
+    const max = 1500;
+    count.textContent = `${len} / ${max}`;
+    count.classList.toggle("warn", len > max - 50);
+  };
+  txt.addEventListener("input", updateCount);
+
+  /* ----------------- Mailto dinâmico ----------------- */
+  const buildMailto = () => {
+    const nome = encodeURIComponent($("#nome").value || "");
+    const email = encodeURIComponent($("#email").value || "");
+    const assuntoSel = $("#assunto");
+    const assuntoTxt = assuntoSel.value ? assuntoSel.options[assuntoSel.selectedIndex].text : "Contato pelo site";
+    const msg = $("#mensagem").value || "";
+    const corpo = encodeURIComponent(
+      `${msg}\n\n—\nEnviado de: ${decodeURIComponent(nome)}\nResponder para: ${decodeURIComponent(email)}`
+    );
+    return `mailto:contato@paraisodoscupons.com.br?subject=${encodeURIComponent("[Paraíso] " + assuntoTxt)}&body=${corpo}`;
+  };
+  mailtoLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = buildMailto();
+  });
+
+  /* ----------------- Validação ----------------- */
+  const validateField = (id, fn) => {
+    const wrap = $("#" + id);
+    const ok = fn();
+    wrap.classList.toggle("invalid", !ok);
+    return ok;
+  };
+
+  const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+
+  const validateAll = () => {
+    let ok = true;
+    ok = validateField("fNome", () => $("#nome").value.trim().length >= 2) && ok;
+    ok = validateField("fEmail", () => isEmail($("#email").value)) && ok;
+    ok = validateField("fAssunto", () => $("#assunto").value !== "") && ok;
+    ok = validateField("fMensagem", () => $("#mensagem").value.trim().length >= 10) && ok;
+    return ok;
+  };
+
+  // valida ao sair do campo
+  ["#nome","#email","#assunto","#mensagem"].forEach(sel => {
+    const el = $(sel);
+    el.addEventListener("blur", () => {
+      if (sel === "#nome") validateField("fNome", () => el.value.trim().length >= 2);
+      if (sel === "#email") validateField("fEmail", () => isEmail(el.value));
+      if (sel === "#assunto") validateField("fAssunto", () => el.value !== "");
+      if (sel === "#mensagem") validateField("fMensagem", () => el.value.trim().length >= 10);
+    });
+  });
+
+  /* ----------------- Submit ----------------- */
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errBox.classList.remove("show");
+
+    if (!$("#consent").checked) {
+      errMsg.textContent = "Você precisa concordar com a Política de Privacidade para enviar.";
+      errBox.classList.add("show");
+      return;
+    }
+
+    if (!validateAll()) {
+      errMsg.textContent = "Confira os campos destacados em vermelho antes de enviar.";
+      errBox.classList.add("show");
+      return;
+    }
+
+    const isFormspreeConfigured = !form.action.includes("SEU_ID_FORMSPREE");
+
+    submit.disabled = true;
+    submit.querySelector(".btn-label").textContent = "Enviando…";
+
+    if (!isFormspreeConfigured) {
+      // Sem ID configurado → abre mailto como fallback
+      setTimeout(() => {
+        window.location.href = buildMailto();
+        submit.disabled = false;
+        submit.querySelector(".btn-label").textContent = "Enviar mensagem";
+        showToast("Abrindo seu app de e-mail…");
+      }, 350);
+      return;
+    }
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      form.style.display = "none";
+      success.classList.add("show");
+      const top = formCard.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top, behavior: "smooth" });
+      showToast("Mensagem enviada!");
+    } catch (err) {
+      console.warn(err);
+      errMsg.innerHTML = 'Houve um problema ao enviar. Tente novamente ou use o <a href="#" id="mtRetry" style="color: var(--pc-apple-700); border-bottom: 1px dashed;">link mailto</a>.';
+      errBox.classList.add("show");
+      $("#mtRetry")?.addEventListener("click", (e) => { e.preventDefault(); window.location.href = buildMailto(); });
+    } finally {
+      submit.disabled = false;
+      submit.querySelector(".btn-label").textContent = "Enviar mensagem";
+    }
+  });
+
+  /* ----------------- "Enviar outra mensagem" ----------------- */
+  newBtn.addEventListener("click", () => {
+    form.reset();
+    form.style.display = "";
+    success.classList.remove("show");
+    updateCount();
+    const top = formCard.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({ top, behavior: "smooth" });
+  });
+
+  /* ----------------- Toast ----------------- */
+  let toastTimer;
+  function showToast(msg) {
+    const toast = $("#toast");
+    $("#toastMsg").textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+  }
+
+  updateCount();
+})();
+</script>
+
+</body>
+</html>
