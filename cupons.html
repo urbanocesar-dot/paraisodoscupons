@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cupons — Paraíso dos Cupons</title>
+<meta name="description" content="Todos os cupons ativos do Paraíso dos Cupons. Verificados pela equipe nas últimas 24h." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  /* ════════ TOKENS ════════ */
+  :root{
+    --pc-emerald-900:#03261D; --pc-emerald-800:#064E3B; --pc-emerald-700:#0B6B52;
+    --pc-emerald-600:#15876A; --pc-emerald-500:#1FA683; --pc-emerald-100:#D6EDE3; --pc-emerald-50:#EAF4EE;
+    --pc-apple-900:#7A1313; --pc-apple-700:#A21C1C; --pc-apple-600:#DC2626; --pc-apple-500:#EF4444; --pc-apple-100:#FCE4E4;
+    --pc-gold-700:#B45309; --pc-gold-600:#D97706; --pc-gold-500:#F59E0B; --pc-gold-400:#FBBF24; --pc-gold-100:#FEF3C7;
+    --pc-cream-50:#FFFBEB; --pc-cream-100:#FAF3DE; --pc-cream-200:#F1E7C8; --pc-cream-300:#E5D6A6;
+    --pc-ink-900:#1B2A24; --pc-ink-700:#3D4E47; --pc-ink-500:#6B7A73; --pc-ink-300:#A8B3AD;
+    --pc-font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --pc-font-sans:  "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --pc-font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --pc-r-sm:6px; --pc-r-md:10px; --pc-r-lg:16px; --pc-r-pill:999px;
+    --pc-shadow-sm: 0 1px 2px rgba(3,38,29,.06), 0 1px 1px rgba(3,38,29,.04);
+    --pc-shadow-md: 0 6px 16px -8px rgba(3,38,29,.22), 0 2px 6px -2px rgba(3,38,29,.10);
+    --pc-shadow-lg: 0 24px 48px -24px rgba(3,38,29,.35), 0 8px 16px -8px rgba(3,38,29,.18);
+    --pc-shadow-apple: 0 10px 24px -10px rgba(220,38,38,.45);
+    --pc-shadow-gold: 0 10px 30px -12px rgba(245,158,11,.55);
+    --pc-container: 1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: var(--pc-font-sans); color: var(--pc-ink-900);
+    background: var(--pc-cream-50);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    font-size:16px; line-height:1.55;
+  }
+  a{ color: inherit; text-decoration: none; }
+  .container{ max-width: var(--pc-container); margin: 0 auto; padding: 0 32px; }
+
+  /* ════════ BOTÃO ════════ */
+  .pc-btn{
+    --bg: var(--pc-apple-600); --bg-hover: var(--pc-apple-700); --fg: var(--pc-cream-50); --bd: transparent;
+    appearance:none; border:1px solid var(--bd);
+    background: var(--bg); color: var(--fg);
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px;
+    padding: 14px 22px; border-radius: var(--pc-r-pill);
+    cursor: pointer; display:inline-flex; align-items:center; justify-content:center; gap: 10px; line-height: 1;
+    transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
+    box-shadow: var(--pc-shadow-apple);
+  }
+  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
+  .pc-btn .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; transform: translateY(-1px); }
+  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); box-shadow: 0 10px 24px -14px rgba(3,38,29,.55); }
+  .pc-btn--gold{ --bg: var(--pc-gold-500); --bg-hover: var(--pc-gold-600); --fg: var(--pc-emerald-900); box-shadow: var(--pc-shadow-gold); }
+  .pc-btn--ghost{ --bg: transparent; --bg-hover: rgba(6,78,59,.06); --fg: var(--pc-emerald-800); --bd: var(--pc-emerald-800); box-shadow: none; }
+  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
+  .pc-btn--lg{ font-size: 17px; padding: 18px 28px; }
+
+  /* ════════ NAVBAR ════════ */
+  .nav-wrap{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,251,235,.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6,78,59,.08);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height: 76px; }
+  .logo-lockup{ display:flex; align-items:center; gap: 14px; color: var(--pc-emerald-900); }
+  .logo-mark{
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 22px;
+    box-shadow: inset 0 0 0 1px rgba(3,38,29,.15);
+  }
+  .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
+  .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
+  .nav-links{ display:flex; align-items:center; gap: 8px; }
+  .nav-link{
+    font-size: 14px; font-weight: 600; color: var(--pc-emerald-900);
+    padding: 10px 14px; border-radius: var(--pc-r-pill);
+    transition: background .15s ease, color .15s ease;
+    position: relative;
+  }
+  .nav-link:hover{ background: rgba(6,78,59,.07); }
+  .nav-link.active{
+    color: var(--pc-apple-600);
+    background: var(--pc-apple-100);
+  }
+  .nav-link.active::after{
+    content:""; position: absolute;
+    left: 16px; right: 16px; bottom: 4px;
+    height: 2px; border-radius: 2px;
+    background: var(--pc-apple-600);
+  }
+  .nav-cta{ display:flex; align-items:center; gap: 12px; }
+  .nav-search{
+    display:flex; align-items:center; gap: 10px;
+    background: #fff; border:1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px;
+    min-width: 280px; box-shadow: var(--pc-shadow-sm);
+  }
+  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
+  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
+  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
+  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+
+  /* ════════ HERO compacto ════════ */
+  .doc-hero{
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 80% at 92% 8%, rgba(245,158,11,.18), transparent 60%),
+      radial-gradient(70% 60% at 5% 100%, rgba(31,166,131,.18), transparent 70%),
+      linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+    padding: 72px 0 88px;
+  }
+  .doc-hero::before, .doc-hero::after{
+    content:""; position:absolute; border-radius: 50%; pointer-events:none;
+  }
+  .doc-hero::before{ width: 420px; height: 420px; right: -160px; top: -160px; border: 1px solid rgba(245,158,11,.22); }
+  .doc-hero::after{ width: 260px; height: 260px; right: -60px; top: 60px; border: 1px solid rgba(214,237,227,.12); }
+  .doc-hero .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-gold-400); margin: 0;
+    display:inline-flex; align-items:center; gap: 12px;
+  }
+  .doc-hero .eyebrow .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-gold-500); }
+  .doc-hero h1{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(48px, 6vw, 78px); line-height: .98;
+    letter-spacing:-.02em; margin: 22px 0 0; max-width: 18ch;
+  }
+  .doc-hero h1 em{ color: var(--pc-gold-500); font-style: italic; }
+  .doc-hero h1 .apple{ color: var(--pc-apple-500); font-style: italic; }
+  .doc-hero .sub{ margin-top: 20px; font-size: 17px; line-height: 1.5; color: rgba(255,251,235,.78); max-width: 60ch; }
+  .doc-hero .stats{
+    margin-top: 40px;
+    display:flex; flex-wrap: wrap; gap: 32px;
+    padding-top: 24px; border-top: 1px solid rgba(255,251,235,.15);
+    max-width: 720px;
+  }
+  .doc-hero .stat{ font-size: 13px; color: rgba(255,251,235,.6); }
+  .doc-hero .stat b{
+    display:block;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 32px; color: var(--pc-gold-400); margin-bottom: 2px; line-height: 1;
+  }
+  .doc-crumb{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: rgba(255,251,235,.55); margin-bottom: 8px;
+  }
+  .doc-crumb a{ color: var(--pc-gold-400); }
+  .doc-crumb a:hover{ text-decoration: underline; }
+
+  /* ════════ FAIXA DE CATEGORIAS ════════ */
+  .cats-strip{
+    background: var(--pc-cream-100);
+    border-bottom: 1px solid var(--pc-cream-200);
+    padding: 18px 0;
+    position: sticky; top: 76px; z-index: 40;
+  }
+  .cats-row{
+    display:flex; gap: 8px; align-items:center;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .cats-row::-webkit-scrollbar{ display:none; }
+  .cat-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    color: var(--pc-emerald-800);
+    font-family: inherit; font-weight: 600; font-size: 13px;
+    border-radius: var(--pc-r-pill);
+    white-space:nowrap; cursor: pointer;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .cat-pill:hover{ background: var(--pc-emerald-50); }
+  .cat-pill.active{ background: var(--pc-emerald-800); color: var(--pc-cream-50); border-color: var(--pc-emerald-800); }
+  .cat-pill .count{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    background: var(--pc-cream-100); color: var(--pc-emerald-800);
+    padding: 2px 6px; border-radius: 999px;
+  }
+  .cat-pill.active .count{ background: rgba(245,158,11,.25); color: var(--pc-gold-400); }
+
+  /* ════════ LISTA DE CUPONS ════════ */
+  .cupons-section{ padding: 56px 0 80px; }
+  .cupons-head{ display:flex; justify-content:space-between; align-items:flex-end; gap: 32px; margin-bottom: 32px; }
+  .cupons-head .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-emerald-700); margin:0;
+  }
+  .cupons-head h2{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: 38px; line-height: 1.05;
+    letter-spacing:-.015em; color: var(--pc-emerald-900); margin: 8px 0 0;
+  }
+  .cupons-head h2 em{ color: var(--pc-apple-600); font-style: italic; }
+  .cupons-head .meta{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing:.18em; text-transform:uppercase;
+    color: var(--pc-ink-500);
+  }
+  .cupons-head .meta b{ color: var(--pc-emerald-800); font-weight: 500; }
+
+  .cupons-list{
+    display: grid; gap: 24px;
+  }
+
+  /* ════════ CUPOM (card no formato físico) ════════ */
+  .cupom{
+    position: relative;
+    background: #fff;
+    border: 2px dashed rgba(6,78,59,.30);
+    border-radius: var(--pc-r-lg);
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    overflow: visible;
+    transition: transform .15s ease, box-shadow .25s ease, border-color .2s ease;
+    isolation: isolate;
+  }
+  .cupom:hover{
+    transform: translateY(-2px);
+    box-shadow: var(--pc-shadow-md);
+    border-color: var(--pc-gold-500);
+  }
+
+  /* Picote no meio — círculos creme entalhados */
+  .cupom::before, .cupom::after{
+    content:"";
+    position: absolute;
+    width: 24px; height: 24px;
+    background: var(--pc-cream-50);
+    border-radius: 50%;
+    z-index: 1;
+    right: 280px;
+    transform: translateX(50%);
+    box-shadow: inset 0 0 0 2px transparent;
+  }
+  .cupom::before{ top: -12px; }
+  .cupom::after { bottom: -12px; }
+
+  /* Picote pontilhado vertical entre as duas metades */
+  .cupom__picote{
+    position: absolute;
+    top: 18px; bottom: 18px;
+    right: 280px;
+    width: 0;
+    border-right: 2px dashed rgba(6,78,59,.28);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── Metade esquerda ─── */
+  .cupom__left{
+    padding: 28px 32px 28px 32px;
+    display:flex; flex-direction: column; gap: 16px;
+    min-width: 0;
+  }
+  .cupom__meta{
+    display:flex; align-items:center; gap: 10px; flex-wrap: wrap;
+    font-family: var(--pc-font-mono); font-size: 10px;
+    letter-spacing:.22em; text-transform: uppercase; color: var(--pc-ink-500);
+  }
+  .cupom__meta .cat{
+    background: var(--pc-emerald-50); color: var(--pc-emerald-800);
+    font-weight: 600; padding: 4px 10px; border-radius: var(--pc-r-pill);
+    letter-spacing: .14em;
+  }
+  .cupom__meta .val{ color: var(--pc-emerald-700); font-weight: 500; }
+  .cupom__meta .val::before{ content: "validade · "; opacity:.6; }
+  .cupom__loja{
+    font-family: var(--pc-font-serif);
+    font-weight: 600; font-style: italic;
+    font-size: 28px; line-height: 1.05;
+    color: var(--pc-emerald-900);
+    letter-spacing: -.01em;
+    margin: 0;
+  }
+  .cupom__desc{
+    font-size: 15px; color: var(--pc-ink-700);
+    margin: 0; line-height: 1.5;
+    max-width: 56ch;
+  }
+
+  /* Bloco do código + CTA */
+  .cupom__code-block{
+    display: grid; grid-template-columns: 1fr auto; gap: 12px;
+    align-items: stretch;
+    margin-top: 4px;
+  }
+  .cupom__codigo{
+    background: var(--pc-emerald-900); color: var(--pc-gold-400);
+    font-family: var(--pc-font-mono); font-weight: 700;
+    font-size: 22px; letter-spacing: .22em;
+    padding: 16px 22px;
+    border-radius: var(--pc-r-sm);
+    display: flex; align-items: center; gap: 14px;
+    border: 1.5px dashed var(--pc-gold-500);
+    position: relative;
+    min-width: 0;
+  }
+  .cupom__codigo .lbl{
+    font-family: var(--pc-font-mono); font-size: 9px;
+    color: rgba(245,158,11,.7); letter-spacing: .22em; font-weight: 500;
+    text-transform: uppercase;
+    flex: none;
+    border-right: 1px dashed rgba(245,158,11,.4);
+    padding-right: 14px;
+  }
+  .cupom__codigo .code-text{
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    flex: 1;
+  }
+  .cupom__cta{
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 14px;
+    line-height: 1.2;
+    background: var(--pc-apple-600); color: var(--pc-cream-50);
+    border: none; cursor: pointer;
+    padding: 14px 20px;
+    border-radius: var(--pc-r-sm);
+    display: inline-flex; align-items: center; gap: 10px;
+    text-align: left;
+    box-shadow: var(--pc-shadow-apple);
+    transition: background .15s ease, transform .12s ease;
+    white-space: nowrap;
+  }
+  .cupom__cta:hover{ background: var(--pc-apple-700); transform: translateY(-1px); }
+  .cupom__cta:focus-visible{ outline: 2px solid var(--pc-gold-500); outline-offset: 3px; }
+  .cupom__cta .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; }
+  .cupom__cta.copied{
+    background: var(--pc-emerald-700);
+    pointer-events: none;
+  }
+  .cupom__cta.copied .label-default{ display:none; }
+  .cupom__cta.copied .label-success{ display:inline; }
+  .cupom__cta .label-success{ display:none; }
+
+  /* ─── Metade direita (porcentagem + maçã) ─── */
+  .cupom__right{
+    position: relative;
+    background:
+      radial-gradient(80% 80% at 50% 50%, rgba(245,158,11,.10), transparent 70%),
+      linear-gradient(160deg, var(--pc-apple-100) 0%, var(--pc-cream-100) 100%);
+    border-radius: 0 var(--pc-r-lg) var(--pc-r-lg) 0;
+    display: grid; place-items: center;
+    padding: 32px 24px;
+    overflow: hidden;
+  }
+  .cupom__right::before{
+    content:"";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(220,38,38,.06) 0 1px, transparent 2px),
+      radial-gradient(circle at 80% 70%, rgba(245,158,11,.10) 0 1px, transparent 2px),
+      radial-gradient(circle at 50% 80%, rgba(31,166,131,.06) 0 1px, transparent 2px);
+    background-size: 60px 60px;
+    opacity: .8;
+    pointer-events: none;
+  }
+  .cupom__pct-wrap{
+    position: relative; z-index: 2;
+    display:flex; flex-direction: column; align-items: center; gap: 12px;
+    text-align: center;
+  }
+  .cupom__pct{
+    font-family: var(--pc-font-sans); font-weight: 800;
+    font-size: 92px; line-height: .9;
+    color: var(--pc-apple-700);
+    letter-spacing: -.04em; font-variant-numeric: tabular-nums;
+    display: inline-flex; align-items: flex-start;
+  }
+  .cupom__pct sup{
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-left: 4px;
+  }
+  .cupom__off{
+    font-family: var(--pc-font-mono); font-weight: 500;
+    font-size: 11px; letter-spacing: .42em;
+    color: var(--pc-apple-700);
+    text-transform: uppercase;
+  }
+  .cupom__maca{
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 56px; height: 56px;
+    z-index: 1;
+    transform: rotate(-12deg);
+    filter: drop-shadow(0 6px 8px rgba(122,19,19,.25));
+  }
+
+  /* destaque na seção direita quando hover */
+  .cupom:hover .cupom__maca{ transform: rotate(-6deg) scale(1.05); transition: transform .25s ease; }
+
+  /* Responsivo: cupom vira layout vertical em mobile */
+  @media (max-width: 720px){
+    .cupom{
+      grid-template-columns: 1fr;
+    }
+    .cupom__picote{
+      top: auto; bottom: auto;
+      left: 18px; right: 18px;
+      height: 0; width: auto;
+      border-right: none; border-bottom: 2px dashed rgba(6,78,59,.28);
+    }
+    .cupom__picote{
+      bottom: 220px; top: auto;
+    }
+    .cupom::before, .cupom::after{
+      top: auto; bottom: 220px; right: auto;
+      transform: translateY(50%);
+    }
+    .cupom::before{ left: -12px; right: auto; transform: translate(-50%, 50%); }
+    .cupom::after { right: -12px; left: auto; bottom: 220px; transform: translate(50%, 50%); }
+    .cupom__right{
+      border-radius: 0 0 var(--pc-r-lg) var(--pc-r-lg);
+      min-height: 200px;
+    }
+    .cupom__pct{ font-size: 72px; }
+    .cupom__code-block{ grid-template-columns: 1fr; }
+    .cupom__codigo .lbl{ display: none; }
+    .cupom__codigo{ padding: 14px 18px; font-size: 18px; }
+    .cupom__cta{ padding: 14px 20px; justify-content: center; }
+  }
+
+  /* Skeleton */
+  .skel{
+    background: linear-gradient(90deg, var(--pc-cream-100) 0%, var(--pc-cream-200) 50%, var(--pc-cream-100) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+    border-radius: var(--pc-r-sm);
+  }
+  @keyframes shimmer{ 0%{ background-position: 100% 0; } 100%{ background-position: -100% 0; } }
+  .skel-cupom{
+    height: 220px;
+    border: 2px dashed rgba(6,78,59,.18);
+    border-radius: var(--pc-r-lg);
+    background:
+      linear-gradient(90deg, transparent 0 calc(100% - 280px), rgba(220,38,38,.04) calc(100% - 280px) 100%);
+  }
+
+  /* Vazio */
+  .empty{
+    text-align:center; padding: 80px 24px;
+    color: var(--pc-ink-500); font-size: 15px;
+    border: 2px dashed rgba(6,78,59,.18);
+    border-radius: var(--pc-r-lg);
+    background: var(--pc-cream-100);
+  }
+  .empty b{
+    display:block;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 28px; color: var(--pc-emerald-900); margin-bottom: 8px;
+  }
+
+  /* ════════ AVISO DE AFILIADOS (abaixo dos cupons) ════════ */
+  .affiliate-notice{
+    margin-top: 40px;
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 22px;
+    background: var(--pc-cream-100);
+    border: 1px dashed rgba(6,78,59,.22);
+    border-radius: var(--pc-r-md);
+    color: var(--pc-ink-700);
+  }
+  .affiliate-notice .badge{
+    flex: none;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display: grid; place-items: center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
+    font-size: 15px; line-height: 1;
+    margin-top: 2px;
+  }
+  .affiliate-notice p{ margin: 0; font-size: 13.5px; line-height: 1.55; max-width: 80ch; }
+  .affiliate-notice b{ color: var(--pc-emerald-900); font-weight: 700; }
+  .affiliate-notice em{ font-style: italic; color: var(--pc-apple-700); font-weight: 600; }
+
+  /* ════════ FOOTER (idêntico ao index) ════════ */
+  footer.foot{ background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; margin-top: 56px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
+  .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
+  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--pc-gold-400); }
+  .foot-col a.active{ color: var(--pc-gold-400); }
+  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
+  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
+  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
+  .foot-bottom{
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid rgba(255,251,235,.10);
+    display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase;
+  }
+  .foot-disclosure{
+    margin-top: 48px;
+    padding: 16px 20px;
+    border: 1px dashed rgba(245,158,11,.35);
+    border-radius: var(--pc-r-md);
+    background: rgba(245,158,11,.04);
+    font-size: 12.5px;
+    color: rgba(255,251,235,.7);
+    line-height: 1.55;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
+  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
+  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+
+  /* ════════ TOAST ════════ */
+  .toast{
+    position: fixed; bottom: 32px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--pc-emerald-900); color: var(--pc-cream-50);
+    padding: 16px 22px; border-radius: var(--pc-r-pill);
+    font-size: 14.5px; font-weight: 600;
+    box-shadow: var(--pc-shadow-lg);
+    border: 1px solid rgba(245,158,11,.35);
+    opacity: 0; pointer-events: none;
+    transition: opacity .25s ease, transform .3s ease;
+    z-index: 100;
+    display:flex; align-items:center; gap: 12px;
+    max-width: calc(100vw - 32px);
+  }
+  .toast.show{ opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast .seal{
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display: grid; place-items: center;
+    font-size: 14px; font-weight: 800; font-family: var(--pc-font-sans);
+    flex: none;
+  }
+  .toast b{ color: var(--pc-gold-400); font-family: var(--pc-font-mono); letter-spacing: .14em; font-weight: 500; font-size: 11px; }
+  .toast .msg-main{ display:block; }
+  .toast .msg-sub{ display:block; font-weight: 400; color: rgba(255,251,235,.65); font-size: 12px; margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo-lockup">
+        <div class="logo-mark">P</div>
+        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+        <a class="nav-link active" href="cupons.html" aria-current="page">Cupons</a>
+        <a class="nav-link" href="index.html">Lojas</a>
+        <a class="nav-link" href="index.html">Categorias</a>
+        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
+      </div>
+      <div class="nav-cta">
+        <label class="nav-search" aria-label="Buscar">
+          <span class="ic">⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar cupom ou loja…" />
+          <kbd>/</kbd>
+        </label>
+        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ HERO ═══════════════════════════════════════════════ -->
+<header class="doc-hero">
+  <div class="container">
+    <p class="doc-crumb"><a href="index.html">Início</a> &nbsp;/&nbsp; Cupons</p>
+    <p class="eyebrow"><span class="dot"></span>Atualizado hoje · todos os códigos testados</p>
+    <h1>Cupons <em>frescos</em>,<br/>colhidos do <span class="apple">jardim</span>.</h1>
+    <p class="sub">Cada cupom abaixo foi verificado pela nossa equipe nas últimas 24 horas. Clique para copiar o código e ir direto pra loja.</p>
+    <div class="stats">
+      <div class="stat"><b id="statTotal">—</b>cupons ativos</div>
+      <div class="stat"><b id="statLojas">—</b>lojas parceiras</div>
+      <div class="stat"><b>98%</b>códigos verificados</div>
+      <div class="stat"><b>24h</b>frequência de checagem</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ FAIXA DE CATEGORIAS ═══════════════════════════════════════════════ -->
+<div class="cats-strip">
+  <div class="container">
+    <div class="cats-row" id="catsRow">
+      <button class="cat-pill active" data-cat="todas">Todas <span class="count" data-count="todas">—</span></button>
+      <button class="cat-pill" data-cat="Eletrônicos">Eletrônicos <span class="count" data-count="Eletrônicos">—</span></button>
+      <button class="cat-pill" data-cat="Moda">Moda <span class="count" data-count="Moda">—</span></button>
+      <button class="cat-pill" data-cat="Beleza">Beleza <span class="count" data-count="Beleza">—</span></button>
+      <button class="cat-pill" data-cat="Mercado">Mercado <span class="count" data-count="Mercado">—</span></button>
+      <button class="cat-pill" data-cat="Casa">Casa <span class="count" data-count="Casa">—</span></button>
+      <button class="cat-pill" data-cat="Bebidas">Bebidas <span class="count" data-count="Bebidas">—</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ LISTA ═══════════════════════════════════════════════ -->
+<main class="container">
+  <section class="cupons-section">
+    <div class="cupons-head">
+      <div>
+        <p class="eyebrow">A colheita do dia</p>
+        <h2>Todos os <em>cupons</em> ativos</h2>
+      </div>
+      <p class="meta"><b id="visibleCount">—</b> cupons mostrados · ordenados por maior desconto</p>
+    </div>
+
+    <div class="cupons-list" id="cuponsList">
+      <!-- Skeletons iniciais -->
+      <div class="skel-cupom skel"></div>
+      <div class="skel-cupom skel"></div>
+      <div class="skel-cupom skel"></div>
+    </div>
+
+    <!-- Aviso de afiliados -->
+    <aside class="affiliate-notice" role="note">
+      <span class="badge">i</span>
+      <p>
+        <b>Transparência:</b> este site contém links de afiliados. Ao comprar através deles, podemos receber uma comissão — <em>sem custo adicional para você</em>. Isso ajuda a manter a curadoria diária no ar.
+      </p>
+    </aside>
+  </section>
+</main>
+
+<!-- ═══════════════════════════════════════════════ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a href="index.html" class="logo-lockup">
+          <div class="logo-mark">P</div>
+          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+        </a>
+        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="index.html#ofertas">Ofertas do dia</a></li>
+          <li><a href="cupons.html" class="active">Cupons</a></li>
+          <li><a href="index.html">Todas as lojas</a></li>
+          <li><a href="index.html#telegram">Bot do Telegram</a></li>
+          <li><a href="index.html">Blog &amp; guias</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#0f6c60617b6e7b604f7f6e7d6e667c606b607c6c7a7f60617c216c6062216d7d"><span class="__cf_email__" data-cfemail="55363a3b2134213a15253427343c263a313a263620253a3b267b363a387b3727">[email&#160;protected]</span></a></li>
+          <li><a href="#">Reportar cupom inválido</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Divulgação de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-disclosure">
+      <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Paraíso dos Cupons · Todos os direitos reservados</span>
+      <span>Feito com 🍎 no Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════ TOAST ═══════════════════════════════════════════════ -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <div class="seal">✓</div>
+  <div>
+    <b>Cupom copiado</b>
+    <span class="msg-main" id="toastMain">Código copiado!</span>
+    <span class="msg-sub" id="toastSub">Abrindo a loja em uma nova aba…</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ SVG SIMBOLO: maçã mordida ═══════════════════════════════════════════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="maca-mordida" viewBox="0 0 80 80">
+      <!-- Folha verde -->
+      <path d="M44 10 Q56 6 60 14 Q56 22 46 20 Q42 16 44 10 Z"
+            fill="#15876A" stroke="#0B6B52" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- Cabinho -->
+      <path d="M40 22 L42 12" stroke="#7A1313" stroke-width="3" stroke-linecap="round"/>
+      <!-- Corpo da maçã -->
+      <path d="M40 24 C22 24 14 38 14 52 C14 66 24 74 40 74 C56 74 66 66 66 52 C66 38 58 24 40 24 Z"
+            fill="#DC2626" stroke="#7A1313" stroke-width="1.5"/>
+      <!-- Brilho -->
+      <path d="M24 36 Q22 44 26 50" stroke="rgba(255,251,235,.55)" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <!-- A MORDIDA — recorte creme à direita -->
+      <path d="M66 38 C72 40 72 48 64 48 C70 48 70 56 60 56 C56 56 52 50 56 46 C60 42 62 38 66 38 Z"
+            fill="#FFFBEB" stroke="#7A1313" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- Sombrinha dentro da mordida -->
+      <path d="M58 44 Q62 46 63 50" stroke="rgba(122,19,19,.25)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(() => {
+  const $  = (s, c=document) => c.querySelector(s);
+  const $$ = (s, c=document) => [...c.querySelectorAll(s)];
+  const escapeHtml = (s = "") => String(s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+
+  /* ----------- Fallback inline (caso fetch falhe, p.ex. file://) ----------- */
+  const INLINE_FALLBACK = [
+    {"loja":"TechParaíso","desconto":38,"codigo":"POMUM38","descricao":"Smartphone Pomum Pro 256GB com cashback de 5% direto na carteira","link":"https://techparaiso.com.br/pomum-pro-256?ref=paraisodoscupons","validade":"31/05/2026","categoria":"Eletrônicos"},
+    {"loja":"Beleza Pura","desconto":55,"codigo":"EDEN55","descricao":"Perfume floral Édenne 100ml — válido na primeira compra, sem mínimo","link":"https://belezapura.com.br/edenne-floral-100?ref=paraisodoscupons","validade":"20/05/2026","categoria":"Beleza"},
+    {"loja":"Vestir Éden","desconto":46,"codigo":"LINHO46","descricao":"Coleção verão — túnicas de linho natural, acumula com promoções da loja","link":"https://vestireden.com.br/tunica-linho-verao?ref=paraisodoscupons","validade":"15/05/2026","categoria":"Moda"},
+    {"loja":"Adega Edênica","desconto":40,"codigo":"ROMA40","descricao":"Kit 6 garrafas Vinho Romã Reserva — frete grátis para todo o país","link":"https://adegaedenica.com.br/roma-reserva-kit6?ref=paraisodoscupons","validade":"30/06/2026","categoria":"Bebidas"},
+    {"loja":"Casa Pomar","desconto":50,"codigo":"FIGO2X1","descricao":"Luminária Figo dourada — combo 2 unidades pelo preço de 1","link":"https://casapomar.com.br/luminaria-figo?ref=paraisodoscupons","validade":"22/05/2026","categoria":"Casa"},
+    {"loja":"Pomar Fresco","desconto":30,"codigo":"JARDIM30","descricao":"R$ 30 off em cestas acima de R$ 199 — frutas, vegetais e orgânicos","link":"https://pomarfresco.com.br/cestas?ref=paraisodoscupons","validade":"31/12/2026","categoria":"Mercado"},
+    {"loja":"Beleza Pura","desconto":35,"codigo":"EVA35","descricao":"Kit skincare Eva — sérum, hidratante, protetor e máscara + brinde","link":"https://belezapura.com.br/kit-skincare-eva?ref=paraisodoscupons","validade":"18/05/2026","categoria":"Beleza"},
+    {"loja":"TechParaíso","desconto":39,"codigo":"ANC39","descricao":"Fone bluetooth Arcanjo ANC com garantia estendida grátis","link":"https://techparaiso.com.br/arcanjo-anc?ref=paraisodoscupons","validade":"25/05/2026","categoria":"Eletrônicos"}
+  ];
+
+  /* ----------- Estado ----------- */
+  let allCupons = [];
+  let activeCategory = "todas";
+  let searchTerm = "";
+
+  /* ----------- Render do cupom ----------- */
+  function renderCupom(c) {
+    const codigo   = String(c.codigo || "").toUpperCase();
+    const link     = c.link || "#";
+    const desconto = Number(c.desconto || 0);
+    return `
+    <article class="cupom" data-cat="${escapeHtml(c.categoria || "")}">
+      <span class="cupom__picote" aria-hidden="true"></span>
+
+      <div class="cupom__left">
+        <div class="cupom__meta">
+          <span class="cat">${escapeHtml(c.categoria || "—")}</span>
+          ${c.validade ? `<span class="val">${escapeHtml(c.validade)}</span>` : ""}
+        </div>
+        <h3 class="cupom__loja">${escapeHtml(c.loja || "")}</h3>
+        <p class="cupom__desc">${escapeHtml(c.descricao || "")}</p>
+        <div class="cupom__code-block">
+          <div class="cupom__codigo">
+            <span class="lbl">código</span>
+            <span class="code-text">${escapeHtml(codigo)}</span>
+          </div>
+          <button
+            class="cupom__cta"
+            type="button"
+            data-codigo="${escapeHtml(codigo)}"
+            data-link="${escapeHtml(link)}"
+            aria-label="Copiar código ${escapeHtml(codigo)} e ir para a loja ${escapeHtml(c.loja || "")}"
+          >
+            <span class="label-default">Copiar código e ir para a loja <span class="arrow">→</span></span>
+            <span class="label-success">✓ Copiado · indo para a loja…</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cupom__right">
+        <svg class="cupom__maca" aria-hidden="true"><use href="#maca-mordida"/></svg>
+        <div class="cupom__pct-wrap">
+          <div class="cupom__pct">${desconto}<sup>%</sup></div>
+          <div class="cupom__off">desconto</div>
+        </div>
+      </div>
+    </article>`;
+  }
+
+  /* ----------- Render da lista ----------- */
+  function render() {
+    const list = $("#cuponsList");
+    const q = searchTerm.trim().toLowerCase();
+
+    let filtered = allCupons.filter(c => {
+      const matchCat = activeCategory === "todas" || c.categoria === activeCategory;
+      const matchQ = !q ||
+        (c.loja || "").toLowerCase().includes(q) ||
+        (c.codigo || "").toLowerCase().includes(q) ||
+        (c.descricao || "").toLowerCase().includes(q) ||
+        (c.categoria || "").toLowerCase().includes(q);
+      return matchCat && matchQ;
+    });
+
+    // Ordenar por maior desconto
+    filtered.sort((a,b) => (b.desconto || 0) - (a.desconto || 0));
+
+    $("#visibleCount").textContent = filtered.length;
+
+    if (filtered.length === 0) {
+      list.innerHTML = `<div class="empty">
+        <b>Nenhum cupom encontrado</b>
+        Tente outra categoria ou termo de busca.
+      </div>`;
+      return;
+    }
+
+    list.innerHTML = filtered.map(renderCupom).join("");
+    attachEvents(list);
+  }
+
+  /* ----------- Eventos (copiar + abrir) ----------- */
+  function attachEvents(scope) {
+    $$(".cupom__cta", scope).forEach(btn => {
+      btn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const codigo = btn.dataset.codigo;
+        const link   = btn.dataset.link;
+
+        // Copiar
+        let copied = false;
+        try {
+          await navigator.clipboard.writeText(codigo);
+          copied = true;
+        } catch(err) {
+          // Fallback antigo
+          try {
+            const ta = document.createElement("textarea");
+            ta.value = codigo;
+            ta.style.position = "fixed"; ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+            copied = true;
+          } catch(e2) { copied = false; }
+        }
+
+        // Feedback visual no botão
+        btn.classList.add("copied");
+        setTimeout(() => btn.classList.remove("copied"), 2400);
+
+        // Toast
+        showToast(copied ? "Código copiado!" : "Não foi possível copiar — código:", `Abrindo a loja em uma nova aba…`, codigo);
+
+        // Abrir a loja em nova aba (com pequeno atraso para ler o toast)
+        if (link && link !== "#") {
+          setTimeout(() => {
+            window.open(link, "_blank", "noopener,noreferrer");
+          }, 220);
+        }
+      });
+    });
+  }
+
+  /* ----------- Toast ----------- */
+  let toastTimer;
+  function showToast(main, sub, codigo) {
+    const toast = $("#toast");
+    $("#toastMain").innerHTML = main + (codigo && !main.includes("copiado") ? ` <code style="font-family: var(--pc-font-mono); background: rgba(255,251,235,.12); padding: 2px 8px; border-radius: 4px; color: var(--pc-gold-400); letter-spacing: .14em;">${escapeHtml(codigo)}</code>` : "");
+    $("#toastSub").textContent = sub;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 2800);
+  }
+
+  /* ----------- Categorias ----------- */
+  $$(".cat-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      $$(".cat-pill").forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      activeCategory = pill.dataset.cat;
+      render();
+      // scroll suave de volta ao topo da lista
+      const top = $("#cuponsList").getBoundingClientRect().top + window.scrollY - 180;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
+
+  function updateCategoryCounts() {
+    const counts = { todas: allCupons.length };
+    allCupons.forEach(c => { counts[c.categoria] = (counts[c.categoria] || 0) + 1; });
+    $$("[data-count]").forEach(el => {
+      const cat = el.dataset.count;
+      el.textContent = counts[cat] || 0;
+    });
+  }
+
+  /* ----------- Busca (atalho /) ----------- */
+  const searchInput = $("#searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchTerm = e.target.value;
+      render();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "/" && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+
+  /* ----------- Stats no hero ----------- */
+  function updateHeroStats() {
+    $("#statTotal").textContent = allCupons.length;
+    const lojasUnicas = new Set(allCupons.map(c => c.loja).filter(Boolean));
+    $("#statLojas").textContent = lojasUnicas.size;
+  }
+
+  /* ----------- Carregar ----------- */
+  async function load() {
+    try {
+      const res = await fetch("cupons.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      allCupons = await res.json();
+    } catch (err) {
+      console.warn("Falha no fetch — usando fallback inline.", err);
+      allCupons = INLINE_FALLBACK;
+    }
+    updateCategoryCounts();
+    updateHeroStats();
+    render();
+  }
+
+  load();
+})();
+</script>
+
+</body>
+</html>
