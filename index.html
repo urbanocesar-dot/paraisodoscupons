@@ -1007,9 +1007,7 @@ de você procurar.</h3>
     <article class="pc-card ${featured ? "pc-card--featured" : ""}" data-cat="${escapeHtml(cat)}">
       <a class="pc-card__media" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(o.titulo)} na loja ${escapeHtml(o.loja)}">
         ${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.remove()"/>` : ""}
-        <div class="corner">
-          <span class="pc-badge-corner">-${o.desconto}%<span>desconto</span></span>
-        </div>
+        ${o.desconto > 0 ? `<div class="corner"><span class="pc-badge-corner">-${o.desconto}%<span>desconto</span></span></div>` : ""}
         <button class="save" type="button" aria-label="Salvar oferta" onclick="event.preventDefault(); event.stopPropagation();">♡</button>
         ${!img ? `<span class="ph">[ ${escapeHtml(cat.toLowerCase())} ]</span>` : ""}
       </a>
