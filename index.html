@@ -809,9 +809,9 @@
           <a href="#telegram" class="pc-btn ghost-light">Receber no Telegram</a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><b>1.240+</b>cupons ativos hoje</div>
-          <div class="stat"><b>R$ 87M</b>economia gerada em 2025</div>
-          <div class="stat"><b>98%</b>códigos verificados</div>
+          <div class="stat"><b>Diária</b>curadoria atualizada</div>
+          <div class="stat"><b>Manual</b>verificação de cada código</div>
+          <div class="stat"><b>Zero</b>spam — você escolhe os alertas</div>
         </div>
       </div>
 
@@ -901,11 +901,11 @@ de você procurar.</h3>
             </div>
           </div>
           <div class="tg-msgs">
-            <div class="tg-msg">Boa tarde 🍎 Achei <em>3 maçãs proibidas</em> para você hoje.</div>
-            <div class="tg-msg user">/ofertas eletrônicos</div>
+            <div class="tg-msg">Boa tarde 🍎 Encontrei uma oferta para você em <em>Eletrônicos</em>.</div>
+            <div class="tg-msg user">/listar</div>
             <div class="tg-msg">
-              <b>Pomum Pro 256GB</b> — <em>-38% só hoje</em><br/>
-              Código: <span class="code">POMUM38</span>
+              Você monitora <b>2 produtos</b>.<br/>
+              Use <span class="code">/adicionar</span> para incluir mais.
             </div>
             <div class="tg-typing" aria-label="digitando">
               <span></span><span></span><span></span>
@@ -1154,12 +1154,7 @@ de você procurar.</h3>
   /* ----------------------------------------------------------
      Fallback inline (caso fetch falhe — file://, sem servidor)
   ---------------------------------------------------------- */
-  const INLINE_FALLBACK = [
-    {"titulo":"Smartphone Pomum Pro 256GB","loja":"TechParaíso","desconto":38,"preco_original":4099.00,"preco_final":2499.00,"link_afiliado":"https://techparaiso.com.br/pomum-pro-256?ref=paraisodoscupons","categoria":"Eletrônicos","imagem_url":"https://picsum.photos/seed/pomum-pro/720/540","destaque":true},
-    {"titulo":"Perfume floral Édenne 100ml","loja":"Beleza Pura","desconto":55,"preco_original":329.90,"preco_final":149.90,"link_afiliado":"https://belezapura.com.br/edenne-floral-100?ref=paraisodoscupons","categoria":"Beleza","imagem_url":"https://picsum.photos/seed/edenne-perfume/720/540","destaque":false},
-    {"titulo":"Túnica linho natural — coleção verão","loja":"Vestir Éden","desconto":46,"preco_original":349.00,"preco_final":189.00,"link_afiliado":"https://vestireden.com.br/tunica-linho-verao?ref=paraisodoscupons","categoria":"Moda","imagem_url":"https://picsum.photos/seed/tunica-linho/720/540","destaque":true},
-    {"titulo":"Vinho Romã Reserva — kit 6 garrafas","loja":"Adega Edênica","desconto":40,"preco_original":599.00,"preco_final":359.00,"link_afiliado":"https://adegaedenica.com.br/roma-reserva-kit6?ref=paraisodoscupons","categoria":"Bebidas","imagem_url":"https://picsum.photos/seed/vinho-roma/720/540","destaque":false}
-  ];
+  const INLINE_FALLBACK = [];
 
   loadOffers();
 })();
