@@ -567,14 +567,16 @@
     .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 
   /* ── Fallback inline (caso fetch falhe — file://, sem servidor) ── */
-  const INLINE_FALLBACK = [
-    {"nome_campanha":"Esquenta dia das mães — até 60% off","loja":"Beleza Pura","categoria":"Beleza","imagem_url":"https://picsum.photos/seed/beleza-pura-mae/960/640","link":"https://belezapura.com.br/dia-das-maes?ref=paraisodoscupons","validade":"27/05/2026","destaque":true},
-    {"nome_campanha":"Festival Pomum Pro — frete grátis Brasil","loja":"TechParaíso","categoria":"Eletrônicos","imagem_url":"https://picsum.photos/seed/techparaiso-festival/960/640","link":"https://techparaiso.com.br/festival-pomum?ref=paraisodoscupons","validade":"31/05/2026","destaque":true},
-    {"nome_campanha":"Coleção verão — linho 46% off","loja":"Vestir Éden","categoria":"Moda","imagem_url":"https://picsum.photos/seed/vestir-eden-verao/960/640","link":"https://vestireden.com.br/colecao-verao?ref=paraisodoscupons","validade":"15/05/2026","destaque":false},
-    {"nome_campanha":"Kit 6 vinhos com 40% de desconto","loja":"Adega Edênica","categoria":"Bebidas","imagem_url":"https://picsum.photos/seed/adega-edenica/960/640","link":"https://adegaedenica.com.br/kit6?ref=paraisodoscupons","validade":"30/06/2026","destaque":false},
-    {"nome_campanha":"Combo 2x1 em iluminação dourada","loja":"Casa Pomar","categoria":"Casa","imagem_url":"https://picsum.photos/seed/casa-pomar/960/640","link":"https://casapomar.com.br/iluminacao-2x1?ref=paraisodoscupons","validade":"22/05/2026","destaque":false},
-    {"nome_campanha":"Cesta orgânica — R$ 30 off acima de R$ 199","loja":"Pomar Fresco","categoria":"Mercado","imagem_url":"https://picsum.photos/seed/pomar-fresco/960/640","link":"https://pomarfresco.com.br/organicos?ref=paraisodoscupons","validade":"31/12/2026","destaque":false}
-  ];
+  const INLINE_FALLBACK = [];
+
+  const IMG_FALLBACK = {
+    "Eletrônicos": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=960&q=80",
+    "Moda":        "https://images.unsplash.com/photo-1445205170230-053b83016050?w=960&q=80",
+    "Beleza":      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=960&q=80",
+    "Casa":        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=960&q=80",
+    "Mercado":     "https://images.unsplash.com/photo-1542838132-92c53300491e?w=960&q=80",
+    "Bebidas":     "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=960&q=80",
+  };
 
   /* ── Estado ── */
   let allLojas = [];
@@ -585,15 +587,14 @@
   function renderCard(l) {
     const cat   = l.categoria || "";
     const link  = l.link || "#";
-    const img   = l.imagem_url || "";
+    const img   = l.imagem_url || IMG_FALLBACK[l.categoria] || "";
     const featured = !!l.destaque;
     return `
     <article class="loja" data-cat="${escapeHtml(cat)}">
       <a class="loja__media" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")}">
         ${cat ? `<span class="loja__tag">${escapeHtml(cat)}</span>` : ""}
         ${featured ? `<span class="loja__destaque"><span class="dot"></span>Destaque</span>` : ""}
-        ${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.remove()"/>` : ""}
-        ${!img ? `<span class="ph">[ ${escapeHtml((cat || "loja").toLowerCase())} ]</span>` : ""}
+        <img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.src=IMG_FALLBACK['${escapeHtml(cat)}'] || ''"/>
       </a>
       <div class="loja__body">
         <p class="loja__store">${escapeHtml(l.loja || "")}</p>
