@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lojas Parceiras — Paraíso dos Cupons</title>
+<meta name="description" content="Conheça as lojas parceiras do Paraíso dos Cupons e suas campanhas ativas." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  /* ════════ TOKENS ════════ */
+  :root{
+    --pc-emerald-900:#03261D; --pc-emerald-800:#064E3B; --pc-emerald-700:#0B6B52;
+    --pc-emerald-600:#15876A; --pc-emerald-500:#1FA683; --pc-emerald-100:#D6EDE3; --pc-emerald-50:#EAF4EE;
+    --pc-apple-900:#7A1313; --pc-apple-700:#A21C1C; --pc-apple-600:#DC2626; --pc-apple-500:#EF4444; --pc-apple-100:#FCE4E4;
+    --pc-gold-700:#B45309; --pc-gold-600:#D97706; --pc-gold-500:#F59E0B; --pc-gold-400:#FBBF24; --pc-gold-100:#FEF3C7;
+    --pc-cream-50:#FFFBEB; --pc-cream-100:#FAF3DE; --pc-cream-200:#F1E7C8; --pc-cream-300:#E5D6A6;
+    --pc-ink-900:#1B2A24; --pc-ink-700:#3D4E47; --pc-ink-500:#6B7A73; --pc-ink-300:#A8B3AD;
+    --pc-font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --pc-font-sans:  "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --pc-font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --pc-r-sm:6px; --pc-r-md:10px; --pc-r-lg:16px; --pc-r-pill:999px;
+    --pc-shadow-sm: 0 1px 2px rgba(3,38,29,.06), 0 1px 1px rgba(3,38,29,.04);
+    --pc-shadow-md: 0 6px 16px -8px rgba(3,38,29,.22), 0 2px 6px -2px rgba(3,38,29,.10);
+    --pc-shadow-lg: 0 24px 48px -24px rgba(3,38,29,.35), 0 8px 16px -8px rgba(3,38,29,.18);
+    --pc-shadow-apple: 0 10px 24px -10px rgba(220,38,38,.45);
+    --pc-shadow-gold: 0 10px 30px -12px rgba(245,158,11,.55);
+    --pc-container: 1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: var(--pc-font-sans); color: var(--pc-ink-900);
+    background: var(--pc-cream-50);
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    font-size:16px; line-height:1.55;
+  }
+  a{ color: inherit; text-decoration: none; }
+  img{ display:block; max-width:100%; }
+  .container{ max-width: var(--pc-container); margin: 0 auto; padding: 0 32px; }
+
+  /* ════════ BOTÃO ════════ */
+  .pc-btn{
+    --bg: var(--pc-apple-600); --bg-hover: var(--pc-apple-700); --fg: var(--pc-cream-50); --bd: transparent;
+    appearance:none; border:1px solid var(--bd);
+    background: var(--bg); color: var(--fg);
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px;
+    padding: 14px 22px; border-radius: var(--pc-r-pill);
+    cursor: pointer; display:inline-flex; align-items:center; justify-content:center; gap: 10px; line-height: 1;
+    transition: transform .12s ease, box-shadow .2s ease, background .15s ease;
+    box-shadow: var(--pc-shadow-apple);
+  }
+  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
+  .pc-btn:focus-visible{ outline: 2px solid var(--pc-gold-500); outline-offset: 3px; }
+  .pc-btn .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; transform: translateY(-1px); }
+  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); box-shadow: 0 10px 24px -14px rgba(3,38,29,.55); }
+  .pc-btn--gold{ --bg: var(--pc-gold-500); --bg-hover: var(--pc-gold-600); --fg: var(--pc-emerald-900); box-shadow: var(--pc-shadow-gold); }
+  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
+
+  /* ════════ NAVBAR ════════ */
+  .nav-wrap{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,251,235,.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6,78,59,.08);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height: 76px; }
+  .logo-lockup{ display:flex; align-items:center; gap: 14px; color: var(--pc-emerald-900); }
+  .logo-mark{
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 22px;
+    box-shadow: inset 0 0 0 1px rgba(3,38,29,.15);
+  }
+  .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
+  .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
+  .nav-links{ display:flex; align-items:center; gap: 8px; }
+  .nav-link{
+    font-size: 14px; font-weight: 600; color: var(--pc-emerald-900);
+    padding: 10px 14px; border-radius: var(--pc-r-pill);
+    transition: background .15s ease, color .15s ease;
+    position: relative;
+  }
+  .nav-link:hover{ background: rgba(6,78,59,.07); }
+  .nav-link.active{
+    color: var(--pc-apple-600); background: var(--pc-apple-100);
+  }
+  .nav-link.active::after{
+    content:""; position: absolute;
+    left: 16px; right: 16px; bottom: 4px;
+    height: 2px; border-radius: 2px;
+    background: var(--pc-apple-600);
+  }
+  .nav-cta{ display:flex; align-items:center; gap: 12px; }
+  .nav-search{
+    display:flex; align-items:center; gap: 10px;
+    background: #fff; border:1px solid var(--pc-cream-200);
+    border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px;
+    min-width: 280px; box-shadow: var(--pc-shadow-sm);
+  }
+  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
+  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
+  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
+  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+
+  /* ════════ HERO ════════ */
+  .doc-hero{
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(120% 80% at 92% 8%, rgba(245,158,11,.18), transparent 60%),
+      radial-gradient(70% 60% at 5% 100%, rgba(31,166,131,.18), transparent 70%),
+      linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+    padding: 72px 0 88px;
+  }
+  .doc-hero::before, .doc-hero::after{
+    content:""; position:absolute; border-radius: 50%; pointer-events:none;
+  }
+  .doc-hero::before{ width: 420px; height: 420px; right: -160px; top: -160px; border: 1px solid rgba(245,158,11,.22); }
+  .doc-hero::after{ width: 260px; height: 260px; right: -60px; top: 60px; border: 1px solid rgba(214,237,227,.12); }
+  .doc-hero .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-gold-400); margin: 0;
+    display:inline-flex; align-items:center; gap: 12px;
+  }
+  .doc-hero .eyebrow .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-gold-500); }
+  .doc-hero h1{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(48px, 6vw, 78px); line-height: .98;
+    letter-spacing:-.02em; margin: 22px 0 0; max-width: 18ch;
+  }
+  .doc-hero h1 em{ color: var(--pc-gold-500); font-style: italic; }
+  .doc-hero .sub{ margin-top: 20px; font-size: 17px; line-height: 1.5; color: rgba(255,251,235,.78); max-width: 60ch; }
+  .doc-crumb{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: rgba(255,251,235,.55); margin-bottom: 8px;
+  }
+  .doc-crumb a{ color: var(--pc-gold-400); }
+  .doc-crumb a:hover{ text-decoration: underline; }
+
+  /* ════════ FAIXA DE CATEGORIAS ════════ */
+  .cats-strip{
+    background: var(--pc-cream-100);
+    border-bottom: 1px solid var(--pc-cream-200);
+    padding: 18px 0;
+    position: sticky; top: 76px; z-index: 40;
+  }
+  .cats-row{
+    display:flex; gap: 8px; align-items:center;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .cats-row::-webkit-scrollbar{ display:none; }
+  .cat-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid var(--pc-cream-200);
+    color: var(--pc-emerald-800);
+    font-family: inherit; font-weight: 600; font-size: 13px;
+    border-radius: var(--pc-r-pill);
+    white-space:nowrap; cursor: pointer;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .cat-pill:hover{ background: var(--pc-emerald-50); }
+  .cat-pill.active{ background: var(--pc-emerald-800); color: var(--pc-cream-50); border-color: var(--pc-emerald-800); }
+  .cat-pill .count{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    background: var(--pc-cream-100); color: var(--pc-emerald-800);
+    padding: 2px 6px; border-radius: 999px;
+  }
+  .cat-pill.active .count{ background: rgba(245,158,11,.25); color: var(--pc-gold-400); }
+
+  /* ════════ SEÇÃO DE LOJAS ════════ */
+  .lojas-section{ padding: 56px 0 80px; }
+  .lojas-head{ display:flex; justify-content:space-between; align-items:flex-end; gap: 32px; margin-bottom: 32px; }
+  .lojas-head .eyebrow{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
+    text-transform:uppercase; color: var(--pc-emerald-700); margin:0;
+  }
+  .lojas-head h2{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: 38px; line-height: 1.05;
+    letter-spacing:-.015em; color: var(--pc-emerald-900); margin: 8px 0 0;
+  }
+  .lojas-head h2 em{ color: var(--pc-apple-600); font-style: italic; }
+  .lojas-head .meta{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing:.18em; text-transform:uppercase; color: var(--pc-ink-500);
+  }
+  .lojas-head .meta b{ color: var(--pc-emerald-800); font-weight: 500; }
+
+  /* ════════ GRID DE LOJAS ════════ */
+  .lojas-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 980px){ .lojas-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px){ .lojas-grid{ grid-template-columns: 1fr; } }
+
+  .loja{
+    background: #fff;
+    border-radius: var(--pc-r-lg);
+    overflow: hidden;
+    border: 1px solid rgba(6,78,59,.08);
+    box-shadow: var(--pc-shadow-md);
+    display: flex; flex-direction: column;
+    position: relative;
+    transition: transform .2s ease, box-shadow .25s ease, border-color .2s ease;
+  }
+  .loja:hover{
+    transform: translateY(-3px);
+    box-shadow: var(--pc-shadow-lg);
+    border-color: var(--pc-gold-500);
+  }
+
+  /* Mídia / banner */
+  .loja__media{
+    position: relative;
+    aspect-ratio: 3 / 2;
+    background:
+      repeating-linear-gradient(135deg, rgba(6,78,59,.045) 0 10px, transparent 10px 22px),
+      linear-gradient(160deg, var(--pc-emerald-50), var(--pc-cream-100));
+    overflow: hidden;
+    color: var(--pc-emerald-800);
+    display: grid; place-items: center;
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em; text-transform:uppercase;
+  }
+  .loja__media img{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform .4s ease;
+  }
+  .loja:hover .loja__media img{ transform: scale(1.04); }
+  .loja__media .ph{ position: relative; z-index: 1; }
+
+  /* Tag de categoria (canto superior esquerdo) */
+  .loja__tag{
+    position: absolute; top: 14px; left: 14px; z-index: 2;
+    background: var(--pc-cream-50);
+    color: var(--pc-emerald-800);
+    font-family: var(--pc-font-sans); font-weight: 700;
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: var(--pc-r-pill);
+    box-shadow: var(--pc-shadow-sm);
+  }
+  /* Selo dourado de destaque (canto superior direito) */
+  .loja__destaque{
+    position: absolute; top: 14px; right: 14px; z-index: 2;
+    background: var(--pc-gold-500);
+    color: var(--pc-emerald-900);
+    font-family: var(--pc-font-sans); font-weight: 800;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: var(--pc-r-pill);
+    display: inline-flex; align-items: center; gap: 6px;
+    box-shadow: var(--pc-shadow-gold);
+  }
+  .loja__destaque .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-emerald-900); }
+
+  /* Corpo */
+  .loja__body{
+    padding: 22px 22px 0;
+    display: flex; flex-direction: column; gap: 12px; flex: 1;
+  }
+  .loja__store{
+    font-family: var(--pc-font-mono); font-size: 11px;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--pc-emerald-700); font-weight: 600;
+    margin: 0;
+  }
+  .loja__campaign{
+    font-family: var(--pc-font-serif); font-weight: 500;
+    font-size: 22px; line-height: 1.18;
+    color: var(--pc-emerald-900); margin: 0;
+    letter-spacing: -.01em;
+  }
+  .loja__campaign em{ font-style: italic; color: var(--pc-emerald-700); }
+
+  /* Linha de validade */
+  .loja__validade{
+    display: flex; align-items: center; gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(6,78,59,.18);
+    font-size: 13px; color: var(--pc-ink-700);
+  }
+  .loja__validade .ic{
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--pc-gold-100); color: var(--pc-gold-700);
+    display: grid; place-items: center;
+    font-family: var(--pc-font-serif); font-weight: 600; font-style: italic;
+    font-size: 13px; line-height: 1; flex: none;
+  }
+  .loja__validade b{ color: var(--pc-emerald-900); font-weight: 600; }
+
+  /* Footer / CTA */
+  .loja__footer{ padding: 18px 22px 22px; }
+  .loja__cta{
+    display: flex; width: 100%;
+    align-items: center; justify-content: center; gap: 10px;
+    background: var(--pc-apple-600); color: var(--pc-cream-50);
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 14px;
+    padding: 14px 18px;
+    border-radius: var(--pc-r-pill);
+    transition: background .15s ease, transform .12s ease;
+    box-shadow: var(--pc-shadow-apple);
+  }
+  .loja__cta:hover{ background: var(--pc-apple-700); transform: translateY(-1px); }
+  .loja__cta .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; }
+
+  /* ════════ SKELETON ════════ */
+  .skel{
+    background: linear-gradient(90deg, var(--pc-cream-100) 0%, var(--pc-cream-200) 50%, var(--pc-cream-100) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+    border-radius: var(--pc-r-sm);
+  }
+  @keyframes shimmer{ 0%{ background-position: 100% 0; } 100%{ background-position: -100% 0; } }
+  .skel-card{
+    background: #fff;
+    border: 1px solid rgba(6,78,59,.08);
+    border-radius: var(--pc-r-lg);
+    overflow: hidden;
+    box-shadow: var(--pc-shadow-md);
+  }
+  .skel-card .skel-media{ aspect-ratio: 3/2; }
+  .skel-card .skel-body{ padding: 22px; display: flex; flex-direction: column; gap: 10px; }
+  .skel-card .skel-line{ height: 12px; border-radius: 4px; }
+  .skel-card .skel-line.t{ height: 22px; width: 90%; }
+  .skel-card .skel-line.s{ width: 55%; }
+  .skel-card .skel-line.f{ width: 70%; margin-top: 12px; }
+
+  /* ════════ ESTADO VAZIO ════════ */
+  .empty{
+    text-align: center;
+    padding: 80px 24px;
+    border: 2px dashed rgba(6,78,59,.18);
+    border-radius: var(--pc-r-lg);
+    background: var(--pc-cream-100);
+    color: var(--pc-ink-500);
+    grid-column: 1 / -1;
+  }
+  .empty .seal{
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    margin: 0 auto 20px;
+    display: grid; place-items: center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
+    font-size: 36px; line-height: 1;
+    box-shadow: var(--pc-shadow-gold);
+    position: relative;
+  }
+  .empty .seal::before{
+    content:""; position: absolute; inset: 4px;
+    border-radius: 50%;
+    border: 1px dashed rgba(3,38,29,.25);
+  }
+  .empty b{
+    display: block;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
+    font-size: 32px; color: var(--pc-emerald-900);
+    margin-bottom: 8px;
+    letter-spacing: -.01em;
+  }
+  .empty p{ margin: 0 auto; max-width: 44ch; font-size: 15px; line-height: 1.55; color: var(--pc-ink-700); }
+  .empty .cta-row{ margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* ════════ AVISO AFILIADOS ════════ */
+  .affiliate-notice{
+    margin-top: 40px;
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 22px;
+    background: var(--pc-cream-100);
+    border: 1px dashed rgba(6,78,59,.22);
+    border-radius: var(--pc-r-md);
+    color: var(--pc-ink-700);
+  }
+  .affiliate-notice .badge{
+    flex: none;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display: grid; place-items: center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
+    font-size: 15px; line-height: 1; margin-top: 2px;
+  }
+  .affiliate-notice p{ margin: 0; font-size: 13.5px; line-height: 1.55; max-width: 80ch; }
+  .affiliate-notice b{ color: var(--pc-emerald-900); font-weight: 700; }
+  .affiliate-notice em{ font-style: italic; color: var(--pc-apple-700); font-weight: 600; }
+
+  /* ════════ FOOTER (idêntico) ════════ */
+  footer.foot{ background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; margin-top: 56px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
+  .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
+  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--pc-gold-400); }
+  .foot-col a.active{ color: var(--pc-gold-400); }
+  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
+  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
+  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
+  .foot-bottom{
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid rgba(255,251,235,.10);
+    display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap;
+    font-family: var(--pc-font-mono); font-size: 11px;
+    color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase;
+  }
+  .foot-disclosure{
+    margin-top: 48px;
+    padding: 16px 20px;
+    border: 1px dashed rgba(245,158,11,.35);
+    border-radius: var(--pc-r-md);
+    background: rgba(245,158,11,.04);
+    font-size: 12.5px;
+    color: rgba(255,251,235,.7);
+    line-height: 1.55;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
+  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
+  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo-lockup">
+        <div class="logo-mark">P</div>
+        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+        <a class="nav-link" href="cupons.html">Cupons</a>
+        <a class="nav-link active" href="lojas.html" aria-current="page">Lojas</a>
+        <a class="nav-link" href="index.html">Categorias</a>
+        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
+      </div>
+      <div class="nav-cta">
+        <label class="nav-search" aria-label="Buscar">
+          <span class="ic">⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar loja ou campanha…" />
+          <kbd>/</kbd>
+        </label>
+        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ HERO ═══════════════════════════════════════════════ -->
+<header class="doc-hero">
+  <div class="container">
+    <p class="doc-crumb"><a href="index.html">Início</a> &nbsp;/&nbsp; Lojas</p>
+    <p class="eyebrow"><span class="dot"></span>Curadoria · campanhas ativas</p>
+    <h1>Lojas <em>parceiras</em></h1>
+    <p class="sub">As marcas do jardim que confiam na nossa curadoria. Veja as campanhas ativas e clique para ir direto à oferta da loja.</p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════ FAIXA DE CATEGORIAS ═══════════════════════════════════════════════ -->
+<div class="cats-strip">
+  <div class="container">
+    <div class="cats-row" id="catsRow">
+      <button class="cat-pill active" data-cat="todas">Todas <span class="count" data-count="todas">—</span></button>
+      <button class="cat-pill" data-cat="Eletrônicos">Eletrônicos <span class="count" data-count="Eletrônicos">—</span></button>
+      <button class="cat-pill" data-cat="Moda">Moda <span class="count" data-count="Moda">—</span></button>
+      <button class="cat-pill" data-cat="Beleza">Beleza <span class="count" data-count="Beleza">—</span></button>
+      <button class="cat-pill" data-cat="Mercado">Mercado <span class="count" data-count="Mercado">—</span></button>
+      <button class="cat-pill" data-cat="Casa">Casa <span class="count" data-count="Casa">—</span></button>
+      <button class="cat-pill" data-cat="Bebidas">Bebidas <span class="count" data-count="Bebidas">—</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ GRID ═══════════════════════════════════════════════ -->
+<main class="container">
+  <section class="lojas-section">
+    <div class="lojas-head">
+      <div>
+        <p class="eyebrow">Campanhas ativas</p>
+        <h2>Marcas do <em>jardim</em></h2>
+      </div>
+      <p class="meta"><b id="visibleCount">—</b> campanhas mostradas · destaques no topo</p>
+    </div>
+
+    <div class="lojas-grid" id="lojasGrid">
+      <!-- skeletons iniciais -->
+      <div class="skel-card"><div class="skel-media skel"></div><div class="skel-body"><div class="skel-line s skel"></div><div class="skel-line t skel"></div><div class="skel-line f skel"></div></div></div>
+      <div class="skel-card"><div class="skel-media skel"></div><div class="skel-body"><div class="skel-line s skel"></div><div class="skel-line t skel"></div><div class="skel-line f skel"></div></div></div>
+      <div class="skel-card"><div class="skel-media skel"></div><div class="skel-body"><div class="skel-line s skel"></div><div class="skel-line t skel"></div><div class="skel-line f skel"></div></div></div>
+    </div>
+
+    <aside class="affiliate-notice" role="note">
+      <span class="badge">i</span>
+      <p>
+        <b>Transparência:</b> este site contém links de afiliados. Ao comprar através deles, podemos receber uma comissão — <em>sem custo adicional para você</em>. Isso ajuda a manter a curadoria diária no ar.
+      </p>
+    </aside>
+  </section>
+</main>
+
+<!-- ═══════════════════════════════════════════════ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a href="index.html" class="logo-lockup">
+          <div class="logo-mark">P</div>
+          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+        </a>
+        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="index.html#ofertas">Ofertas do dia</a></li>
+          <li><a href="cupons.html">Cupons</a></li>
+          <li><a href="lojas.html" class="active">Lojas parceiras</a></li>
+          <li><a href="index.html#telegram">Bot do Telegram</a></li>
+          <li><a href="index.html">Blog &amp; guias</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#167579786277627956667764777f65797279657563667978653875797b387464"><span class="__cf_email__" data-cfemail="bbd8d4d5cfdacfd4fbcbdac9dad2c8d4dfd4c8d8cecbd4d5c895d8d4d695d9c9">[email&#160;protected]</span></a></li>
+          <li><a href="#">Reportar cupom inválido</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Divulgação de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-disclosure">
+      <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Paraíso dos Cupons · Todos os direitos reservados</span>
+      <span>Feito com 🍎 no Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(() => {
+  const $  = (s, c=document) => c.querySelector(s);
+  const $$ = (s, c=document) => [...c.querySelectorAll(s)];
+  const escapeHtml = (s = "") => String(s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+
+  /* ── Fallback inline (caso fetch falhe — file://, sem servidor) ── */
+  const INLINE_FALLBACK = [
+    {"nome_campanha":"Esquenta dia das mães — até 60% off","loja":"Beleza Pura","categoria":"Beleza","imagem_url":"https://picsum.photos/seed/beleza-pura-mae/960/640","link":"https://belezapura.com.br/dia-das-maes?ref=paraisodoscupons","validade":"27/05/2026","destaque":true},
+    {"nome_campanha":"Festival Pomum Pro — frete grátis Brasil","loja":"TechParaíso","categoria":"Eletrônicos","imagem_url":"https://picsum.photos/seed/techparaiso-festival/960/640","link":"https://techparaiso.com.br/festival-pomum?ref=paraisodoscupons","validade":"31/05/2026","destaque":true},
+    {"nome_campanha":"Coleção verão — linho 46% off","loja":"Vestir Éden","categoria":"Moda","imagem_url":"https://picsum.photos/seed/vestir-eden-verao/960/640","link":"https://vestireden.com.br/colecao-verao?ref=paraisodoscupons","validade":"15/05/2026","destaque":false},
+    {"nome_campanha":"Kit 6 vinhos com 40% de desconto","loja":"Adega Edênica","categoria":"Bebidas","imagem_url":"https://picsum.photos/seed/adega-edenica/960/640","link":"https://adegaedenica.com.br/kit6?ref=paraisodoscupons","validade":"30/06/2026","destaque":false},
+    {"nome_campanha":"Combo 2x1 em iluminação dourada","loja":"Casa Pomar","categoria":"Casa","imagem_url":"https://picsum.photos/seed/casa-pomar/960/640","link":"https://casapomar.com.br/iluminacao-2x1?ref=paraisodoscupons","validade":"22/05/2026","destaque":false},
+    {"nome_campanha":"Cesta orgânica — R$ 30 off acima de R$ 199","loja":"Pomar Fresco","categoria":"Mercado","imagem_url":"https://picsum.photos/seed/pomar-fresco/960/640","link":"https://pomarfresco.com.br/organicos?ref=paraisodoscupons","validade":"31/12/2026","destaque":false}
+  ];
+
+  /* ── Estado ── */
+  let allLojas = [];
+  let activeCategory = "todas";
+  let searchTerm = "";
+
+  /* ── Render do card ── */
+  function renderCard(l) {
+    const cat   = l.categoria || "";
+    const link  = l.link || "#";
+    const img   = l.imagem_url || "";
+    const featured = !!l.destaque;
+    return `
+    <article class="loja" data-cat="${escapeHtml(cat)}">
+      <a class="loja__media" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")}">
+        ${cat ? `<span class="loja__tag">${escapeHtml(cat)}</span>` : ""}
+        ${featured ? `<span class="loja__destaque"><span class="dot"></span>Destaque</span>` : ""}
+        ${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.remove()"/>` : ""}
+        ${!img ? `<span class="ph">[ ${escapeHtml((cat || "loja").toLowerCase())} ]</span>` : ""}
+      </a>
+      <div class="loja__body">
+        <p class="loja__store">${escapeHtml(l.loja || "")}</p>
+        <h3 class="loja__campaign">${escapeHtml(l.nome_campanha || "")}</h3>
+        ${l.validade ? `
+          <div class="loja__validade">
+            <span class="ic">⏱</span>
+            <span>válido até <b>${escapeHtml(l.validade)}</b></span>
+          </div>` : ""}
+      </div>
+      <div class="loja__footer">
+        <a class="loja__cta" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")} na loja ${escapeHtml(l.loja || "")}">
+          Ver oferta <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>`;
+  }
+
+  /* ── Render da lista ── */
+  function render() {
+    const grid = $("#lojasGrid");
+    const q = searchTerm.trim().toLowerCase();
+
+    let filtered = allLojas.filter(l => {
+      const matchCat = activeCategory === "todas" || l.categoria === activeCategory;
+      const matchQ = !q ||
+        (l.loja || "").toLowerCase().includes(q) ||
+        (l.nome_campanha || "").toLowerCase().includes(q) ||
+        (l.categoria || "").toLowerCase().includes(q);
+      return matchCat && matchQ;
+    });
+
+    // destaques primeiro
+    filtered.sort((a,b) => (b.destaque ? 1 : 0) - (a.destaque ? 1 : 0));
+
+    $("#visibleCount").textContent = filtered.length;
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div class="empty">
+          <div class="seal">∅</div>
+          <b>Nada por aqui ainda</b>
+          <p>Ainda não há campanhas ativas nesta categoria. Tente outra categoria ou volte em breve — a colheita do jardim é diária.</p>
+          <div class="cta-row">
+            <a href="index.html#ofertas" class="pc-btn">Ver ofertas do dia <span class="arrow">→</span></a>
+            <a href="index.html#telegram" class="pc-btn pc-btn--secondary">Receber alertas no Telegram</a>
+          </div>
+        </div>`;
+      return;
+    }
+
+    grid.innerHTML = filtered.map(renderCard).join("");
+  }
+
+  /* ── Categorias + contagem ── */
+  $$(".cat-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      $$(".cat-pill").forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      activeCategory = pill.dataset.cat;
+      render();
+      const top = $("#lojasGrid").getBoundingClientRect().top + window.scrollY - 180;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
+
+  function updateCategoryCounts() {
+    const counts = { todas: allLojas.length };
+    allLojas.forEach(l => { counts[l.categoria] = (counts[l.categoria] || 0) + 1; });
+    $$("[data-count]").forEach(el => {
+      const cat = el.dataset.count;
+      el.textContent = counts[cat] || 0;
+    });
+  }
+
+  /* ── Busca ── */
+  const searchInput = $("#searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchTerm = e.target.value;
+      render();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "/" && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  }
+
+  /* ── Carregar ── */
+  async function load() {
+    try {
+      const res = await fetch("lojas.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      allLojas = await res.json();
+      if (!Array.isArray(allLojas)) allLojas = [];
+    } catch (err) {
+      console.warn("Falha no fetch — usando fallback inline.", err);
+      allLojas = INLINE_FALLBACK;
+    }
+    updateCategoryCounts();
+    render();
+  }
+
+  load();
+})();
+</script>
+
+</body>
+</html>
