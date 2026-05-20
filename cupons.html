@@ -723,16 +723,7 @@
     .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 
   /* ----------- Fallback inline (caso fetch falhe, p.ex. file://) ----------- */
-  const INLINE_FALLBACK = [
-    {"loja":"TechParaíso","desconto":38,"codigo":"POMUM38","descricao":"Smartphone Pomum Pro 256GB com cashback de 5% direto na carteira","link":"https://techparaiso.com.br/pomum-pro-256?ref=paraisodoscupons","validade":"31/05/2026","categoria":"Eletrônicos"},
-    {"loja":"Beleza Pura","desconto":55,"codigo":"EDEN55","descricao":"Perfume floral Édenne 100ml — válido na primeira compra, sem mínimo","link":"https://belezapura.com.br/edenne-floral-100?ref=paraisodoscupons","validade":"20/05/2026","categoria":"Beleza"},
-    {"loja":"Vestir Éden","desconto":46,"codigo":"LINHO46","descricao":"Coleção verão — túnicas de linho natural, acumula com promoções da loja","link":"https://vestireden.com.br/tunica-linho-verao?ref=paraisodoscupons","validade":"15/05/2026","categoria":"Moda"},
-    {"loja":"Adega Edênica","desconto":40,"codigo":"ROMA40","descricao":"Kit 6 garrafas Vinho Romã Reserva — frete grátis para todo o país","link":"https://adegaedenica.com.br/roma-reserva-kit6?ref=paraisodoscupons","validade":"30/06/2026","categoria":"Bebidas"},
-    {"loja":"Casa Pomar","desconto":50,"codigo":"FIGO2X1","descricao":"Luminária Figo dourada — combo 2 unidades pelo preço de 1","link":"https://casapomar.com.br/luminaria-figo?ref=paraisodoscupons","validade":"22/05/2026","categoria":"Casa"},
-    {"loja":"Pomar Fresco","desconto":30,"codigo":"JARDIM30","descricao":"R$ 30 off em cestas acima de R$ 199 — frutas, vegetais e orgânicos","link":"https://pomarfresco.com.br/cestas?ref=paraisodoscupons","validade":"31/12/2026","categoria":"Mercado"},
-    {"loja":"Beleza Pura","desconto":35,"codigo":"EVA35","descricao":"Kit skincare Eva — sérum, hidratante, protetor e máscara + brinde","link":"https://belezapura.com.br/kit-skincare-eva?ref=paraisodoscupons","validade":"18/05/2026","categoria":"Beleza"},
-    {"loja":"TechParaíso","desconto":39,"codigo":"ANC39","descricao":"Fone bluetooth Arcanjo ANC com garantia estendida grátis","link":"https://techparaiso.com.br/arcanjo-anc?ref=paraisodoscupons","validade":"25/05/2026","categoria":"Eletrônicos"}
-  ];
+  const INLINE_FALLBACK = [];
 
   /* ----------- Estado ----------- */
   let allCupons = [];
@@ -740,10 +731,30 @@
   let searchTerm = "";
 
   /* ----------- Render do cupom ----------- */
+  function renderBadgeDesconto(c) {
+    const tipo    = c.tipo_desconto || "%";
+    const valor   = c.desconto;
+    if (tipo === "site" || !valor) {
+      return `<div class="cupom__pct-wrap">
+        <div class="cupom__off" style="font-size:0.75rem;padding:0.5rem 0;">desconto em<br>todo o site</div>
+      </div>`;
+    }
+    if (tipo === "R$") {
+      return `<div class="cupom__pct-wrap">
+        <div class="cupom__pct" style="font-size:1.1rem;">R$&nbsp;${valor}</div>
+        <div class="cupom__off">desconto</div>
+      </div>`;
+    }
+    // default: %
+    return `<div class="cupom__pct-wrap">
+      <div class="cupom__pct">${valor}<sup>%</sup></div>
+      <div class="cupom__off">desconto</div>
+    </div>`;
+  }
+
   function renderCupom(c) {
     const codigo   = String(c.codigo || "").toUpperCase();
     const link     = c.link || "#";
-    const desconto = Number(c.desconto || 0);
     return `
     <article class="cupom" data-cat="${escapeHtml(c.categoria || "")}">
       <span class="cupom__picote" aria-hidden="true"></span>
@@ -775,10 +786,7 @@
 
       <div class="cupom__right">
         <svg class="cupom__maca" aria-hidden="true"><use href="#maca-mordida"/></svg>
-        <div class="cupom__pct-wrap">
-          <div class="cupom__pct">${desconto}<sup>%</sup></div>
-          <div class="cupom__off">desconto</div>
-        </div>
+        ${renderBadgeDesconto(c)}
       </div>
     </article>`;
   }
