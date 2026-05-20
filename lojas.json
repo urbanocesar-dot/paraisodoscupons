@@ -11,7 +11,7 @@
   {
     "nome_campanha": "Electrolux Day",
     "loja": "Electrolux",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/1f8178c9-2d6e-4b3f-83ce-ec30f0b36e00/banners/Elux%20Day_1080x1920.png",
     "link": "https://lmdee.link/H1HrN6OB8KSO",
     "validade": "20/05/2026",
@@ -20,7 +20,7 @@
   {
     "nome_campanha": "15%OFF no Portable Blender 💪 O blender portátil da sua rotina fitness",
     "loja": "NutriBullet",
-    "categoria": "Moda",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/395414af-5a23-4311-b7a1-8c3a8446faf5/banners/Prancheta%201%20%284%29.png",
     "link": "https://lmdee.link/VBi-2kvDOfEO",
     "validade": "01/06/2026",
@@ -29,7 +29,7 @@
   {
     "nome_campanha": "🔥 Nutribullet 900W com R$ 270OFF - Potência profissional para sua rotina",
     "loja": "NutriBullet",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/e655d71b-d8c4-4005-9f44-afb4f5b58766/banners/Prancheta%201.png",
     "link": "https://lmdee.link/ImHbYVerPiC7",
     "validade": "01/06/2026",
@@ -38,7 +38,7 @@
   {
     "nome_campanha": "🔥 Oferta relâmpago Magic Bullet com 20% OFF",
     "loja": "NutriBullet",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/aa932c24-2522-4b29-b6c5-9da74cbd14cf/banners/banner_nutribullet_500kb.jpg",
     "link": "https://lmdee.link/wEq0z0EyHajI",
     "validade": "",
@@ -47,7 +47,7 @@
   {
     "nome_campanha": "Torcida Mobly",
     "loja": "",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "",
     "link": "https://lmdee.link/HcuuGCJUYU7N",
     "validade": "20/07/2026",
@@ -56,7 +56,7 @@
   {
     "nome_campanha": "SHOPCLUB DAYS Até R$3500 off + cupom até 15% + frete grátis*",
     "loja": "Shopclub",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/ef6453bd-5b02-4f20-8c47-70f83c2c48f5/banners/Shopclub%20Days_Maio_1080x1920.png",
     "link": "https://lmdee.link/LyV2PLZaErYn",
     "validade": "22/05/2026",
@@ -74,7 +74,7 @@
   {
     "nome_campanha": "Campanha Copa Shopclub: Até 55% OFF + pix 5% + frete grátis*",
     "loja": "Shopclub",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/56bbc398-fa29-468a-b0b8-35643b4bfdbf/banners/Copa%201.png",
     "link": "https://lmdee.link/S3SotOmfJI2L",
     "validade": "20/05/2026",
@@ -83,7 +83,7 @@
   {
     "nome_campanha": "Oportunidades Brinox 14/05",
     "loja": "Brinox",
-    "categoria": "Eletrônicos",
+    "categoria": "Casa",
     "imagem_url": "https://cdn.lomadee.com.br/offer/38228382-0764-4b26-9eb2-237371f34ece/banners/Achadinhos%20Carrinho%20Organizador%20MOB.png",
     "link": "https://cdn.lomadee.com.br/offer/3b2560f8-a9e7-4689-a4d6-0f72ebbd809b/spreadsheet/Oportunidades-de-Maio--BrinoxFolha1.csv",
     "validade": "01/06/2026",
@@ -92,7 +92,7 @@
   {
     "nome_campanha": "Novas_Baixas_OI26",
     "loja": "Soulier",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/bed5c439-0c38-4a84-ac2c-20a45aa974d3/banners/970x90_lomade_blue.jpg",
     "link": "https://lmdee.link/NojhE547e-Xf",
     "validade": "01/09/2026",
@@ -101,7 +101,7 @@
   {
     "nome_campanha": "Rasteiras_Oi26",
     "loja": "Soulier",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/d8388e3f-a09e-46c7-a079-f28e7e898a6d/banners/120x600_lomade_blue.jpg",
     "link": "https://lmdee.link/OdCBHr2vYV8I",
     "validade": "01/09/2026",
@@ -119,7 +119,7 @@
   {
     "nome_campanha": "Celebre o mês do orgulho Geek - Mochilas, estojos e lancheiras - Produtos com até 75% Off;",
     "loja": "Up4you",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/30c01ab7-6280-463c-acae-74e581353ce7/banners/Luxcel_ADS%20-%20Feed_Orgulho%20Nerd%20v1.jpg",
     "link": "https://lmdee.link/OkwAEZgNjnaa",
     "validade": "26/05/2026",
@@ -164,7 +164,7 @@
   {
     "nome_campanha": "Mês do Orgulho Geek Lomadee",
     "loja": "",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/2825a3f6-52f0-4550-9fd8-2fa0580054d5/banners/Me%CC%82s%20do%20Orgulho%20Geek%20Toymania.zip",
     "link": "https://lmdee.link/tWyl2t2POHAf",
     "validade": "01/06/2026",
@@ -182,7 +182,7 @@
   {
     "nome_campanha": "Tenis_OI26",
     "loja": "Soulier",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/797f5a73-812e-4d0e-9db9-1c07954310b0/banners/120x600_lomade_blue.jpg",
     "link": "https://lmdee.link/jJhR0za6VzPv",
     "validade": "01/09/2026",
@@ -191,7 +191,7 @@
   {
     "nome_campanha": "Sapatilhas OI26",
     "loja": "Soulier",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/e8026f5a-9fb9-4773-a8d7-f6593d335a5b/banners/120x600_lomade_blue.jpg",
     "link": "https://lmdee.link/p0T1VhJCYFyh",
     "validade": "01/09/2026",
@@ -209,7 +209,7 @@
   {
     "nome_campanha": "Tá na Ortopé- Até 20% OFF levando 4 pares ou mais ",
     "loja": "Ortope",
-    "categoria": "Eletrônicos",
+    "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/f9f54c94-2df2-474b-9770-ad97d0925431/banners/Ortop%C3%A9-banners-120x600.jpg",
     "link": "https://lmdee.link/dUJtqUOHIkGc",
     "validade": "01/06/2026",
