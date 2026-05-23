@@ -1,7 +1,88 @@
 [
   {
+    "loja": "",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "BOCAROSA",
+    "descricao": "Ipanema + Boca Rosa com 15% Off",
+    "link": "https://lmdee.link/jSioPZFixkXc",
+    "validade": "",
+    "categoria": "Moda"
+  },
+  {
+    "loja": "Shopclub",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "15SOCIALSOUL",
+    "descricao": "Cupom de 15% de desconto ",
+    "link": "https://lmdee.link/zRLnMEwoHCQP",
+    "validade": "25/05/2026",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Rovitex",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "QUERO15",
+    "descricao": "15% OFF extra em TODO site + Brinde Exclusivo acima de R$299",
+    "link": "https://lmdee.link/L7xTQUQ0vLlx",
+    "validade": "26/05/2026",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Camisaria Colombo",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "SECRETO15",
+    "descricao": "Cupom de 15% de desconto em todo o site ",
+    "link": "https://lmdee.link/8yj6dMRM68GB",
+    "validade": "13/07/2026",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "BALAROTI",
+    "desconto": null,
+    "tipo_desconto": "site",
+    "codigo": "REFORMATOTAL",
+    "descricao": "REFORMA TOTAL",
+    "link": "https://lmdee.link/ZrfHVkT0T1oM",
+    "validade": "29/05/2026",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "BALAROTI",
+    "desconto": null,
+    "tipo_desconto": "site",
+    "codigo": "OFFDACONSTRU",
+    "descricao": "OFF DA CONSTRU",
+    "link": "https://lmdee.link/KytTOgKocwPS",
+    "validade": "29/05/2026",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "BALAROTI",
+    "desconto": null,
+    "tipo_desconto": "site",
+    "codigo": "OFERTADOLAR",
+    "descricao": "OFERTA DO LAR",
+    "link": "https://lmdee.link/bv73WuExACpt",
+    "validade": "29/05/2026",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "BALAROTI",
+    "desconto": null,
+    "tipo_desconto": "site",
+    "codigo": "TUDOEMOBRA",
+    "descricao": "TUDO EM OBRA ",
+    "link": "https://lmdee.link/gviKU4wnaGY0",
+    "validade": "29/05/2026",
+    "categoria": "Eletrônicos"
+  },
+  {
     "loja": "Casa do Fitness",
-    "desconto": 0,
+    "desconto": 200,
+    "tipo_desconto": "R$",
     "codigo": "S10320OFF",
     "descricao": "R$ 200,00 de desconto na Bicicleta Speedo S103 ",
     "link": "https://lmdee.link/MrSzzC6mbNwt",
@@ -10,7 +91,8 @@
   },
   {
     "loja": "Casa do Fitness",
-    "desconto": 0,
+    "desconto": 5,
+    "tipo_desconto": "%",
     "codigo": "PRIMEIRACOMPRA",
     "descricao": "5% off em todo o site",
     "link": "https://lmdee.link/CUAeIJwgWFbP",
@@ -18,17 +100,9 @@
     "categoria": "Beleza"
   },
   {
-    "loja": "Shopclub",
-    "desconto": 0,
-    "codigo": "GANHE15",
-    "descricao": "15% de desconto em produtos selecionados",
-    "link": "https://lmdee.link/6gYiRFkd9GDc",
-    "validade": "22/05/2026",
-    "categoria": "Casa"
-  },
-  {
     "loja": "Gazin",
-    "desconto": 0,
+    "desconto": 50,
+    "tipo_desconto": "R$",
     "codigo": "SONO50",
     "descricao": "R$50 OFF em colchões selecionados",
     "link": "https://lmdee.link/PxN0Jmvq59bU",
@@ -37,7 +111,8 @@
   },
   {
     "loja": "Electrolux",
-    "desconto": 0,
+    "desconto": 5,
+    "tipo_desconto": "%",
     "codigo": "LOMADEE5",
     "descricao": "Cupom de 5% de desconto ",
     "link": "https://lmdee.link/52jzuNzJuxOn",
@@ -46,7 +121,8 @@
   },
   {
     "loja": "Electrolux",
-    "desconto": 0,
+    "desconto": 10,
+    "tipo_desconto": "%",
     "codigo": "LOMADEE10",
     "descricao": "Cupom de 10% de desconto ",
     "link": "https://lmdee.link/WUE12t2n-tX1",
@@ -55,7 +131,8 @@
   },
   {
     "loja": "Vinícola Jolimont",
-    "desconto": 0,
+    "desconto": null,
+    "tipo_desconto": "site",
     "codigo": "AVENTURANDO",
     "descricao": "AVENTURANDO",
     "link": "https://lmdee.link/ItHQFaiCGn1m",
@@ -64,7 +141,8 @@
   },
   {
     "loja": "Vinícola Jolimont",
-    "desconto": 0,
+    "desconto": null,
+    "tipo_desconto": "site",
     "codigo": "LOMADEE10",
     "descricao": "LOMADEE10",
     "link": "https://lmdee.link/TwAh9zEqnIO2",
@@ -73,7 +151,8 @@
   },
   {
     "loja": "",
-    "desconto": 0,
+    "desconto": 10,
+    "tipo_desconto": "%",
     "codigo": "LIQUIDO10",
     "descricao": "10% OFF Coleção Aura/Inverno",
     "link": "https://lmdee.link/wNy98u4bZySl",
@@ -82,7 +161,8 @@
   },
   {
     "loja": "Brinox",
-    "desconto": 0,
+    "desconto": 10,
+    "tipo_desconto": "%",
     "codigo": "FAVORITO10",
     "descricao": "Cupom de 10% de desconto ",
     "link": "https://lmdee.link/XkUHW6-dcalJ",
@@ -91,7 +171,8 @@
   },
   {
     "loja": "DeÔnibus",
-    "desconto": 0,
+    "desconto": 12,
+    "tipo_desconto": "%",
     "codigo": "LOMADEE12",
     "descricao": "12% OFF - no valor da passagem (1 uso por usuário)",
     "link": "https://lmdee.link/i5HKk3WWS0TT",
@@ -100,7 +181,8 @@
   },
   {
     "loja": "Electrolux",
-    "desconto": 0,
+    "desconto": 500,
+    "tipo_desconto": "R$",
     "codigo": "SUPER500",
     "descricao": "R$ 500 OFF para Eletrodomésticos (Válido para produtos selecionados ou até acabarem os estoques)",
     "link": "https://lmdee.link/CPTYrhiAH-c1",
@@ -109,7 +191,8 @@
   },
   {
     "loja": "",
-    "desconto": 0,
+    "desconto": 10,
+    "tipo_desconto": "R$",
     "codigo": "KASSIO10",
     "descricao": "R$10 OFF nas compras de perfume na Drogasmil",
     "link": "https://lmdee.link/LlEJXiCtPsbF",
@@ -117,17 +200,9 @@
     "categoria": "Beleza"
   },
   {
-    "loja": "Malwee",
-    "desconto": 0,
-    "codigo": "EXTRA15",
-    "descricao": "Outlet até 40% OFF + 15% OFF EXTRA ",
-    "link": "https://lmdee.link/W0cM7PcYWPkV",
-    "validade": "22/05/2026",
-    "categoria": "Beleza"
-  },
-  {
     "loja": "Gazin",
-    "desconto": 0,
+    "desconto": 1,
+    "tipo_desconto": "R$",
     "codigo": "MOTO",
     "descricao": "R$ 1.000 de desconto no Smartphone Motorola Edge 70 6.7” Octa Core 256GB 8GB Câmera Tripla - Cinza - Quadriband",
     "link": "https://lmdee.link/72NXhXO9OjkN",
@@ -136,7 +211,8 @@
   },
   {
     "loja": "Coza",
-    "desconto": 0,
+    "desconto": 20,
+    "tipo_desconto": "%",
     "codigo": "ORGANIZA20",
     "descricao": "20% off em todo site",
     "link": "https://lmdee.link/0auWuEkHi6gG",
@@ -144,17 +220,9 @@
     "categoria": "Eletrônicos"
   },
   {
-    "loja": "Coza",
-    "desconto": 0,
-    "codigo": "BAMBU10",
-    "descricao": "10% off + frete grátis em modo bambu",
-    "link": "https://lmdee.link/JMVfof3eaCvL",
-    "validade": "23/05/2026",
-    "categoria": "Eletrônicos"
-  },
-  {
     "loja": "Brinox",
-    "desconto": 0,
+    "desconto": 15,
+    "tipo_desconto": "%",
     "codigo": "CHAZINHO",
     "descricao": "Cupom de 15% de desconto em produtos selecionados",
     "link": "https://lmdee.link/7fczt-MCITW9",
@@ -162,8 +230,19 @@
     "categoria": "Beleza"
   },
   {
+    "loja": "Brinox",
+    "desconto": 30,
+    "tipo_desconto": "R$",
+    "codigo": "CARRINHO30",
+    "descricao": "R$30 off nos carrinhos organizadores",
+    "link": "https://lmdee.link/-6Xb9-Qys3OS",
+    "validade": "24/05/2026",
+    "categoria": "Casa"
+  },
+  {
     "loja": "Kidy Calçados",
-    "desconto": 0,
+    "desconto": null,
+    "tipo_desconto": "site",
     "codigo": "AMOKIDY",
     "descricao": "AMOKIDY",
     "link": "https://lmdee.link/qUQM7h6Bbytb",
@@ -172,10 +251,111 @@
   },
   {
     "loja": "",
-    "desconto": 0,
+    "desconto": 15,
+    "tipo_desconto": "%",
     "codigo": "RIDER15LD",
     "descricao": "Primeiro Rider c/ 15% OFF",
     "link": "https://lmdee.link/KHh37nnrqM94",
+    "validade": "",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "GKIDS15ld",
+    "descricao": "Grendene Kids c/ 15% Off",
+    "link": "https://lmdee.link/0miIjJgSkuzM",
+    "validade": "",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "IPANEMA15LD",
+    "descricao": "Primeira Ipanema c/ 15% Off",
+    "link": "https://lmdee.link/9LAUKdnXEvC5",
+    "validade": "",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "ZAXY15LD",
+    "descricao": "Primeira Zaxy c/ 15% Off",
+    "link": "https://lmdee.link/sfpuXRSsg2rh",
+    "validade": "",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Casa do Fitness",
+    "desconto": 5,
+    "tipo_desconto": "%",
+    "codigo": "FITNESS5",
+    "descricao": "Cupom de 5% de desconto em todo o site ",
+    "link": "https://lmdee.link/v7t7cV0Hsb0w",
+    "validade": "",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "FOM",
+    "desconto": 10,
+    "tipo_desconto": "%",
+    "codigo": "desconto10OFF",
+    "descricao": "Cupom Desconto 10%OFF",
+    "link": "https://lmdee.link/K5tOx9J6Ccaq",
+    "validade": "",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "FOM",
+    "desconto": 10,
+    "tipo_desconto": "%",
+    "codigo": "bemvindo10off",
+    "descricao": "10%OFF Primeira compra",
+    "link": "https://lmdee.link/stN446-i-t10",
+    "validade": "",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "Kappesberg",
+    "desconto": 6,
+    "tipo_desconto": "%",
+    "codigo": "MEUCUPOM6",
+    "descricao": "6% de desconto no site todo com o uso do cupom",
+    "link": "https://lmdee.link/zQBLcBF4MbcY",
+    "validade": "",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "DeÔnibus",
+    "desconto": 5,
+    "tipo_desconto": "%",
+    "codigo": "LOMADEE5",
+    "descricao": "5%OFF na passagem | Geral Lomadee",
+    "link": "https://lmdee.link/gHOkgpD8nvCp",
+    "validade": "",
+    "categoria": "Eletrônicos"
+  },
+  {
+    "loja": "Kidy Calçados",
+    "desconto": null,
+    "tipo_desconto": "site",
+    "codigo": "AFILIKIDY",
+    "descricao": "AFILIKIDY ",
+    "link": "https://lmdee.link/15PQi2Bw2fKL",
+    "validade": "",
+    "categoria": "Moda"
+  },
+  {
+    "loja": "Le Loyn Parfums",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "PERFUMEEXCLUSIVO15",
+    "descricao": "Cupom de 15% de desconto para produtos no link selecionado",
+    "link": "https://leloynparfums.com.br/collections/perfumes-de-nicho",
     "validade": "",
     "categoria": "Beleza"
   }
