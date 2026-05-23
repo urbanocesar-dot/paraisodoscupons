@@ -1,20 +1,128 @@
 [
   {
+    "nome_campanha": "Ipanema + Boca Rosa com 15% Off",
+    "loja": "",
+    "categoria": "Eletrônicos",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/8c43d9c1-fc38-4d0c-9990-b104c86b622e/banners/202605_Midia_LG_Ipanema_BocaRosa_Cupom15OFF_1200x628_V4.jpg",
+    "link": "https://lmdee.link/W2bC1tnf6RZK",
+    "validade": "",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Ação Lazer Gazin",
+    "loja": "Gazin",
+    "categoria": "Eletrônicos",
+    "imagem_url": "",
+    "link": "https://cdn.lomadee.com.br/offer/006ef625-528b-4093-adc9-39f0162884d7/spreadsheet/Acao-LazerFolha1.csv",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "AÇÃO OUTONO NA TAÇA - Acima de R$600→ 1 Tradicional + 2 Taças de Vidro;  - Acima de R$900→ 2 Tradicionais ou 1 Reserva ou 1 Espumante + 4 Taças de Vidro; - Acima de R$1500→ 6 Tradicionais ou 3 Reservas ou 3 Espumantes + 6 Taças de Vidro",
+    "loja": "Vinícola Jolimont",
+    "categoria": "Moda",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/f0cb3aef-92bb-4b47-8e2c-3b9d1edd1d81/banners/Lomadee%201.png",
+    "link": "https://lmdee.link/bD9bENvmeMLj",
+    "validade": "28/05/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Oportunidades Drogaria Rosário 22-05",
+    "loja": "Drogaria Rosário",
+    "categoria": "Eletrônicos",
+    "imagem_url": "",
+    "link": "https://cdn.lomadee.com.br/offer/f31290d5-da20-4cdb-84a3-4ff9b45784b0/spreadsheet/Oportunidades-Rosario-22-05Folha1.csv",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Oportunidades Drogasmil 22-05",
+    "loja": "",
+    "categoria": "Eletrônicos",
+    "imagem_url": "",
+    "link": "https://cdn.lomadee.com.br/offer/bc875ce0-0cbb-4481-848e-fd8b39df0ef9/spreadsheet/Oportunidades-Drogasmil-22-05Folha1.csv",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Colchão Cama Box Gazin Molas Casal Provence 138x188 - Marrom (R$899,00 à vista ou 12x R$91,58)",
+    "loja": "Gazin",
+    "categoria": "Casa",
+    "imagem_url": "",
+    "link": "https://lmdee.link/SzLnZOI41dFx",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Colchão Casal Molas Gazin Provence 138x188 - Marrom (R$599,00 à vista ou 12x R$55,00)",
+    "loja": "Gazin",
+    "categoria": "Casa",
+    "imagem_url": "",
+    "link": "https://lmdee.link/SjolHqaTv7Vm",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Instalação elétrica  ",
+    "loja": "BALAROTI",
+    "categoria": "Eletrônicos",
+    "imagem_url": "",
+    "link": "https://lmdee.link/2penRCHnHql5",
+    "validade": "29/05/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Cubas e Metais importados",
+    "loja": "BALAROTI",
+    "categoria": "Casa",
+    "imagem_url": "",
+    "link": "https://lmdee.link/XkVNwIzvIl8M",
+    "validade": "30/05/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Calça Alfaiataria - Leve 2 por R$ 249,99",
+    "loja": "Camisaria Colombo",
+    "categoria": "Moda",
+    "imagem_url": "",
+    "link": "https://lmdee.link/I6NR9Yaq4g6r",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Ritmo de Trabalho - produtos selecionados",
+    "loja": "Camisaria Colombo",
+    "categoria": "Moda",
+    "imagem_url": "",
+    "link": "https://lmdee.link/SIzeHW5hq2ai",
+    "validade": "09/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Calça de Sarja e Jeans - Leve 2 por R$ 199,99",
+    "loja": "Camisaria Colombo",
+    "categoria": "Moda",
+    "imagem_url": "",
+    "link": "https://lmdee.link/aBE9H776wBC8",
+    "validade": "01/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "QUEIMA DE ESTOQUE DE PISOS E PORCELANATOS BALAROTI",
+    "loja": "BALAROTI",
+    "categoria": "Eletrônicos",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/b9ec8e93-9279-44da-929c-de82a523ae4c/banners/OFERTAS-QUEIMA-1920x1080-SC-06.jpg",
+    "link": "https://lmdee.link/mTglgtcAt7jW",
+    "validade": "29/05/2026",
+    "destaque": false
+  },
+  {
     "nome_campanha": "Aura Outono/Inverno 2026- Use o cupom LIQUIDO10 e ganhe 10% OFF",
     "loja": "",
     "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/offer/74e5b1ac-1951-4765-ae92-2893422cf875/banners/BANNER_HOME_DESKTOP_AURAINVERNO_NOVO_110526.jpg",
     "link": "https://lmdee.link/0S0PUMtwm2Z8",
     "validade": "27/05/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Electrolux Day",
-    "loja": "Electrolux",
-    "categoria": "Casa",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/1f8178c9-2d6e-4b3f-83ce-ec30f0b36e00/banners/Elux%20Day_1080x1920.png",
-    "link": "https://lmdee.link/H1HrN6OB8KSO",
-    "validade": "20/05/2026",
     "destaque": false
   },
   {
@@ -51,33 +159,6 @@
     "imagem_url": "",
     "link": "https://lmdee.link/HcuuGCJUYU7N",
     "validade": "20/07/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "SHOPCLUB DAYS Até R$3500 off + cupom até 15% + frete grátis*",
-    "loja": "Shopclub",
-    "categoria": "Casa",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/ef6453bd-5b02-4f20-8c47-70f83c2c48f5/banners/Shopclub%20Days_Maio_1080x1920.png",
-    "link": "https://lmdee.link/LyV2PLZaErYn",
-    "validade": "22/05/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Ação Vinho de Brinde - Escadinha promocional",
-    "loja": "Vinícola Jolimont",
-    "categoria": "Bebidas",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/5c79de0a-1b22-4d14-9e60-4bac6c3a5123/banners/Lomadee%201.jpg",
-    "link": "https://lmdee.link/glzudWDo3DkX",
-    "validade": "22/05/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Campanha Copa Shopclub: Até 55% OFF + pix 5% + frete grátis*",
-    "loja": "Shopclub",
-    "categoria": "Casa",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/56bbc398-fa29-468a-b0b8-35643b4bfdbf/banners/Copa%201.png",
-    "link": "https://lmdee.link/S3SotOmfJI2L",
-    "validade": "20/05/2026",
     "destaque": false
   },
   {
@@ -222,15 +303,6 @@
     "imagem_url": "",
     "link": "https://lmdee.link/pMPSbsft-mic",
     "validade": "",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Malwee Kids- Outlet até 40% OFF + 15% OFF EXTRA (Usando o cupom EXTRA15)",
-    "loja": "Malwee",
-    "categoria": "Eletrônicos",
-    "imagem_url": "",
-    "link": "https://lmdee.link/762vwcuw-Vni",
-    "validade": "22/05/2026",
     "destaque": false
   },
   {
@@ -486,15 +558,6 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Dia das Mães- Brinde exclusivo acima de R$ 799",
-    "loja": "Guess Brasil",
-    "categoria": "Bebidas",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/e9bd5623-4df6-4b47-bd26-bd982cab2b7e/banners/04_Dia-das-M%C3%A3es_120x600.png",
-    "link": "https://lmdee.link/2nP87iBp8CYy",
-    "validade": "23/05/2026",
-    "destaque": false
-  },
-  {
     "nome_campanha": "Classicos_OI26",
     "loja": "Soulier",
     "categoria": "Moda",
@@ -519,15 +582,6 @@
     "imagem_url": "https://cdn.lomadee.com.br/offer/0a38b39e-cabb-4b2b-abfb-c95fe02364b0/banners/Prancheta%201%20%286%29%20%281%29.png",
     "link": "https://lmdee.link/nRWnpElKKurn",
     "validade": "",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Envelopes personalizados",
-    "loja": "Nobelpack",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/99598f43-0542-4bfb-b71b-e36c04bf591b/banners/Banner%20envelope%20personalizado.jpg",
-    "link": "https://lmdee.link/5vGniALzQvcg",
-    "validade": "02/12/2026",
     "destaque": false
   }
 ]
