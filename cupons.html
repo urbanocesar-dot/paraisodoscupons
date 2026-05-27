@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CM65B47BCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CM65B47BCC');
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cupons — Paraíso dos Cupons</title>
@@ -541,6 +549,11 @@
   .toast b{ color: var(--pc-gold-400); font-family: var(--pc-font-mono); letter-spacing: .14em; font-weight: 500; font-size: 11px; }
   .toast .msg-main{ display:block; }
   .toast .msg-sub{ display:block; font-weight: 400; color: rgba(255,251,235,.65); font-size: 12px; margin-top: 2px; }
+
+  @media (max-width: 767px) {
+    body { padding-top: 76px; }
+    .nav-wrap { position: fixed; top: 0; left: 0; right: 0; }
+  }
 </style>
 </head>
 <body>
@@ -656,7 +669,7 @@
         <h4>Suporte</h4>
         <ul>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#0f6c60617b6e7b604f7f6e7d6e667c606b607c6c7a7f60617c216c6062216d7d"><span class="__cf_email__" data-cfemail="55363a3b2134213a15253427343c263a313a263620253a3b267b363a387b3727">[email&#160;protected]</span></a></li>
+          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
           <li><a href="#">Reportar cupom inválido</a></li>
           <li><a href="#">Trabalhe conosco</a></li>
         </ul>
@@ -714,7 +727,7 @@
   </defs>
 </svg>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (() => {
   const $  = (s, c=document) => c.querySelector(s);
   const $$ = (s, c=document) => [...c.querySelectorAll(s)];

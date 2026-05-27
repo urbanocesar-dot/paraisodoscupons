@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CM65B47BCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CM65B47BCC');
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lojas Parceiras — Paraíso dos Cupons</title>
@@ -425,6 +433,11 @@
   .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
   @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+
+  @media (max-width: 767px) {
+    body { padding-top: 76px; }
+    .nav-wrap { position: fixed; top: 0; left: 0; right: 0; }
+  }
 </style>
 </head>
 <body>
@@ -533,7 +546,7 @@
         <h4>Suporte</h4>
         <ul>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#167579786277627956667764777f65797279657563667978653875797b387464"><span class="__cf_email__" data-cfemail="bbd8d4d5cfdacfd4fbcbdac9dad2c8d4dfd4c8d8cecbd4d5c895d8d4d695d9c9">[email&#160;protected]</span></a></li>
+          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
           <li><a href="#">Reportar cupom inválido</a></li>
           <li><a href="#">Trabalhe conosco</a></li>
         </ul>
@@ -558,7 +571,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (() => {
   const $  = (s, c=document) => c.querySelector(s);
   const $$ = (s, c=document) => [...c.querySelectorAll(s)];

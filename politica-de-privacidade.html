@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CM65B47BCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CM65B47BCC');
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Política de Privacidade — Paraíso dos Cupons</title>
@@ -356,6 +364,11 @@
     .doc-meta{ grid-template-columns: repeat(2, 1fr); }
     .rights-grid{ grid-template-columns: 1fr; }
     .contact-block{ grid-template-columns: 1fr; padding: 24px; }
+  }
+
+  @media (max-width: 767px) {
+    body { padding-top: 76px; }
+    .nav-wrap { position: fixed; top: 0; left: 0; right: 0; }
   }
 </style>
 </head>

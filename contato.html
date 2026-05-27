@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CM65B47BCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CM65B47BCC');
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contato — Paraíso dos Cupons</title>
@@ -506,6 +514,11 @@
   }
   .toast.show{ opacity: 1; transform: translateX(-50%) translateY(0); }
   .toast b{ color: var(--pc-gold-400); font-family: var(--pc-font-mono); letter-spacing: .14em; font-weight: 500; font-size: 12px; }
+
+  @media (max-width: 767px) {
+    body { padding-top: 76px; }
+    .nav-wrap { position: fixed; top: 0; left: 0; right: 0; }
+  }
 </style>
 </head>
 <body>
