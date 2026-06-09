@@ -60,26 +60,6 @@
     "categoria": "Casa"
   },
   {
-    "loja": "",
-    "desconto": 20,
-    "tipo_desconto": "%",
-    "codigo": "ENFIM20",
-    "descricao": "20% OFF em selecionados de moda",
-    "link": "https://lmdee.link/vydvSI4PNxNG",
-    "validade": "15/06/2026",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": null,
-    "tipo_desconto": "site",
-    "codigo": "primeirazin",
-    "descricao": "Primeiracompra ZIN",
-    "link": "https://lmdee.link/R1nKgNMKrPQT",
-    "validade": "31/12/2026",
-    "categoria": "Moda"
-  },
-  {
     "loja": "Maria Valentina",
     "desconto": null,
     "tipo_desconto": "site",
@@ -127,56 +107,6 @@
     "descricao": "IC3 5OFF",
     "link": "https://lmdee.link/kVB4GWymt5bu",
     "validade": "",
-    "categoria": "Eletrônicos"
-  },
-  {
-    "loja": "",
-    "desconto": 12,
-    "tipo_desconto": "R$",
-    "codigo": "FRALDAS",
-    "descricao": "Cupom progressivo com R$ 12 OFF Válido para compras acima de R$130 e R$ 15 OFF para compras acima de R$ 150 em produtos selecionados",
-    "link": "https://lmdee.link/rtjXKxUXPkLi",
-    "validade": "02/07/2026",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 5,
-    "tipo_desconto": "R$",
-    "codigo": "CABELO5",
-    "descricao": "R$5 OFF Válido para compras acima de R$50 e apenas produtos selecionados",
-    "link": "https://lmdee.link/jjyO-zhwj9vr",
-    "validade": "01/07/2026",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 5,
-    "tipo_desconto": "R$",
-    "codigo": "HIGIENE5",
-    "descricao": "R$5 OFF Válido para compras acima de R$50 e apenas produtos selecionados.",
-    "link": "https://lmdee.link/2D5RLzHDeaXE",
-    "validade": "01/07/2026",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 12,
-    "tipo_desconto": "R$",
-    "codigo": "ADULTO12",
-    "descricao": "R$12 OFF Compras acima de R$130,00 e apenas para produtos selecionados. Somente uma utilização por CPF",
-    "link": "https://lmdee.link/-katKqaTRIWe",
-    "validade": "10/06/2026",
-    "categoria": "Eletrônicos"
-  },
-  {
-    "loja": "",
-    "desconto": 10,
-    "tipo_desconto": "R$",
-    "codigo": "GASTRO10",
-    "descricao": "R$10 OFF Válido para compras acima de R$90 e apenas produtos selecionados",
-    "link": "https://lmdee.link/fOrLNRbyP7uR",
-    "validade": "01/07/2026",
     "categoria": "Eletrônicos"
   },
   {
@@ -250,16 +180,6 @@
     "categoria": "Casa"
   },
   {
-    "loja": "",
-    "desconto": null,
-    "tipo_desconto": "site",
-    "codigo": "HEXA6",
-    "descricao": "HEXA6",
-    "link": "https://lmdee.link/aZ8d3fDHSU9S",
-    "validade": "01/07/2026",
-    "categoria": "Eletrônicos"
-  },
-  {
     "loja": "Coza",
     "desconto": 20,
     "tipo_desconto": "%",
@@ -288,16 +208,6 @@
     "link": "https://lmdee.link/g9hmqWBaw1v2",
     "validade": "16/06/2026",
     "categoria": "Casa"
-  },
-  {
-    "loja": "",
-    "desconto": 5,
-    "tipo_desconto": "%",
-    "codigo": "LOMADEE5",
-    "descricao": "Cupom 5% OFF primeira compra",
-    "link": "https://lmdee.link/Hb1MGR74tcIx",
-    "validade": "",
-    "categoria": "Eletrônicos"
   },
   {
     "loja": "Vinícola Jolimont",
@@ -400,16 +310,6 @@
     "categoria": "Casa"
   },
   {
-    "loja": "",
-    "desconto": 7,
-    "tipo_desconto": "%",
-    "codigo": "HOME7",
-    "descricao": "Cupom de 7% de desconto ",
-    "link": "https://lmdee.link/5FTvvjYpvk-4",
-    "validade": "",
-    "categoria": "Eletrônicos"
-  },
-  {
     "loja": "Casa do Fitness",
     "desconto": 200,
     "tipo_desconto": "R$",
@@ -500,46 +400,6 @@
     "categoria": "Beleza"
   },
   {
-    "loja": "",
-    "desconto": 15,
-    "tipo_desconto": "%",
-    "codigo": "RIDER15LD",
-    "descricao": "Primeiro Rider c/ 15% OFF",
-    "link": "https://lmdee.link/KHh37nnrqM94",
-    "validade": "",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 15,
-    "tipo_desconto": "%",
-    "codigo": "GKIDS15ld",
-    "descricao": "Grendene Kids c/ 15% Off",
-    "link": "https://lmdee.link/0miIjJgSkuzM",
-    "validade": "",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 15,
-    "tipo_desconto": "%",
-    "codigo": "IPANEMA15LD",
-    "descricao": "Primeira Ipanema c/ 15% Off",
-    "link": "https://lmdee.link/9LAUKdnXEvC5",
-    "validade": "",
-    "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 15,
-    "tipo_desconto": "%",
-    "codigo": "ZAXY15LD",
-    "descricao": "Primeira Zaxy c/ 15% Off",
-    "link": "https://lmdee.link/sfpuXRSsg2rh",
-    "validade": "",
-    "categoria": "Beleza"
-  },
-  {
     "loja": "Casa do Fitness",
     "desconto": 5,
     "tipo_desconto": "%",
@@ -548,26 +408,6 @@
     "link": "https://lmdee.link/v7t7cV0Hsb0w",
     "validade": "",
     "categoria": "Beleza"
-  },
-  {
-    "loja": "",
-    "desconto": 10,
-    "tipo_desconto": "%",
-    "codigo": "desconto10OFF",
-    "descricao": "Cupom Desconto 10%OFF",
-    "link": "https://lmdee.link/K5tOx9J6Ccaq",
-    "validade": "",
-    "categoria": "Eletrônicos"
-  },
-  {
-    "loja": "",
-    "desconto": 10,
-    "tipo_desconto": "%",
-    "codigo": "bemvindo10off",
-    "descricao": "10%OFF Primeira compra",
-    "link": "https://lmdee.link/stN446-i-t10",
-    "validade": "",
-    "categoria": "Eletrônicos"
   },
   {
     "loja": "Kappesberg",
@@ -598,5 +438,55 @@
     "link": "https://lmdee.link/15PQi2Bw2fKL",
     "validade": "",
     "categoria": "Moda"
+  },
+  {
+    "loja": "Le Loyn Parfums",
+    "desconto": 15,
+    "tipo_desconto": "%",
+    "codigo": "PERFUMEEXCLUSIVO15",
+    "descricao": "Cupom de 15% de desconto para produtos no link selecionado",
+    "link": "https://leloynparfums.com.br/collections/perfumes-de-nicho",
+    "validade": "",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Drogaria Rosário",
+    "desconto": 10,
+    "tipo_desconto": "R$",
+    "codigo": "GASTRO10",
+    "descricao": "R$10 OFF\tVálido para compras acima de R$90 e apenas produtos selecionados.\t\t\t\t\t",
+    "link": "https://lmdee.link/XBpmrZgQnRow",
+    "validade": "01/07/2026",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Drogaria Rosário",
+    "desconto": 12,
+    "tipo_desconto": "R$",
+    "codigo": "FRALDAS",
+    "descricao": "Cupom progressivo com R$ 12 OFF Válido para compras acima de R$130 e R$ 15 OFF para compras acima de R$ 150 em produtos selecionados",
+    "link": "https://lmdee.link/2MR8dRAeRvop",
+    "validade": "02/07/2026",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Drogaria Rosário",
+    "desconto": 5,
+    "tipo_desconto": "R$",
+    "codigo": "HIGIENE5",
+    "descricao": "R$5 OFF\tVálido para compras acima de R$50 e apenas produtos selecionados. \t\t\t\t\t",
+    "link": "https://lmdee.link/ybEMSSxw01CO",
+    "validade": "01/07/2026",
+    "categoria": "Beleza"
+  },
+  {
+    "loja": "Drogaria Rosário",
+    "desconto": 5,
+    "tipo_desconto": "R$",
+    "codigo": "CABELO5",
+    "descricao": "R$5 OFF Válido para compras acima de R$50 e apenas produtos selecionados. \t\t\t\t\t\t",
+    "link": "https://lmdee.link/cONM4ouyNlZu",
+    "validade": "01/07/2026",
+    "categoria": "Beleza"
   }
 ]
