@@ -11,6 +11,8 @@
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
 <title>Paraíso dos Cupons — As ofertas mais cobiçadas do jardim</title>
 <meta name="description" content="Curadoria diária de cupons e promoções. Eletrônicos, moda, beleza, mercado — sempre verificados." />
 <meta name="lomadee" content="2324685" />
@@ -152,10 +154,17 @@
   .nav-link{
     font-size: 14px; font-weight: 600; color: var(--pc-emerald-900);
     padding: 10px 14px; border-radius: var(--pc-r-pill);
-    transition: background .15s ease;
+    transition: background .15s ease, color .15s ease;
+    position: relative;
   }
   .nav-link:hover{ background: rgba(6,78,59,.07); }
-  .nav-link.active{ color: var(--pc-apple-700); }
+  .nav-link.active{ color: var(--pc-apple-600); background: var(--pc-apple-100); }
+  .nav-link.active::after{
+    content:""; position: absolute;
+    left: 16px; right: 16px; bottom: 4px;
+    height: 2px; border-radius: 2px;
+    background: var(--pc-apple-600);
+  }
   .nav-cta{ display:flex; align-items:center; gap: 12px; }
   .nav-search{
     display:flex; align-items:center; gap: 10px;
@@ -902,7 +911,7 @@
         <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
       </a>
       <div class="nav-links">
-        <a class="nav-link active" href="#ofertas">Ofertas</a>
+        <a class="nav-link active" href="#ofertas" aria-current="page">Ofertas</a>
         <a class="nav-link" href="lojas.html">Lojas</a>
         <a class="nav-link" href="campanhas.html">Campanhas</a>
         <a class="nav-link" href="cupons.html">Cupons</a>
@@ -1089,7 +1098,7 @@ de você procurar.</h3>
         <h4>Suporte</h4>
         <ul>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#e5868a8b9184918aa5958497848c968a818a968690958a8b96cb868a88cb8797"><span class="__cf_email__" data-cfemail="86e5e9e8f2e7f2e9c6f6e7f4e7eff5e9e2e9f5e5f3f6e9e8f5a8e5e9eba8e4f4">[email&#160;protected]</span></a></li>
           <li><a href="#">Reportar cupom inválido</a></li>
           <li><a href="#">Trabalhe conosco</a></li>
         </ul>
@@ -1122,7 +1131,7 @@ de você procurar.</h3>
 </div>
 
 <!-- ═══════════════════════════════════════════════ JS ═══════════════════════════════════════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (() => {
   /* ----------------------------------------------------------
      Utilidades

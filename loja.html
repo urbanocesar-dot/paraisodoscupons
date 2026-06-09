@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CM65B47BCC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CM65B47BCC');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<title>Loja — Paraíso dos Cupons</title>
+<meta name="description" content="Campanhas e cupons ativos desta loja no Paraíso dos Cupons." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --pc-emerald-900:#03261D; --pc-emerald-800:#064E3B; --pc-emerald-700:#0B6B52;
+    --pc-emerald-600:#15876A; --pc-emerald-500:#1FA683; --pc-emerald-100:#D6EDE3; --pc-emerald-50:#EAF4EE;
+    --pc-apple-900:#7A1313; --pc-apple-700:#A21C1C; --pc-apple-600:#DC2626; --pc-apple-500:#EF4444; --pc-apple-100:#FCE4E4;
+    --pc-gold-700:#B45309; --pc-gold-600:#D97706; --pc-gold-500:#F59E0B; --pc-gold-400:#FBBF24; --pc-gold-100:#FEF3C7;
+    --pc-cream-50:#FFFBEB; --pc-cream-100:#FAF3DE; --pc-cream-200:#F1E7C8; --pc-cream-300:#E5D6A6;
+    --pc-ink-900:#1B2A24; --pc-ink-700:#3D4E47; --pc-ink-500:#6B7A73; --pc-ink-300:#A8B3AD;
+    --pc-font-serif: "Cormorant Garamond", "Times New Roman", serif;
+    --pc-font-sans:  "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --pc-font-mono:  "JetBrains Mono", ui-monospace, Menlo, monospace;
+    --pc-r-sm:6px; --pc-r-md:10px; --pc-r-lg:16px; --pc-r-pill:999px;
+    --pc-shadow-sm: 0 1px 2px rgba(3,38,29,.06), 0 1px 1px rgba(3,38,29,.04);
+    --pc-shadow-md: 0 6px 16px -8px rgba(3,38,29,.22), 0 2px 6px -2px rgba(3,38,29,.10);
+    --pc-shadow-lg: 0 24px 48px -24px rgba(3,38,29,.35), 0 8px 16px -8px rgba(3,38,29,.18);
+    --pc-shadow-apple: 0 10px 24px -10px rgba(220,38,38,.45);
+    --pc-shadow-gold: 0 10px 30px -12px rgba(245,158,11,.55);
+    --pc-container: 1240px;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family: var(--pc-font-sans); color: var(--pc-ink-900);
+    background: var(--pc-cream-50);
+    -webkit-font-smoothing:antialiased;
+    font-size:16px; line-height:1.55;
+    padding-top: 76px;
+  }
+  a{ color: inherit; text-decoration: none; }
+  img{ display:block; max-width:100%; }
+  .container{ max-width: var(--pc-container); margin: 0 auto; padding: 0 32px; }
+
+  /* ════════ NAVBAR ════════ */
+  .nav-wrap{
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(255,251,235,.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(6,78,59,.08);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height: 76px; }
+  .logo-lockup{ display:flex; align-items:center; gap: 14px; color: var(--pc-emerald-900); }
+  .logo-mark{
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    display:grid; place-items:center;
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600; font-size: 22px;
+  }
+  .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
+  .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
+  .nav-links{ display:flex; align-items:center; gap: 8px; }
+  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease, color .15s ease; position: relative; }
+  .nav-link:hover{ background: rgba(6,78,59,.07); }
+  .nav-link.active{ color: var(--pc-apple-600); background: var(--pc-apple-100); }
+  .nav-link.active::after{ content:""; position: absolute; left: 16px; right: 16px; bottom: 4px; height: 2px; border-radius: 2px; background: var(--pc-apple-600); }
+  .nav-cta{ display:flex; align-items:center; gap: 12px; }
+  .nav-search{ display:flex; align-items:center; gap: 10px; background: #fff; border:1px solid var(--pc-cream-200); border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px; min-width: 280px; box-shadow: var(--pc-shadow-sm); }
+  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
+  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
+  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
+  .pc-btn{ --bg: var(--pc-apple-600); --bg-hover: var(--pc-apple-700); --fg: var(--pc-cream-50); --bd: transparent; appearance:none; border:1px solid var(--bd); background: var(--bg); color: var(--fg); font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: var(--pc-r-pill); cursor: pointer; display:inline-flex; align-items:center; justify-content:center; gap: 10px; line-height: 1; transition: transform .12s ease, background .15s ease; }
+  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
+  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); }
+  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
+  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+
+  /* ════════ HERO DA LOJA ════════ */
+  .loja-hero{
+    background:
+      radial-gradient(120% 80% at 92% 8%, rgba(245,158,11,.18), transparent 60%),
+      linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    color: var(--pc-cream-50);
+    padding: 48px 0 56px;
+  }
+  .doc-crumb{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: rgba(255,251,235,.55); margin-bottom: 24px;
+  }
+  .doc-crumb a{ color: var(--pc-gold-400); }
+  .loja-hero__inner{ display:flex; align-items:center; gap: 32px; }
+  .loja-hero__logo{
+    width: 100px; height: 100px; border-radius: var(--pc-r-lg);
+    background: #fff; border: 2px solid rgba(255,251,235,.15);
+    display: grid; place-items: center; flex-shrink: 0; overflow: hidden;
+  }
+  .loja-hero__logo img{ width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+  .loja-hero__logo .initial{
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
+    font-size: 42px; color: var(--pc-emerald-700);
+  }
+  .loja-hero__info h1{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(32px, 4vw, 52px); line-height: 1; letter-spacing:-.02em;
+    margin: 0 0 12px;
+  }
+  .loja-hero__info h1 em{ color: var(--pc-gold-500); }
+  .loja-hero__stats{ display:flex; gap: 16px; flex-wrap: wrap; }
+  .loja-hero__stat{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.14em; text-transform:uppercase;
+    padding: 6px 14px; border-radius: var(--pc-r-pill);
+    background: rgba(255,251,235,.12); color: var(--pc-cream-50);
+  }
+
+  /* ════════ SEÇÕES DE CONTEÚDO ════════ */
+  .content-section{ padding: 48px 0 24px; }
+  .section-title{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: 32px; color: var(--pc-emerald-900);
+    margin: 0 0 28px; letter-spacing:-.01em;
+  }
+  .section-title em{ color: var(--pc-apple-600); }
+
+  /* ════════ GRID DE CAMPANHAS ════════ */
+  .camp-grid{
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (max-width:900px){ .camp-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width:560px){ .camp-grid{ grid-template-columns: 1fr; } }
+
+  .camp-card{
+    background: #fff; border-radius: var(--pc-r-lg);
+    border: 1px solid rgba(6,78,59,.08);
+    box-shadow: var(--pc-shadow-sm);
+    overflow: hidden; display: flex; flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .camp-card:hover{ transform: translateY(-3px); box-shadow: var(--pc-shadow-md); border-color: var(--pc-gold-500); }
+  .camp-card__media{
+    position: relative; aspect-ratio: 3/2; overflow: hidden;
+    background: linear-gradient(160deg, var(--pc-emerald-50), var(--pc-cream-100));
+  }
+  .camp-card__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition: transform .4s ease; }
+  .camp-card:hover .camp-card__media img{ transform: scale(1.04); }
+  .camp-card__media--logo{ background: #fff !important; }
+  .camp-card__media--logo img{ object-fit:contain !important; padding:20px; }
+  .camp-card:hover .camp-card__media--logo img{ transform: none !important; }
+  .camp-card__body{ padding: 18px 18px 0; flex:1; display:flex; flex-direction:column; gap:8px; }
+  .camp-card__name{
+    font-family: var(--pc-font-serif); font-weight: 500; font-size: 19px;
+    line-height: 1.2; color: var(--pc-emerald-900); margin: 0;
+  }
+  .camp-card__validade{
+    display:flex; align-items:center; gap:6px;
+    font-size:12px; color: var(--pc-ink-500); margin-top: auto; padding-top: 12px;
+    border-top: 1px dashed rgba(6,78,59,.15);
+  }
+  .camp-card__validade b{ color: var(--pc-emerald-900); }
+  .camp-card__footer{ padding: 14px 18px 18px; }
+  .camp-card__cta{
+    display:flex; width:100%; align-items:center; justify-content:center; gap:8px;
+    background: var(--pc-apple-600); color: var(--pc-cream-50);
+    font-weight:700; font-size:13px; padding:12px;
+    border-radius: var(--pc-r-pill); box-shadow: var(--pc-shadow-apple);
+    transition: background .15s ease, transform .12s ease;
+  }
+  .camp-card__cta:hover{ background: var(--pc-apple-700); transform: translateY(-1px); }
+  .camp-card__cta .arrow{ font-family: var(--pc-font-serif); font-style:italic; font-size:16px; }
+
+  /* ════════ GRID DE CUPONS ════════ */
+  .cupon-grid{
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 16px;
+    margin-bottom: 48px;
+  }
+  @media (max-width:700px){ .cupon-grid{ grid-template-columns: 1fr; } }
+
+  .cupon-card{
+    background: #fff; border-radius: var(--pc-r-lg);
+    border: 1px solid rgba(6,78,59,.08);
+    box-shadow: var(--pc-shadow-sm);
+    padding: 20px 22px;
+    display: flex; flex-direction:column; gap:12px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .cupon-card:hover{ border-color: var(--pc-gold-500); box-shadow: var(--pc-shadow-md); }
+  .cupon-card__desc{ font-size:15px; font-weight:500; color: var(--pc-emerald-900); line-height:1.4; }
+  .cupon-card__code-row{ display:flex; align-items:center; gap:10px; }
+  .cupon-card__code{
+    font-family: var(--pc-font-mono); font-size:14px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase;
+    background: var(--pc-gold-100); color: var(--pc-gold-700);
+    padding: 8px 14px; border-radius: var(--pc-r-md);
+    border: 1.5px dashed var(--pc-gold-500);
+    cursor: pointer; transition: background .15s ease;
+    flex: 1; text-align:center;
+  }
+  .cupon-card__code:hover{ background: var(--pc-gold-500); color: var(--pc-emerald-900); }
+  .cupon-card__btn{
+    display:inline-flex; align-items:center; gap:6px;
+    background: var(--pc-apple-600); color: #fff;
+    font-weight:700; font-size:12px; padding:10px 14px;
+    border-radius: var(--pc-r-pill); box-shadow: var(--pc-shadow-apple);
+    white-space:nowrap; transition: background .15s ease;
+  }
+  .cupon-card__btn:hover{ background: var(--pc-apple-700); }
+  .cupon-card__validade{ font-size:12px; color: var(--pc-ink-500); }
+  .cupon-card__validade b{ color: var(--pc-emerald-900); }
+
+  /* ════════ ESTADO VAZIO ════════ */
+  .empty-msg{
+    text-align:center; padding: 40px 24px;
+    font-size:14px; color: var(--pc-ink-500);
+    border: 2px dashed rgba(6,78,59,.12);
+    border-radius: var(--pc-r-lg);
+  }
+
+  /* ════════ FOOTER ════════ */
+  footer.foot{ background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; margin-top: 56px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
+  .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
+  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
+  .foot-col a:hover{ color: var(--pc-gold-400); }
+  .foot-col a.active{ color: var(--pc-gold-400); }
+  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
+  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
+  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
+  .foot-bottom{ margin-top: 56px; padding-top: 28px; border-top: 1px solid rgba(255,251,235,.10); display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap; font-family: var(--pc-font-mono); font-size: 11px; color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase; }
+  .foot-disclosure{ margin-top: 48px; padding: 16px 20px; border: 1px dashed rgba(245,158,11,.35); border-radius: var(--pc-r-md); background: rgba(245,158,11,.04); font-size: 12.5px; color: rgba(255,251,235,.7); line-height: 1.55; display: flex; align-items: center; gap: 12px; }
+  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
+  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
+  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="logo-lockup">
+        <div class="logo-mark">P</div>
+        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+        <a class="nav-link active" href="lojas.html" aria-current="page">Lojas</a>
+        <a class="nav-link" href="campanhas.html">Campanhas</a>
+        <a class="nav-link" href="cupons.html">Cupons</a>
+        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
+      </div>
+      <div class="nav-cta">
+        <label class="nav-search" aria-label="Buscar">
+          <span class="ic">⌕</span>
+          <input type="search" placeholder="Buscar cupom ou loja…" />
+          <kbd>/</kbd>
+        </label>
+        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<section class="loja-hero" id="lojaHero">
+  <div class="container">
+    <p class="doc-crumb"><a href="index.html">Início</a> &nbsp;/&nbsp; <a href="lojas.html">Lojas</a> &nbsp;/&nbsp; <span id="crumbNome">…</span></p>
+    <div class="loja-hero__inner">
+      <div class="loja-hero__logo" id="heroLogo">
+        <span class="initial" id="heroInitial">?</span>
+      </div>
+      <div class="loja-hero__info">
+        <h1 id="heroNome">Carregando…</h1>
+        <div class="loja-hero__stats" id="heroStats"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="content-section" id="secCampanhas">
+    <h2 class="section-title">Campanhas <em>ativas</em></h2>
+    <div class="camp-grid" id="campGrid"></div>
+  </section>
+
+  <section class="content-section" id="secCupons">
+    <h2 class="section-title">Cupons <em>disponíveis</em></h2>
+    <div class="cupon-grid" id="cuponGrid"></div>
+  </section>
+</div>
+
+<footer class="foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand">
+        <a href="index.html" class="logo-lockup">
+          <div class="logo-mark">P</div>
+          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+        </a>
+        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Navegar</h4>
+        <ul>
+          <li><a href="index.html#ofertas">Ofertas do dia</a></li>
+          <li><a href="lojas.html" class="active">Lojas parceiras</a></li>
+          <li><a href="campanhas.html">Campanhas</a></li>
+          <li><a href="cupons.html">Cupons</a></li>
+          <li><a href="index.html#telegram">Bot do Telegram</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#24474b4a5045504b64544556454d574b404b574751544b4a570a474b490a4656"><span class="__cf_email__" data-cfemail="7c1f1312081d08133c0c1d0e1d150f1318130f1f090c13120f521f1311521e0e">[email&#160;protected]</span></a></li>
+          <li><a href="#">Reportar cupom inválido</a></li>
+          <li><a href="#">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Divulgação de afiliados</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-disclosure">
+      <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Paraíso dos Cupons · Todos os direitos reservados</span>
+      <span>Feito com 🍎 no Brasil</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(() => {
+  const esc = s => String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+
+  // Pega o nome da loja da URL
+  const params = new URLSearchParams(window.location.search);
+  const nomeLoja = (params.get("nome") || "").trim();
+
+  if (!nomeLoja) {
+    document.getElementById("heroNome").textContent = "Loja não encontrada";
+    window.location.href = "lojas.html";
+  }
+
+  // Atualiza título da página
+  document.title = `${nomeLoja} — Paraíso dos Cupons`;
+  document.getElementById("crumbNome").textContent = nomeLoja;
+  document.getElementById("heroNome").innerHTML = esc(nomeLoja);
+  document.getElementById("heroInitial").textContent = nomeLoja.charAt(0);
+
+  const IMG_FALLBACK = {
+    "Eletrônicos": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=960&q=80",
+    "Moda":        "https://images.unsplash.com/photo-1445205170230-053b83016050?w=960&q=80",
+    "Beleza":      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=960&q=80",
+    "Casa":        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=960&q=80",
+    "Mercado":     "https://images.unsplash.com/photo-1542838132-92c53300491e?w=960&q=80",
+    "Bebidas":     "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=960&q=80",
+  };
+
+  async function load() {
+    let todasLojas = [], todosCupons = [];
+    try {
+      const [r1, r2] = await Promise.all([
+        fetch("lojas.json",  { cache: "no-store" }),
+        fetch("cupons.json", { cache: "no-store" }),
+      ]);
+      todasLojas  = r1.ok ? await r1.json() : [];
+      todosCupons = r2.ok ? await r2.json() : [];
+    } catch(e) { console.warn(e); }
+
+    // Filtra pela loja
+    const campanhas = todasLojas.filter(l => (l.loja||"").trim().toLowerCase() === nomeLoja.toLowerCase());
+    const cupons    = todosCupons.filter(c => (c.loja||"").trim().toLowerCase() === nomeLoja.toLowerCase());
+
+    // Se a loja sumiu dos JSONs, redireciona
+    if (!campanhas.length && !cupons.length) {
+      document.getElementById("heroNome").textContent = "Loja não encontrada";
+      return;
+    }
+
+    // Logo da loja
+    const logo = campanhas.find(l => l.imagem_url && l.imagem_url.includes("cdn.lomadee.com.br/logos"))?.imagem_url || "";
+    const heroLogo = document.getElementById("heroLogo");
+    if (logo) {
+      heroLogo.innerHTML = `<img src="${esc(logo)}" alt="${esc(nomeLoja)}" loading="lazy"/>`;
+    }
+
+    // Stats no hero
+    const stats = [];
+    if (campanhas.length) stats.push(`<span class="loja-hero__stat">${campanhas.length} campanha${campanhas.length>1?"s":""}</span>`);
+    if (cupons.length)    stats.push(`<span class="loja-hero__stat">${cupons.length} cupom${cupons.length>1?"s":""}</span>`);
+    document.getElementById("heroStats").innerHTML = stats.join("");
+
+    // Render campanhas
+    const campGrid = document.getElementById("campGrid");
+    if (campanhas.length) {
+      campGrid.innerHTML = campanhas.map(l => {
+        const img = l.imagem_url || IMG_FALLBACK[l.categoria] || "";
+        const isLogo = img.includes("cdn.lomadee.com.br/logos");
+        const mediaClass = isLogo ? "camp-card__media camp-card__media--logo" : "camp-card__media";
+        return `
+        <article class="camp-card">
+          <a class="${mediaClass}" href="${esc(l.link||"#")}" target="_blank" rel="noopener sponsored">
+            <img src="${esc(img)}" alt="" loading="lazy"/>
+          </a>
+          <div class="camp-card__body">
+            <h3 class="camp-card__name">${esc(l.nome_campanha||"")}</h3>
+            ${l.validade ? `<div class="camp-card__validade">⏱ válido até <b>${esc(l.validade)}</b></div>` : ""}
+          </div>
+          <div class="camp-card__footer">
+            <a class="camp-card__cta" href="${esc(l.link||"#")}" target="_blank" rel="noopener sponsored">
+              Ver oferta <span class="arrow">→</span>
+            </a>
+          </div>
+        </article>`;
+      }).join("");
+    } else {
+      document.getElementById("secCampanhas").innerHTML = "";
+    }
+
+    // Render cupons
+    const cuponGrid = document.getElementById("cuponGrid");
+    if (cupons.length) {
+      cuponGrid.innerHTML = cupons.map(c => {
+        const desconto = c.desconto ? `${c.desconto}${c.tipo_desconto === "%" ? "%" : " R$"} OFF` : "";
+        return `
+        <div class="cupon-card">
+          <p class="cupon-card__desc">${esc(c.descricao||"")}${desconto ? ` — <b>${esc(desconto)}</b>` : ""}</p>
+          <div class="cupon-card__code-row">
+            <span class="cupon-card__code" title="Clique para copiar" onclick="navigator.clipboard?.writeText('${esc(c.codigo||"")}');this.textContent='Copiado!'">
+              ${esc(c.codigo||"")}
+            </span>
+            <a class="cupon-card__btn" href="${esc(c.link||"#")}" target="_blank" rel="noopener sponsored">
+              Usar <span style="font-style:italic;font-family:serif">→</span>
+            </a>
+          </div>
+          ${c.validade ? `<p class="cupon-card__validade">válido até <b>${esc(c.validade)}</b></p>` : ""}
+        </div>`;
+      }).join("");
+    } else {
+      document.getElementById("secCupons").innerHTML = "";
+    }
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>

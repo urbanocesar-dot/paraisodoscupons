@@ -11,6 +11,8 @@
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
 <title>Contato — Paraíso dos Cupons</title>
 <meta name="description" content="Fale com o Paraíso dos Cupons. Dúvidas, parcerias, cupons inválidos ou solicitações LGPD." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,9 +89,15 @@
   .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
   .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
   .nav-links{ display:flex; align-items:center; gap: 8px; }
-  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease; }
+  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease, color .15s ease; position: relative; }
   .nav-link:hover{ background: rgba(6,78,59,.07); }
-  .nav-link.active{ color: var(--pc-apple-700); }
+  .nav-link.active{ color: var(--pc-apple-600); background: var(--pc-apple-100); }
+  .nav-link.active::after{
+    content:""; position: absolute;
+    left: 16px; right: 16px; bottom: 4px;
+    height: 2px; border-radius: 2px;
+    background: var(--pc-apple-600);
+  }
   .nav-cta{ display:flex; align-items:center; gap: 12px; }
   .nav-search{
     display:flex; align-items:center; gap: 10px;
@@ -533,10 +541,10 @@
       </a>
       <div class="nav-links">
         <a class="nav-link" href="index.html#ofertas">Ofertas</a>
-        <a class="nav-link" href="index.html">Lojas</a>
-        <a class="nav-link" href="index.html">Categorias</a>
+        <a class="nav-link" href="lojas.html">Lojas</a>
+        <a class="nav-link" href="campanhas.html">Campanhas</a>
+        <a class="nav-link" href="cupons.html">Cupons</a>
         <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
-        <a class="nav-link" href="index.html">Blog</a>
       </div>
       <div class="nav-cta">
         <label class="nav-search" aria-label="Buscar">
@@ -579,20 +587,20 @@
         </div>
       </a>
 
-      <a href="mailto:contato@paraisodoscupons.com.br" class="info-card">
+      <a href="/cdn-cgi/l/email-protection#c9aaa6a7bda8bda689b9a8bba8a0baa6ada6baaabcb9a6a7bae7aaa6a4e7abbb" class="info-card">
         <div class="ic">✉</div>
         <div>
           <h3>E-mail geral</h3>
-          <span class="val">contato@paraisodoscupons.com.br</span>
+          <span class="val"><span class="__cf_email__" data-cfemail="e1828e8f9580958ea19180938088928e858e928294918e8f92cf828e8ccf8393">[email&#160;protected]</span></span>
           <p class="hint" style="margin: 8px 0 0;">Resposta em até 48h úteis</p>
         </div>
       </a>
 
-      <a href="mailto:privacidade@paraisodoscupons.com.br" class="info-card">
+      <a href="/cdn-cgi/l/email-protection#1565677c6374767c7174717055657467747c667a717a667660657a7b663b767a783b7767" class="info-card">
         <div class="ic ic--apple">§</div>
         <div>
           <h3>Encarregado LGPD</h3>
-          <span class="val">privacidade@paraisodoscupons.com.br</span>
+          <span class="val"><span class="__cf_email__" data-cfemail="abdbd9c2ddcac8c2cfcacfceebdbcad9cac2d8c4cfc4d8c8dedbc4c5d885c8c4c685c9d9">[email&#160;protected]</span></span>
           <p class="hint" style="margin: 8px 0 0;">Direitos de titular · 15 dias</p>
         </div>
       </a>
@@ -751,17 +759,17 @@
         <h4>Navegar</h4>
         <ul>
           <li><a href="index.html#ofertas">Ofertas do dia</a></li>
-          <li><a href="index.html">Todas as lojas</a></li>
-          <li><a href="index.html">Categorias</a></li>
+          <li><a href="lojas.html">Lojas parceiras</a></li>
+          <li><a href="campanhas.html">Campanhas</a></li>
+          <li><a href="cupons.html">Cupons</a></li>
           <li><a href="index.html#telegram">Bot do Telegram</a></li>
-          <li><a href="index.html">Blog &amp; guias</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h4>Suporte</h4>
         <ul>
           <li><a href="contato.html" class="active">Contato</a></li>
-          <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#0b6864657f6a7f644b7b6a796a6278646f6478687e7b64657825686466256979"><span class="__cf_email__" data-cfemail="88ebe7e6fce9fce7c8f8e9fae9e1fbe7ece7fbebfdf8e7e6fba6ebe7e5a6eafa">[email&#160;protected]</span></a></li>
           <li><a href="#">Reportar cupom inválido</a></li>
           <li><a href="#">Trabalhe conosco</a></li>
         </ul>
@@ -792,7 +800,7 @@
   <b>✓</b><span id="toastMsg">Enviado!</span>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (() => {
   const $ = (s, c=document) => c.querySelector(s);
   const form    = $("#contactForm");
