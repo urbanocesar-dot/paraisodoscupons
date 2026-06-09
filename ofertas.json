@@ -232,6 +232,23 @@
     "lomadee_id": "31524",
     "lomadee_organization_id": "7595dee7-e09b-485a-9853-4fb3fc380c11",
     "data_adicao": "2026-06-09T22:05:07.885946+00:00",
-    "ultima_verificacao": "2026-06-09T22:05:07.885966+00:00"
+    "ultima_verificacao": "2026-06-09T22:08:07.297839+00:00",
+    "falhas_verificacao": 1
+  },
+  {
+    "titulo": "50ml 50ml",
+    "loja": "Drogaria Rosário",
+    "desconto": 49,
+    "preco_original": 719.0,
+    "preco_final": 369.0,
+    "link_afiliado": "https://lmdee.link/ZWVVupQUi4Oo",
+    "categoria": "Beleza",
+    "imagem_url": "https://dmvfarma.vteximg.com.br/arquivos/ids/311398/50ml.png?v=638980487164730000",
+    "destaque": false,
+    "lomadee_id": "46417",
+    "lomadee_organization_id": "1fcee90e-562e-455c-97a5-6bdd6d60b589",
+    "data_adicao": "2026-06-09T22:08:15.060395+00:00",
+    "ultima_verificacao": "2026-06-09T22:08:15.060414+00:00",
+    "falhas_verificacao": 0
   }
 ]
