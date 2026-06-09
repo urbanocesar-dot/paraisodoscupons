@@ -514,6 +514,121 @@
   .pc-card--featured .pc-card__media .save{ background: rgba(255,251,235,.12); color: var(--pc-cream-50); }
   .pc-card--featured .pc-card__media .save:hover{ background: rgba(255,251,235,.22); color: var(--pc-gold-400); }
 
+  /* ════════ CARD HERÓI (produto destaque) ════════ */
+  .hero-produto{
+    margin-bottom: 40px;
+    background: linear-gradient(165deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
+    border-radius: var(--pc-r-lg);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    min-height: 280px;
+    box-shadow: var(--pc-shadow-lg);
+  }
+  @media (max-width: 700px){ .hero-produto{ grid-template-columns: 1fr; } }
+  .hero-produto__img{
+    position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #0A3D2D, #03261D);
+  }
+  .hero-produto__img img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: .9;
+    transition: transform .4s ease;
+  }
+  .hero-produto:hover .hero-produto__img img{ transform: scale(1.04); }
+  .hero-produto__badge{
+    position: absolute; top: 16px; left: 16px;
+    background: var(--pc-apple-600); color: #fff;
+    font-family: var(--pc-font-sans); font-weight: 800;
+    font-size: 22px; line-height: 1;
+    padding: 10px 14px; border-radius: var(--pc-r-sm);
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .hero-produto__badge span{
+    font-family: var(--pc-font-mono); font-size: 9px;
+    letter-spacing: .2em; text-transform: uppercase;
+    margin-top: 4px; opacity: .85;
+  }
+  .hero-produto__body{
+    padding: 36px 40px;
+    display: flex; flex-direction: column; justify-content: center; gap: 16px;
+    color: var(--pc-cream-50);
+  }
+  .hero-produto__meta{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    letter-spacing: .22em; text-transform: uppercase;
+    color: var(--pc-gold-400);
+  }
+  .hero-produto__title{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: clamp(22px, 3vw, 34px); line-height: 1.1;
+    letter-spacing: -.01em; color: var(--pc-cream-50); margin: 0;
+  }
+  .hero-produto__prices{
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  .hero-produto__price{
+    font-family: var(--pc-font-sans); font-weight: 800;
+    font-size: 36px; color: var(--pc-gold-400);
+    letter-spacing: -.02em; line-height: 1;
+  }
+  .hero-produto__price-prefix{ font-size: 16px; font-weight: 600; margin-right: 2px; }
+  .hero-produto__strike{
+    font-size: 15px; color: rgba(255,251,235,.45);
+    text-decoration: line-through;
+  }
+
+  /* ════════ SEÇÃO DE CAMPANHAS DESTAQUE ════════ */
+  .destaques-section{ padding: 0 0 56px; }
+  .destaques-section .section-head{ margin-bottom: 28px; }
+  .destaques-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 980px){ .destaques-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px){ .destaques-grid{ grid-template-columns: 1fr; } }
+
+  .dest-card{
+    background: #fff;
+    border-radius: var(--pc-r-lg);
+    border: 1px solid rgba(6,78,59,.08);
+    box-shadow: var(--pc-shadow-sm);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .dest-card:hover{ transform: translateY(-3px); box-shadow: var(--pc-shadow-md); border-color: var(--pc-gold-500); }
+  .dest-card__media{
+    position: relative; aspect-ratio: 3/2; overflow: hidden;
+    background: linear-gradient(160deg, var(--pc-emerald-50), var(--pc-cream-100));
+  }
+  .dest-card__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition: transform .4s ease; }
+  .dest-card:hover .dest-card__media img{ transform: scale(1.04); }
+  .dest-card__media--logo{ background: #fff !important; }
+  .dest-card__media--logo img{ object-fit: contain !important; padding: 16px; }
+  .dest-card:hover .dest-card__media--logo img{ transform: none !important; }
+  .dest-card__body{ padding: 16px 16px 0; flex: 1; }
+  .dest-card__loja{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: var(--pc-emerald-700); font-weight: 600; margin: 0 0 6px;
+  }
+  .dest-card__nome{
+    font-family: var(--pc-font-serif); font-size: 17px; font-weight: 500;
+    line-height: 1.2; color: var(--pc-emerald-900); margin: 0;
+  }
+  .dest-card__footer{ padding: 12px 16px 16px; }
+  .dest-card__cta{
+    display: flex; width: 100%; align-items: center; justify-content: center; gap: 8px;
+    background: var(--pc-apple-600); color: #fff;
+    font-weight: 700; font-size: 13px; padding: 11px;
+    border-radius: var(--pc-r-pill); box-shadow: var(--pc-shadow-apple);
+    transition: background .15s ease;
+  }
+  .dest-card__cta:hover{ background: var(--pc-apple-700); }
+
   /* Loading state */
   .skeleton{
     background: linear-gradient(90deg, var(--pc-cream-100) 0%, var(--pc-cream-200) 50%, var(--pc-cream-100) 100%);
@@ -788,9 +903,9 @@
       </a>
       <div class="nav-links">
         <a class="nav-link active" href="#ofertas">Ofertas</a>
-        <a class="nav-link" href="cupons.html">Cupons</a>
         <a class="nav-link" href="lojas.html">Lojas</a>
-        <a class="nav-link" href="#">Categorias</a>
+        <a class="nav-link" href="campanhas.html">Campanhas</a>
+        <a class="nav-link" href="cupons.html">Cupons</a>
         <a class="nav-link" href="#telegram">Bot Telegram</a>
       </div>
       <div class="nav-cta">
@@ -853,6 +968,22 @@
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════════ CAMPANHAS DESTAQUE ═══════════════════════════════════════════════ -->
+<section class="destaques-section" id="campanhas-destaque">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Campanhas em destaque</p>
+        <h2>Lojas <em>imperdíveis</em> agora</h2>
+      </div>
+      <a href="campanhas.html" class="pc-btn pc-btn--secondary pc-btn--sm">Ver todas <span class="arrow">→</span></a>
+    </div>
+    <div class="destaques-grid" id="destaquesGrid">
+      <!-- preenchido via JS -->
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════════════════════════════════ OFERTAS ═══════════════════════════════════════════════ -->
 <section class="offers-section" id="ofertas">
   <div class="container">
@@ -864,6 +995,7 @@
       <p>Atualizado em tempo real. Códigos testados nas últimas 24h. Toque no cupom para copiar.</p>
     </div>
 
+    <div id="heroDestaque"></div>
     <div class="offer-grid" id="offerGrid">
       <!-- Skeletons iniciais (3) — substituídos depois do fetch -->
       <div class="skel-card"><div class="skeleton skel-media"></div><div class="skel-body"><div class="skeleton skel-line s"></div><div class="skeleton skel-line t"></div><div class="skeleton skel-line"></div><div class="skeleton skel-line p"></div></div></div>
@@ -947,10 +1079,10 @@ de você procurar.</h3>
         <h4>Navegar</h4>
         <ul>
           <li><a href="#ofertas">Ofertas do dia</a></li>
-          <li><a href="lojas.html">Todas as lojas</a></li>
-          <li><a href="#">Categorias</a></li>
+          <li><a href="lojas.html">Lojas parceiras</a></li>
+          <li><a href="campanhas.html">Campanhas</a></li>
+          <li><a href="cupons.html">Cupons</a></li>
           <li><a href="#telegram">Bot do Telegram</a></li>
-          <li><a href="#">Blog &amp; guias</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -1147,7 +1279,7 @@ de você procurar.</h3>
   }
 
   /* ----------------------------------------------------------
-     Carregar ofertas.json
+     Carregar ofertas.json + lojas.json
   ---------------------------------------------------------- */
   async function loadOffers() {
     try {
@@ -1156,11 +1288,98 @@ de você procurar.</h3>
       allOffers = await res.json();
     } catch (err) {
       console.warn("Falha no fetch — usando fallback inline.", err);
-      // Fallback inline para funcionar mesmo sem servidor (file://)
       allOffers = INLINE_FALLBACK;
     }
+
+    // Herói: produto com maior desconto
+    renderHero();
     updateCategoryCounts();
     renderOffers();
+
+    // Campanhas destaque (lojas.json)
+    try {
+      const res2 = await fetch("lojas.json", { cache: "no-store" });
+      if (res2.ok) {
+        const lojas = await res2.json();
+        renderDestaques(lojas);
+      }
+    } catch(e) { console.warn(e); }
+  }
+
+  /* ----------------------------------------------------------
+     Herói — produto com maior desconto
+  ---------------------------------------------------------- */
+  function renderHero() {
+    const hero = $("#heroDestaque");
+    if (!hero) return;
+    if (!allOffers.length) { hero.innerHTML = ""; return; }
+
+    // Pega produto com maior desconto (ou destaque: true)
+    const sorted = [...allOffers].sort((a,b) => {
+      if (b.destaque !== a.destaque) return (b.destaque ? 1 : 0) - (a.destaque ? 1 : 0);
+      return (b.desconto||0) - (a.desconto||0);
+    });
+    const o = sorted[0];
+    if (!o) return;
+
+    const link = o.link_afiliado || "#";
+    const img  = o.imagem_url || "";
+    hero.innerHTML = `
+    <a class="hero-produto" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored">
+      <div class="hero-produto__img">
+        ${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy"/>` : ""}
+        ${o.desconto > 0 ? `
+        <div class="hero-produto__badge">
+          -${o.desconto}%<span>desconto</span>
+        </div>` : ""}
+      </div>
+      <div class="hero-produto__body">
+        <p class="hero-produto__meta">${escapeHtml(o.loja||"")} · ${escapeHtml(o.categoria||"")}</p>
+        <h3 class="hero-produto__title">${escapeHtml(o.titulo||"")}</h3>
+        <div class="hero-produto__prices">
+          <p class="hero-produto__price"><span class="hero-produto__price-prefix">R$</span>${formatBRL(o.preco_final)}</p>
+          ${o.preco_original ? `<p class="hero-produto__strike">R$ ${formatBRL(o.preco_original)}</p>` : ""}
+        </div>
+        <span class="pc-btn pc-btn--gold" style="width:fit-content">Ver oferta <span class="arrow">→</span></span>
+      </div>
+    </a>`;
+  }
+
+  /* ----------------------------------------------------------
+     Campanhas destaque
+  ---------------------------------------------------------- */
+  function renderDestaques(lojas) {
+    const grid = $("#destaquesGrid");
+    if (!grid) return;
+
+    // Pega destaques primeiro, depois completa com os mais recentes — máx 4
+    const destaques = lojas.filter(l => l.destaque);
+    const resto     = lojas.filter(l => !l.destaque);
+    const selecionados = [...destaques, ...resto].slice(0, 4);
+
+    if (!selecionados.length) {
+      grid.closest("section").style.display = "none";
+      return;
+    }
+
+    grid.innerHTML = selecionados.map(l => {
+      const img = l.imagem_url || "";
+      const isLogo = img.includes("cdn.lomadee.com.br/logos");
+      const mediaClass = isLogo ? "dest-card__media dest-card__media--logo" : "dest-card__media";
+      return `
+      <a class="dest-card" href="${escapeHtml(l.link||"#")}" target="_blank" rel="noopener sponsored">
+        <div class="${mediaClass}">
+          ${img ? `<img src="${escapeHtml(img)}" alt="" loading="lazy"/>` : ""}
+        </div>
+        <div class="dest-card__body">
+          <p class="dest-card__loja">${escapeHtml(l.loja||"")}</p>
+          <h3 class="dest-card__nome">${escapeHtml(l.nome_campanha||"")}</h3>
+        </div>
+        <div class="dest-card__footer">
+          <span class="dest-card__cta">Ver campanha <span style="font-family:serif;font-style:italic">→</span></span>
+        </div>
+      </a>`;
+    }).join("");
   }
 
   /* ----------------------------------------------------------
