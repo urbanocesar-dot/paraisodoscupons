@@ -12,7 +12,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lojas Parceiras — Paraíso dos Cupons</title>
-<meta name="description" content="Conheça as lojas parceiras do Paraíso dos Cupons e suas campanhas ativas." />
+<meta name="description" content="Todas as lojas parceiras do Paraíso dos Cupons com campanhas e cupons ativos." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -43,6 +43,7 @@
     background: var(--pc-cream-50);
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     font-size:16px; line-height:1.55;
+    padding-top: 76px;
   }
   a{ color: inherit; text-decoration: none; }
   img{ display:block; max-width:100%; }
@@ -60,15 +61,12 @@
     box-shadow: var(--pc-shadow-apple);
   }
   .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
-  .pc-btn:focus-visible{ outline: 2px solid var(--pc-gold-500); outline-offset: 3px; }
   .pc-btn .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; transform: translateY(-1px); }
   .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); box-shadow: 0 10px 24px -14px rgba(3,38,29,.55); }
-  .pc-btn--gold{ --bg: var(--pc-gold-500); --bg-hover: var(--pc-gold-600); --fg: var(--pc-emerald-900); box-shadow: var(--pc-shadow-gold); }
-  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
 
   /* ════════ NAVBAR ════════ */
   .nav-wrap{
-    position: sticky; top: 0; z-index: 50;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
     background: rgba(255,251,235,.85);
     backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(6,78,59,.08);
@@ -92,42 +90,29 @@
     position: relative;
   }
   .nav-link:hover{ background: rgba(6,78,59,.07); }
-  .nav-link.active{
-    color: var(--pc-apple-600); background: var(--pc-apple-100);
-  }
+  .nav-link.active{ color: var(--pc-apple-600); background: var(--pc-apple-100); }
   .nav-link.active::after{
     content:""; position: absolute;
     left: 16px; right: 16px; bottom: 4px;
     height: 2px; border-radius: 2px;
     background: var(--pc-apple-600);
   }
-  .nav-cta{ display:flex; align-items:center; gap: 12px; }
-  .nav-search{
-    display:flex; align-items:center; gap: 10px;
-    background: #fff; border:1px solid var(--pc-cream-200);
-    border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px;
-    min-width: 280px; box-shadow: var(--pc-shadow-sm);
-  }
-  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
-  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
-  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
-  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+  @media (max-width: 980px){ .nav-links{ display:none; } }
 
   /* ════════ HERO ════════ */
   .doc-hero{
-    position: relative; overflow: hidden;
     background:
       radial-gradient(120% 80% at 92% 8%, rgba(245,158,11,.18), transparent 60%),
       radial-gradient(70% 60% at 5% 100%, rgba(31,166,131,.18), transparent 70%),
       linear-gradient(180deg, var(--pc-emerald-800) 0%, var(--pc-emerald-900) 100%);
     color: var(--pc-cream-50);
-    padding: 72px 0 88px;
+    padding: 64px 0 72px;
   }
-  .doc-hero::before, .doc-hero::after{
-    content:""; position:absolute; border-radius: 50%; pointer-events:none;
+  .doc-crumb{
+    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
+    color: rgba(255,251,235,.55); margin-bottom: 8px;
   }
-  .doc-hero::before{ width: 420px; height: 420px; right: -160px; top: -160px; border: 1px solid rgba(245,158,11,.22); }
-  .doc-hero::after{ width: 260px; height: 260px; right: -60px; top: 60px; border: 1px solid rgba(214,237,227,.12); }
+  .doc-crumb a{ color: var(--pc-gold-400); }
   .doc-hero .eyebrow{
     font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
     text-transform:uppercase; color: var(--pc-gold-400); margin: 0;
@@ -136,412 +121,165 @@
   .doc-hero .eyebrow .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-gold-500); }
   .doc-hero h1{
     font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
-    font-size: clamp(48px, 6vw, 78px); line-height: .98;
-    letter-spacing:-.02em; margin: 22px 0 0; max-width: 18ch;
+    font-size: clamp(42px, 5vw, 68px); line-height: .98;
+    letter-spacing:-.02em; margin: 18px 0 0;
   }
   .doc-hero h1 em{ color: var(--pc-gold-500); font-style: italic; }
-  .doc-hero .sub{ margin-top: 20px; font-size: 17px; line-height: 1.5; color: rgba(255,251,235,.78); max-width: 60ch; }
-  .doc-crumb{
-    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.18em; text-transform:uppercase;
-    color: rgba(255,251,235,.55); margin-bottom: 8px;
-  }
-  .doc-crumb a{ color: var(--pc-gold-400); }
-  .doc-crumb a:hover{ text-decoration: underline; }
+  .doc-hero .sub{ margin-top: 16px; font-size: 16px; color: rgba(255,251,235,.78); }
 
-  /* ════════ FAIXA DE CATEGORIAS ════════ */
-  .cats-strip{
-    background: var(--pc-cream-100);
-    border-bottom: 1px solid var(--pc-cream-200);
-    padding: 18px 0;
-    position: sticky; top: 76px; z-index: 40;
-  }
-  .cats-row{
-    display:flex; gap: 8px; align-items:center;
-    overflow-x: auto; scrollbar-width: none;
-  }
-  .cats-row::-webkit-scrollbar{ display:none; }
-  .cat-pill{
-    display:inline-flex; align-items:center; gap:8px;
-    padding: 10px 16px;
-    background: #fff;
-    border: 1px solid var(--pc-cream-200);
-    color: var(--pc-emerald-800);
-    font-family: inherit; font-weight: 600; font-size: 13px;
-    border-radius: var(--pc-r-pill);
-    white-space:nowrap; cursor: pointer;
-    transition: background .15s ease, color .15s ease, border-color .15s ease;
-  }
-  .cat-pill:hover{ background: var(--pc-emerald-50); }
-  .cat-pill.active{ background: var(--pc-emerald-800); color: var(--pc-cream-50); border-color: var(--pc-emerald-800); }
-  .cat-pill .count{
-    font-family: var(--pc-font-mono); font-size: 10px;
-    background: var(--pc-cream-100); color: var(--pc-emerald-800);
-    padding: 2px 6px; border-radius: 999px;
-  }
-  .cat-pill.active .count{ background: rgba(245,158,11,.25); color: var(--pc-gold-400); }
-
-  /* ════════ SEÇÃO DE LOJAS ════════ */
+  /* ════════ GRID DE LOJAS ════════ */
   .lojas-section{ padding: 56px 0 80px; }
-  .lojas-head{ display:flex; justify-content:space-between; align-items:flex-end; gap: 32px; margin-bottom: 32px; }
+  .lojas-head{ display:flex; justify-content:space-between; align-items:flex-end; gap: 32px; margin-bottom: 40px; }
+  .lojas-head h2{
+    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
+    font-size: 38px; line-height: 1.05; letter-spacing:-.015em;
+    color: var(--pc-emerald-900); margin: 8px 0 0;
+  }
+  .lojas-head h2 em{ color: var(--pc-apple-600); }
   .lojas-head .eyebrow{
     font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em;
     text-transform:uppercase; color: var(--pc-emerald-700); margin:0;
   }
-  .lojas-head h2{
-    font-family: var(--pc-font-serif); font-weight: 500; font-style: italic;
-    font-size: 38px; line-height: 1.05;
-    letter-spacing:-.015em; color: var(--pc-emerald-900); margin: 8px 0 0;
-  }
-  .lojas-head h2 em{ color: var(--pc-apple-600); font-style: italic; }
   .lojas-head .meta{
     font-family: var(--pc-font-mono); font-size: 11px;
     letter-spacing:.18em; text-transform:uppercase; color: var(--pc-ink-500);
+    white-space: nowrap;
   }
-  .lojas-head .meta b{ color: var(--pc-emerald-800); font-weight: 500; }
+  .lojas-head .meta b{ color: var(--pc-emerald-800); }
 
-  /* ════════ GRID DE LOJAS ════════ */
   .lojas-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
   }
-  @media (max-width: 980px){ .lojas-grid{ grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 640px){ .lojas-grid{ grid-template-columns: 1fr; } }
+  @media (max-width: 1100px){ .lojas-grid{ grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 800px){  .lojas-grid{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 540px){  .lojas-grid{ grid-template-columns: repeat(2, 1fr); } }
 
-  .loja{
+  .loja-card{
     background: #fff;
-    border-radius: var(--pc-r-lg);
-    overflow: hidden;
     border: 1px solid rgba(6,78,59,.08);
-    box-shadow: var(--pc-shadow-md);
-    display: flex; flex-direction: column;
-    position: relative;
+    border-radius: var(--pc-r-lg);
+    box-shadow: var(--pc-shadow-sm);
+    overflow: hidden;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 24px 16px 20px;
+    gap: 14px;
+    cursor: pointer;
     transition: transform .2s ease, box-shadow .25s ease, border-color .2s ease;
+    text-align: center;
   }
-  .loja:hover{
+  .loja-card:hover{
     transform: translateY(-3px);
-    box-shadow: var(--pc-shadow-lg);
+    box-shadow: var(--pc-shadow-md);
     border-color: var(--pc-gold-500);
   }
 
-  /* Mídia / banner */
-  .loja__media{
-    position: relative;
-    aspect-ratio: 3 / 2;
-    background:
-      repeating-linear-gradient(135deg, rgba(6,78,59,.045) 0 10px, transparent 10px 22px),
-      linear-gradient(160deg, var(--pc-emerald-50), var(--pc-cream-100));
-    overflow: hidden;
-    color: var(--pc-emerald-800);
-    display: grid; place-items: center;
-    font-family: var(--pc-font-mono); font-size: 11px; letter-spacing:.22em; text-transform:uppercase;
-  }
-  .loja__media img{
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; display: block;
-    transition: transform .4s ease;
-  }
-  .loja:hover .loja__media img{ transform: scale(1.04); }
-
-  /* Modo logo — imagem contida com fundo neutro */
-  .loja__media--logo{
-    background: #fff !important;
-  }
-  .loja__media--logo img{
-    object-fit: contain !important;
-    padding: 24px;
-    transform: none !important;
-  }
-  .loja:hover .loja__media--logo img{ transform: none !important; }
-  .loja__media .ph{ position: relative; z-index: 1; }
-
-  /* Tag de categoria (canto superior esquerdo) */
-  .loja__tag{
-    position: absolute; top: 14px; left: 14px; z-index: 2;
-    background: var(--pc-cream-50);
-    color: var(--pc-emerald-800);
-    font-family: var(--pc-font-sans); font-weight: 700;
-    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
-    padding: 6px 12px;
-    border-radius: var(--pc-r-pill);
-    box-shadow: var(--pc-shadow-sm);
-  }
-  /* Selo dourado de destaque (canto superior direito) */
-  .loja__destaque{
-    position: absolute; top: 14px; right: 14px; z-index: 2;
-    background: var(--pc-gold-500);
-    color: var(--pc-emerald-900);
-    font-family: var(--pc-font-sans); font-weight: 800;
-    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
-    padding: 6px 12px;
-    border-radius: var(--pc-r-pill);
-    display: inline-flex; align-items: center; gap: 6px;
-    box-shadow: var(--pc-shadow-gold);
-  }
-  .loja__destaque .dot{ width: 5px; height: 5px; border-radius: 50%; background: var(--pc-emerald-900); }
-
-  /* Corpo */
-  .loja__body{
-    padding: 22px 22px 0;
-    display: flex; flex-direction: column; gap: 12px; flex: 1;
-  }
-  .loja__store{
-    font-family: var(--pc-font-mono); font-size: 11px;
-    letter-spacing: .22em; text-transform: uppercase;
-    color: var(--pc-emerald-700); font-weight: 600;
-    margin: 0;
-  }
-  .loja__campaign{
-    font-family: var(--pc-font-serif); font-weight: 500;
-    font-size: 22px; line-height: 1.18;
-    color: var(--pc-emerald-900); margin: 0;
-    letter-spacing: -.01em;
-  }
-  .loja__campaign em{ font-style: italic; color: var(--pc-emerald-700); }
-
-  /* Linha de validade */
-  .loja__validade{
-    display: flex; align-items: center; gap: 8px;
-    margin-top: auto;
-    padding-top: 16px;
-    border-top: 1px dashed rgba(6,78,59,.18);
-    font-size: 13px; color: var(--pc-ink-700);
-  }
-  .loja__validade .ic{
-    width: 22px; height: 22px; border-radius: 50%;
-    background: var(--pc-gold-100); color: var(--pc-gold-700);
-    display: grid; place-items: center;
-    font-family: var(--pc-font-serif); font-weight: 600; font-style: italic;
-    font-size: 13px; line-height: 1; flex: none;
-  }
-  .loja__validade b{ color: var(--pc-emerald-900); font-weight: 600; }
-
-  /* Footer / CTA */
-  .loja__footer{ padding: 18px 22px 22px; }
-  .loja__cta{
-    display: flex; width: 100%;
-    align-items: center; justify-content: center; gap: 10px;
-    background: var(--pc-apple-600); color: var(--pc-cream-50);
-    font-family: var(--pc-font-sans); font-weight: 700; font-size: 14px;
-    padding: 14px 18px;
-    border-radius: var(--pc-r-pill);
-    transition: background .15s ease, transform .12s ease;
-    box-shadow: var(--pc-shadow-apple);
-  }
-  .loja__cta:hover{ background: var(--pc-apple-700); transform: translateY(-1px); }
-  .loja__cta .arrow{ font-family: var(--pc-font-serif); font-style: italic; font-size: 18px; }
-
-  /* ════════ SKELETON ════════ */
-  .skel{
-    background: linear-gradient(90deg, var(--pc-cream-100) 0%, var(--pc-cream-200) 50%, var(--pc-cream-100) 100%);
-    background-size: 200% 100%;
-    animation: shimmer 1.4s ease-in-out infinite;
-    border-radius: var(--pc-r-sm);
-  }
-  @keyframes shimmer{ 0%{ background-position: 100% 0; } 100%{ background-position: -100% 0; } }
-  .skel-card{
-    background: #fff;
-    border: 1px solid rgba(6,78,59,.08);
-    border-radius: var(--pc-r-lg);
-    overflow: hidden;
-    box-shadow: var(--pc-shadow-md);
-  }
-  .skel-card .skel-media{ aspect-ratio: 3/2; }
-  .skel-card .skel-body{ padding: 22px; display: flex; flex-direction: column; gap: 10px; }
-  .skel-card .skel-line{ height: 12px; border-radius: 4px; }
-  .skel-card .skel-line.t{ height: 22px; width: 90%; }
-  .skel-card .skel-line.s{ width: 55%; }
-  .skel-card .skel-line.f{ width: 70%; margin-top: 12px; }
-
-  /* ════════ ESTADO VAZIO ════════ */
-  .empty{
-    text-align: center;
-    padding: 80px 24px;
-    border: 2px dashed rgba(6,78,59,.18);
-    border-radius: var(--pc-r-lg);
-    background: var(--pc-cream-100);
-    color: var(--pc-ink-500);
-    grid-column: 1 / -1;
-  }
-  .empty .seal{
-    width: 80px; height: 80px; border-radius: 50%;
-    background: var(--pc-gold-500); color: var(--pc-emerald-900);
-    margin: 0 auto 20px;
-    display: grid; place-items: center;
-    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
-    font-size: 36px; line-height: 1;
-    box-shadow: var(--pc-shadow-gold);
-    position: relative;
-  }
-  .empty .seal::before{
-    content:""; position: absolute; inset: 4px;
-    border-radius: 50%;
-    border: 1px dashed rgba(3,38,29,.25);
-  }
-  .empty b{
-    display: block;
-    font-family: var(--pc-font-serif); font-style: italic; font-weight: 500;
-    font-size: 32px; color: var(--pc-emerald-900);
-    margin-bottom: 8px;
-    letter-spacing: -.01em;
-  }
-  .empty p{ margin: 0 auto; max-width: 44ch; font-size: 15px; line-height: 1.55; color: var(--pc-ink-700); }
-  .empty .cta-row{ margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-  /* ════════ AVISO AFILIADOS ════════ */
-  .affiliate-notice{
-    margin-top: 40px;
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 18px 22px;
-    background: var(--pc-cream-100);
-    border: 1px dashed rgba(6,78,59,.22);
+  .loja-card__logo{
+    width: 80px; height: 80px;
     border-radius: var(--pc-r-md);
-    color: var(--pc-ink-700);
-  }
-  .affiliate-notice .badge{
-    flex: none;
-    width: 28px; height: 28px; border-radius: 50%;
-    background: var(--pc-gold-500); color: var(--pc-emerald-900);
+    overflow: hidden;
+    background: var(--pc-cream-50);
+    border: 1px solid var(--pc-cream-200);
     display: grid; place-items: center;
-    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
-    font-size: 15px; line-height: 1; margin-top: 2px;
+    flex-shrink: 0;
   }
-  .affiliate-notice p{ margin: 0; font-size: 13.5px; line-height: 1.55; max-width: 80ch; }
-  .affiliate-notice b{ color: var(--pc-emerald-900); font-weight: 700; }
-  .affiliate-notice em{ font-style: italic; color: var(--pc-apple-700); font-weight: 600; }
+  .loja-card__logo img{
+    width: 100%; height: 100%;
+    object-fit: contain;
+    padding: 8px;
+  }
+  .loja-card__logo .logo-initial{
+    font-family: var(--pc-font-serif); font-style: italic; font-weight: 600;
+    font-size: 28px; color: var(--pc-emerald-700);
+  }
 
-  /* ════════ FOOTER (idêntico) ════════ */
-  footer.foot{ background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; margin-top: 56px; }
-  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
+  .loja-card__name{
+    font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px;
+    color: var(--pc-emerald-900); line-height: 1.3;
+  }
+
+  .loja-card__stats{
+    display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+  }
+  .loja-card__stat{
+    font-family: var(--pc-font-mono); font-size: 10px;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 4px 8px; border-radius: var(--pc-r-pill);
+  }
+  .loja-card__stat--camp{
+    background: var(--pc-emerald-50); color: var(--pc-emerald-700);
+  }
+  .loja-card__stat--cupon{
+    background: var(--pc-gold-100); color: var(--pc-gold-700);
+  }
+
+  /* ════════ FOOTER ════════ */
+  footer{
+    background: var(--pc-emerald-900); color: var(--pc-cream-50);
+    padding: 64px 0 40px;
+  }
+  .foot-grid{ display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,251,235,.1); }
+  @media (max-width:860px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
   .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
   .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
   .foot-col a:hover{ color: var(--pc-gold-400); }
   .foot-col a.active{ color: var(--pc-gold-400); }
-  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
-  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
-  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
-  .foot-bottom{
-    margin-top: 56px; padding-top: 28px;
-    border-top: 1px solid rgba(255,251,235,.10);
-    display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap;
-    font-family: var(--pc-font-mono); font-size: 11px;
-    color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase;
-  }
-  .foot-disclosure{
-    margin-top: 48px;
-    padding: 16px 20px;
-    border: 1px dashed rgba(245,158,11,.35);
-    border-radius: var(--pc-r-md);
-    background: rgba(245,158,11,.04);
-    font-size: 12.5px;
-    color: rgba(255,251,235,.7);
-    line-height: 1.55;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
-  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
-  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
-
-  @media (max-width: 767px) {
-    body { padding-top: 76px; }
-    .nav-wrap { position: fixed; top: 0; left: 0; right: 0; }
-  }
+  .foot-brand .logo-lockup{ color: var(--pc-cream-50); margin-bottom: 16px; }
+  .foot-brand p{ font-size: 14px; color: rgba(255,251,235,.6); line-height: 1.6; max-width: 28ch; }
+  .foot-disclosure{ margin-top: 32px; font-size: 12px; color: rgba(255,251,235,.45); line-height: 1.6; }
+  .foot-bottom{ margin-top: 24px; display:flex; justify-content:space-between; font-size: 12px; color: rgba(255,251,235,.35); }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════════ -->
 <div class="nav-wrap">
-  <div class="container">
-    <nav class="nav">
-      <a href="index.html" class="logo-lockup">
-        <div class="logo-mark">P</div>
-        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
-      </a>
-      <div class="nav-links">
-        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
-        <a class="nav-link" href="cupons.html">Cupons</a>
-        <a class="nav-link active" href="lojas.html" aria-current="page">Lojas</a>
-        <a class="nav-link" href="index.html">Categorias</a>
-        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
-      </div>
-      <div class="nav-cta">
-        <label class="nav-search" aria-label="Buscar">
-          <span class="ic">⌕</span>
-          <input id="searchInput" type="search" placeholder="Buscar loja ou campanha…" />
-          <kbd>/</kbd>
-        </label>
-        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
-      </div>
-    </nav>
-  </div>
+  <nav class="nav container">
+    <a href="index.html" class="logo-lockup">
+      <div class="logo-mark">P</div>
+      <div class="logo-wordmark">Paraíso dos Cupons<small>ofertas & descontos</small></div>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+      <a class="nav-link active" href="lojas.html" aria-current="page">Lojas</a>
+      <a class="nav-link" href="campanhas.html">Campanhas</a>
+      <a class="nav-link" href="cupons.html">Cupons</a>
+    </div>
+  </nav>
 </div>
 
-<!-- ═══════════════════════════════════════════════ HERO ═══════════════════════════════════════════════ -->
-<header class="doc-hero">
+<section class="doc-hero">
   <div class="container">
     <p class="doc-crumb"><a href="index.html">Início</a> &nbsp;/&nbsp; Lojas</p>
-    <p class="eyebrow"><span class="dot"></span>Curadoria · campanhas ativas</p>
-    <h1>Lojas <em>parceiras</em></h1>
-    <p class="sub">As marcas do jardim que confiam na nossa curadoria. Veja as campanhas ativas e clique para ir direto à oferta da loja.</p>
+    <p class="eyebrow"><span class="dot"></span>Lojas parceiras</p>
+    <h1>Marcas do <em>jardim</em></h1>
+    <p class="sub">Todas as lojas com campanhas ou cupons ativos agora.</p>
   </div>
-</header>
+</section>
 
-<!-- ═══════════════════════════════════════════════ FAIXA DE CATEGORIAS ═══════════════════════════════════════════════ -->
-<div class="cats-strip">
+<section class="lojas-section">
   <div class="container">
-    <div class="cats-row" id="catsRow">
-      <button class="cat-pill active" data-cat="todas">Todas <span class="count" data-count="todas">—</span></button>
-      <button class="cat-pill" data-cat="Eletrônicos">Eletrônicos <span class="count" data-count="Eletrônicos">—</span></button>
-      <button class="cat-pill" data-cat="Moda">Moda <span class="count" data-count="Moda">—</span></button>
-      <button class="cat-pill" data-cat="Beleza">Beleza <span class="count" data-count="Beleza">—</span></button>
-      <button class="cat-pill" data-cat="Mercado">Mercado <span class="count" data-count="Mercado">—</span></button>
-      <button class="cat-pill" data-cat="Casa">Casa <span class="count" data-count="Casa">—</span></button>
-      <button class="cat-pill" data-cat="Bebidas">Bebidas <span class="count" data-count="Bebidas">—</span></button>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════ GRID ═══════════════════════════════════════════════ -->
-<main class="container">
-  <section class="lojas-section">
     <div class="lojas-head">
       <div>
-        <p class="eyebrow">Campanhas ativas</p>
-        <h2>Marcas do <em>jardim</em></h2>
+        <p class="eyebrow">Parceiros ativos</p>
+        <h2>Escolha uma <em>loja</em></h2>
       </div>
-      <p class="meta"><b id="visibleCount">—</b> campanhas mostradas · destaques no topo</p>
+      <p class="meta"><b id="lojaCount">—</b> lojas ativas</p>
     </div>
+    <div class="lojas-grid" id="lojasGrid"></div>
+  </div>
+</section>
 
-    <div class="lojas-grid" id="lojasGrid">
-      <!-- skeletons iniciais -->
-      <div class="skel-card"><div class="skel-media skel"></div><div class="skel-body"><div class="skel-line s skel"></div><div class="skel-line t skel"></div><div class="skel-line f skel"></div></div></div>
-      <div class="skel-card"><div class="skel-media skel"></div><div class="skel-body"><div class="skel-line s skel"></div><div class="skel-line t skel"></div><div class="skel-line f skel"></div></div></div>
-      <div class="skel-card"><div class="skel-media skel"></div><div class="skel-body"><div class="skel-line s skel"></div><div class="skel-line t skel"></div><div class="skel-line f skel"></div></div></div>
-    </div>
-
-    <aside class="affiliate-notice" role="note">
-      <span class="badge">i</span>
-      <p>
-        <b>Transparência:</b> este site contém links de afiliados. Ao comprar através deles, podemos receber uma comissão — <em>sem custo adicional para você</em>. Isso ajuda a manter a curadoria diária no ar.
-      </p>
-    </aside>
-  </section>
-</main>
-
-<!-- ═══════════════════════════════════════════════ FOOTER ═══════════════════════════════════════════════ -->
-<footer class="foot">
+<footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col foot-brand">
         <a href="index.html" class="logo-lockup">
           <div class="logo-mark">P</div>
-          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
+          <div class="logo-wordmark">Paraíso dos Cupons<small>ofertas & descontos</small></div>
         </a>
-        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
+        <p>Cupons, campanhas e ofertas verificados diariamente para você economizar de verdade.</p>
       </div>
       <div class="foot-col">
         <h4>Navegar</h4>
@@ -549,8 +287,8 @@
           <li><a href="index.html#ofertas">Ofertas do dia</a></li>
           <li><a href="cupons.html">Cupons</a></li>
           <li><a href="lojas.html" class="active">Lojas parceiras</a></li>
+          <li><a href="campanhas.html">Campanhas</a></li>
           <li><a href="index.html#telegram">Bot do Telegram</a></li>
-          <li><a href="index.html">Blog &amp; guias</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -558,8 +296,6 @@
         <ul>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="mailto:contato@paraisodoscupons.com.br">contato@paraisodoscupons.com.br</a></li>
-          <li><a href="#">Reportar cupom inválido</a></li>
-          <li><a href="#">Trabalhe conosco</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -568,7 +304,6 @@
           <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
           <li><a href="#">Termos de uso</a></li>
           <li><a href="#">Política de cookies</a></li>
-          <li><a href="#">Divulgação de afiliados</a></li>
         </ul>
       </div>
     </div>
@@ -584,152 +319,66 @@
 
 <script>
 (() => {
-  const $  = (s, c=document) => c.querySelector(s);
-  const $$ = (s, c=document) => [...c.querySelectorAll(s)];
-  const escapeHtml = (s = "") => String(s)
+  const escapeHtml = s => String(s||"")
     .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
     .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 
-  /* ── Fallback inline (caso fetch falhe — file://, sem servidor) ── */
-  const INLINE_FALLBACK = [];
+  async function load() {
+    let lojas = [], cupons = [];
+    try {
+      const [r1, r2] = await Promise.all([
+        fetch("lojas.json",  { cache: "no-store" }),
+        fetch("cupons.json", { cache: "no-store" }),
+      ]);
+      lojas  = r1.ok ? await r1.json() : [];
+      cupons = r2.ok ? await r2.json() : [];
+    } catch(e) { console.warn(e); }
 
-  const IMG_FALLBACK = {
-    "Eletrônicos": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=960&q=80",
-    "Moda":        "https://images.unsplash.com/photo-1445205170230-053b83016050?w=960&q=80",
-    "Beleza":      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=960&q=80",
-    "Casa":        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=960&q=80",
-    "Mercado":     "https://images.unsplash.com/photo-1542838132-92c53300491e?w=960&q=80",
-    "Bebidas":     "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=960&q=80",
-  };
+    // Agrega por loja
+    const mapa = {};
 
-  /* ── Estado ── */
-  let allLojas = [];
-  let activeCategory = "todas";
-  let searchTerm = "";
-
-  /* ── Render do card ── */
-  function renderCard(l) {
-    const cat   = l.categoria || "";
-    const link  = l.link || "#";
-    const img   = l.imagem_url || IMG_FALLBACK[l.categoria] || "";
-    const featured = !!l.destaque;
-    // Logo da Lomadee: URL do CDN sem extensão — usa modo contain
-    const isLogo = img.includes("cdn.lomadee.com.br/logos");
-    const mediaClass = isLogo ? "loja__media loja__media--logo" : "loja__media";
-    return `
-    <article class="loja" data-cat="${escapeHtml(cat)}">
-      <a class="${mediaClass}" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")}">
-        ${cat ? `<span class="loja__tag">${escapeHtml(cat)}</span>` : ""}
-        ${featured ? `<span class="loja__destaque"><span class="dot"></span>Destaque</span>` : ""}
-        <img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.src=IMG_FALLBACK['${escapeHtml(cat)}'] || ''"/>
-      </a>
-      <div class="loja__body">
-        <p class="loja__store">${escapeHtml(l.loja || "")}</p>
-        <h3 class="loja__campaign">${escapeHtml(l.nome_campanha || "")}</h3>
-        ${l.validade ? `
-          <div class="loja__validade">
-            <span class="ic">⏱</span>
-            <span>válido até <b>${escapeHtml(l.validade)}</b></span>
-          </div>` : ""}
-      </div>
-      <div class="loja__footer">
-        <a class="loja__cta" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")} na loja ${escapeHtml(l.loja || "")}">
-          Ver oferta <span class="arrow">→</span>
-        </a>
-      </div>
-    </article>`;
-  }
-
-  /* ── Render da lista ── */
-  function render() {
-    const grid = $("#lojasGrid");
-    const q = searchTerm.trim().toLowerCase();
-
-    let filtered = allLojas.filter(l => {
-      const matchCat = activeCategory === "todas" || l.categoria === activeCategory;
-      const matchQ = !q ||
-        (l.loja || "").toLowerCase().includes(q) ||
-        (l.nome_campanha || "").toLowerCase().includes(q) ||
-        (l.categoria || "").toLowerCase().includes(q);
-      return matchCat && matchQ;
-    });
-
-    // destaques primeiro
-    filtered.sort((a,b) => (b.destaque ? 1 : 0) - (a.destaque ? 1 : 0));
-
-    $("#visibleCount").textContent = filtered.length;
-
-    if (filtered.length === 0) {
-      grid.innerHTML = `
-        <div class="empty">
-          <div class="seal">∅</div>
-          <b>Nada por aqui ainda</b>
-          <p>Ainda não há campanhas ativas nesta categoria. Tente outra categoria ou volte em breve — a colheita do jardim é diária.</p>
-          <div class="cta-row">
-            <a href="index.html#ofertas" class="pc-btn">Ver ofertas do dia <span class="arrow">→</span></a>
-            <a href="index.html#telegram" class="pc-btn pc-btn--secondary">Receber alertas no Telegram</a>
-          </div>
-        </div>`;
-      return;
-    }
-
-    grid.innerHTML = filtered.map(renderCard).join("");
-  }
-
-  /* ── Categorias + contagem ── */
-  $$(".cat-pill").forEach(pill => {
-    pill.addEventListener("click", () => {
-      $$(".cat-pill").forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
-      activeCategory = pill.dataset.cat;
-      render();
-      const top = $("#lojasGrid").getBoundingClientRect().top + window.scrollY - 180;
-      window.scrollTo({ top, behavior: "smooth" });
-    });
-  });
-
-  function updateCategoryCounts() {
-    const counts = { todas: allLojas.length };
-    allLojas.forEach(l => { counts[l.categoria] = (counts[l.categoria] || 0) + 1; });
-    $$("[data-count]").forEach(el => {
-      const cat = el.dataset.count;
-      el.textContent = counts[cat] || 0;
-    });
-  }
-
-  /* ── Busca ── */
-  const searchInput = $("#searchInput");
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      searchTerm = e.target.value;
-      render();
-    });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "/" && document.activeElement !== searchInput) {
-        e.preventDefault();
-        searchInput.focus();
+    lojas.forEach(l => {
+      const nome = (l.loja || "").trim();
+      if (!nome) return;
+      if (!mapa[nome]) mapa[nome] = { nome, logo: "", campanhas: 0, cupons: 0 };
+      mapa[nome].campanhas++;
+      if (l.imagem_url && l.imagem_url.includes("cdn.lomadee.com.br/logos")) {
+        mapa[nome].logo = l.imagem_url;
       }
     });
-  }
 
-  /* ── Carregar ── */
-  async function load() {
-    try {
-      const res = await fetch("lojas.json", { cache: "no-store" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      allLojas = await res.json();
-      if (!Array.isArray(allLojas)) allLojas = [];
-    } catch (err) {
-      console.warn("Falha no fetch — usando fallback inline.", err);
-      allLojas = INLINE_FALLBACK;
-    }
-    updateCategoryCounts();
-    render();
+    cupons.forEach(c => {
+      const nome = (c.loja || "").trim();
+      if (!nome) return;
+      if (!mapa[nome]) mapa[nome] = { nome, logo: "", campanhas: 0, cupons: 0 };
+      mapa[nome].cupons++;
+    });
+
+    const lista = Object.values(mapa).sort((a,b) => a.nome.localeCompare(b.nome, "pt-BR"));
+
+    document.getElementById("lojaCount").textContent = lista.length;
+
+    const grid = document.getElementById("lojasGrid");
+    grid.innerHTML = lista.map(l => {
+      const href = `loja.html?nome=${encodeURIComponent(l.nome)}`;
+      const logoHtml = l.logo
+        ? `<img src="${escapeHtml(l.logo)}" alt="${escapeHtml(l.nome)}" loading="lazy"/>`
+        : `<span class="logo-initial">${escapeHtml(l.nome.charAt(0))}</span>`;
+      const statsHtml = [
+        l.campanhas ? `<span class="loja-card__stat loja-card__stat--camp">${l.campanhas} campanha${l.campanhas > 1 ? "s" : ""}</span>` : "",
+        l.cupons    ? `<span class="loja-card__stat loja-card__stat--cupon">${l.cupons} cupom${l.cupons > 1 ? "s" : ""}</span>` : "",
+      ].join("");
+      return `
+      <a class="loja-card" href="${escapeHtml(href)}">
+        <div class="loja-card__logo">${logoHtml}</div>
+        <span class="loja-card__name">${escapeHtml(l.nome)}</span>
+        <div class="loja-card__stats">${statsHtml}</div>
+      </a>`;
+    }).join("");
   }
 
   load();
 })();
 </script>
-
 </body>
 </html>
