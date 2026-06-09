@@ -11,8 +11,6 @@
 </script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="apple-touch-icon" href="favicon.svg" />
 <title>Loja — Paraíso dos Cupons</title>
 <meta name="description" content="Campanhas e cupons ativos desta loja no Paraíso dos Cupons." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,20 +66,9 @@
   .logo-wordmark{ font-family: var(--pc-font-serif); font-style: italic; font-weight: 500; font-size: 22px; letter-spacing:-.01em; line-height: 1; }
   .logo-wordmark small{ display:block; font-family: var(--pc-font-mono); font-style:normal; font-weight:400; font-size: 9px; letter-spacing:.3em; text-transform:uppercase; margin-top: 5px; opacity:.65; }
   .nav-links{ display:flex; align-items:center; gap: 8px; }
-  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease, color .15s ease; position: relative; }
+  .nav-link{ font-size: 14px; font-weight: 600; color: var(--pc-emerald-900); padding: 10px 14px; border-radius: var(--pc-r-pill); transition: background .15s ease; }
   .nav-link:hover{ background: rgba(6,78,59,.07); }
-  .nav-link.active{ color: var(--pc-apple-600); background: var(--pc-apple-100); }
-  .nav-link.active::after{ content:""; position: absolute; left: 16px; right: 16px; bottom: 4px; height: 2px; border-radius: 2px; background: var(--pc-apple-600); }
-  .nav-cta{ display:flex; align-items:center; gap: 12px; }
-  .nav-search{ display:flex; align-items:center; gap: 10px; background: #fff; border:1px solid var(--pc-cream-200); border-radius: var(--pc-r-pill); padding: 8px 14px 8px 16px; min-width: 280px; box-shadow: var(--pc-shadow-sm); }
-  .nav-search input{ border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--pc-ink-900); flex: 1; padding: 4px 0; }
-  .nav-search .ic{ color: var(--pc-emerald-700); font-size: 14px; }
-  .nav-search kbd{ font-family: var(--pc-font-mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; background: var(--pc-cream-100); color: var(--pc-ink-500); border: 1px solid var(--pc-cream-200); }
-  .pc-btn{ --bg: var(--pc-apple-600); --bg-hover: var(--pc-apple-700); --fg: var(--pc-cream-50); --bd: transparent; appearance:none; border:1px solid var(--bd); background: var(--bg); color: var(--fg); font-family: var(--pc-font-sans); font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: var(--pc-r-pill); cursor: pointer; display:inline-flex; align-items:center; justify-content:center; gap: 10px; line-height: 1; transition: transform .12s ease, background .15s ease; }
-  .pc-btn:hover{ background: var(--bg-hover); transform: translateY(-1px); }
-  .pc-btn--secondary{ --bg: var(--pc-emerald-800); --bg-hover: var(--pc-emerald-900); }
-  .pc-btn--sm{ font-size: 13px; padding: 10px 16px; }
-  @media (max-width: 980px){ .nav-links, .nav-search{ display:none; } }
+  @media (max-width: 980px){ .nav-links{ display:none; } }
 
   /* ════════ HERO DA LOJA ════════ */
   .loja-hero{
@@ -224,50 +211,26 @@
   }
 
   /* ════════ FOOTER ════════ */
-  footer.foot{ background: var(--pc-emerald-900); color: rgba(255,251,235,.78); padding: 64px 0 32px; margin-top: 56px; }
-  .foot-grid{ display:grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 48px; }
-  .foot-col h4{ font-family: var(--pc-font-sans); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--pc-gold-400); margin: 0 0 18px; }
-  .foot-col ul{ list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-  .foot-col a{ font-size: 14px; color: rgba(255,251,235,.7); transition: color .15s ease; }
-  .foot-col a:hover{ color: var(--pc-gold-400); }
-  .foot-col a.active{ color: var(--pc-gold-400); }
-  .foot-brand p{ margin: 16px 0 0; font-size: 14px; color: rgba(255,251,235,.6); max-width: 36ch; line-height: 1.55; }
-  .foot-brand .logo-wordmark{ color: var(--pc-cream-50); }
-  .foot-brand .logo-wordmark small{ color: var(--pc-gold-400); }
-  .foot-bottom{ margin-top: 56px; padding-top: 28px; border-top: 1px solid rgba(255,251,235,.10); display:flex; justify-content:space-between; gap: 24px; flex-wrap: wrap; font-family: var(--pc-font-mono); font-size: 11px; color: rgba(255,251,235,.45); letter-spacing: .12em; text-transform: uppercase; }
-  .foot-disclosure{ margin-top: 48px; padding: 16px 20px; border: 1px dashed rgba(245,158,11,.35); border-radius: var(--pc-r-md); background: rgba(245,158,11,.04); font-size: 12.5px; color: rgba(255,251,235,.7); line-height: 1.55; display: flex; align-items: center; gap: 12px; }
-  .foot-disclosure span:first-child{ color: var(--pc-gold-400); font-size: 13px; flex: none; }
-  .foot-disclosure em{ font-style: italic; color: var(--pc-gold-400); font-weight: 600; }
-  @media (max-width: 900px){ .foot-grid{ grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px){ .foot-grid{ grid-template-columns: 1fr; } }
+  footer{ background: var(--pc-emerald-900); color: var(--pc-cream-50); padding: 48px 0 32px; }
+  .foot-bottom{ display:flex; justify-content:space-between; font-size:12px; color:rgba(255,251,235,.35); padding-top:24px; border-top:1px solid rgba(255,251,235,.1); }
+  .foot-disclosure{ font-size:12px; color:rgba(255,251,235,.45); line-height:1.6; margin-bottom:16px; }
 </style>
 </head>
 <body>
 
 <div class="nav-wrap">
-  <div class="container">
-    <nav class="nav">
-      <a href="index.html" class="logo-lockup">
-        <div class="logo-mark">P</div>
-        <div class="logo-wordmark">Paraíso dos Cupons<small>desde 2026</small></div>
-      </a>
-      <div class="nav-links">
-        <a class="nav-link" href="index.html#ofertas">Ofertas</a>
-        <a class="nav-link active" href="lojas.html" aria-current="page">Lojas</a>
-        <a class="nav-link" href="campanhas.html">Campanhas</a>
-        <a class="nav-link" href="cupons.html">Cupons</a>
-        <a class="nav-link" href="index.html#telegram">Bot Telegram</a>
-      </div>
-      <div class="nav-cta">
-        <label class="nav-search" aria-label="Buscar">
-          <span class="ic">⌕</span>
-          <input type="search" placeholder="Buscar cupom ou loja…" />
-          <kbd>/</kbd>
-        </label>
-        <button class="pc-btn pc-btn--sm pc-btn--secondary">Entrar</button>
-      </div>
-    </nav>
-  </div>
+  <nav class="nav container">
+    <a href="index.html" class="logo-lockup">
+      <div class="logo-mark">P</div>
+      <div class="logo-wordmark">Paraíso dos Cupons<small>ofertas & descontos</small></div>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html#ofertas">Ofertas</a>
+      <a class="nav-link" href="lojas.html">Lojas</a>
+      <a class="nav-link" href="campanhas.html">Campanhas</a>
+      <a class="nav-link" href="cupons.html">Cupons</a>
+    </div>
+  </nav>
 </div>
 
 <section class="loja-hero" id="lojaHero">
@@ -297,45 +260,8 @@
   </section>
 </div>
 
-<footer class="foot">
+<footer>
   <div class="container">
-    <div class="foot-grid">
-      <div class="foot-col foot-brand">
-        <a href="index.html" class="logo-lockup">
-          <div class="logo-mark">P</div>
-          <div class="logo-wordmark" style="color: var(--pc-cream-50)">Paraíso dos Cupons<small>desde 2026</small></div>
-        </a>
-        <p>Curadoria diária de cupons e promoções. Cada código é verificado pela equipe antes de ir para o ar.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Navegar</h4>
-        <ul>
-          <li><a href="index.html#ofertas">Ofertas do dia</a></li>
-          <li><a href="lojas.html" class="active">Lojas parceiras</a></li>
-          <li><a href="campanhas.html">Campanhas</a></li>
-          <li><a href="cupons.html">Cupons</a></li>
-          <li><a href="index.html#telegram">Bot do Telegram</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>Suporte</h4>
-        <ul>
-          <li><a href="contato.html">Contato</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#24474b4a5045504b64544556454d574b404b574751544b4a570a474b490a4656"><span class="__cf_email__" data-cfemail="7c1f1312081d08133c0c1d0e1d150f1318130f1f090c13120f521f1311521e0e">[email&#160;protected]</span></a></li>
-          <li><a href="#">Reportar cupom inválido</a></li>
-          <li><a href="#">Trabalhe conosco</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
-          <li><a href="#">Termos de uso</a></li>
-          <li><a href="#">Política de cookies</a></li>
-          <li><a href="#">Divulgação de afiliados</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="foot-disclosure">
       <span>★</span> Este site contém links de afiliados. Ao comprar, podemos receber uma comissão — <em>sem custo adicional para você</em>.
     </div>
@@ -346,7 +272,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (() => {
   const esc = s => String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 
@@ -395,8 +321,10 @@
       return;
     }
 
-    // Logo da loja
-    const logo = campanhas.find(l => l.imagem_url && l.imagem_url.includes("cdn.lomadee.com.br/logos"))?.imagem_url || "";
+    // Logo da loja — tenta campanhas primeiro, depois cupons
+    const logo = campanhas.find(l => l.imagem_url && l.imagem_url.includes("cdn.lomadee.com.br/logos"))?.imagem_url
+               || cupons.find(c => c.logo_url)?.logo_url
+               || "";
     const heroLogo = document.getElementById("heroLogo");
     if (logo) {
       heroLogo.innerHTML = `<img src="${esc(logo)}" alt="${esc(nomeLoja)}" loading="lazy"/>`;
