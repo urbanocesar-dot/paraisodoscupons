@@ -220,22 +220,6 @@
     "destaque": false
   },
   {
-    "titulo": "2 Colageno 60 Capsulas - 100% Hidrolisado + Biotina com Vitamina C Coenzima Q10 + Biotina",
-    "loja": "Allever",
-    "desconto": 50,
-    "preco_original": 258.99,
-    "preco_final": 129.9,
-    "link_afiliado": "https://www.allever.com.br/2-colageno-60-capsulas---100--hidrolisado---biotina-com-vitamina-c-coenzima-q10---biotina-31524/p",
-    "categoria": "",
-    "imagem_url": "https://allever.vteximg.com.br/arquivos/ids/298328/image-250a428463fe49c0a6290d4060e4fb97.jpg?v=639007365423430000",
-    "destaque": false,
-    "lomadee_id": "31524",
-    "lomadee_organization_id": "7595dee7-e09b-485a-9853-4fb3fc380c11",
-    "data_adicao": "2026-06-09T22:05:07.885946+00:00",
-    "ultima_verificacao": "2026-06-09T22:08:07.297839+00:00",
-    "falhas_verificacao": 1
-  },
-  {
     "titulo": "50ml 50ml",
     "loja": "Drogaria Rosário",
     "desconto": 49,
@@ -249,6 +233,22 @@
     "lomadee_organization_id": "1fcee90e-562e-455c-97a5-6bdd6d60b589",
     "data_adicao": "2026-06-09T22:08:15.060395+00:00",
     "ultima_verificacao": "2026-06-09T22:08:15.060414+00:00",
+    "falhas_verificacao": 0
+  },
+  {
+    "titulo": "A-z Max Vivacitá Gold 30 Comprimidos",
+    "loja": "PromoFarma",
+    "desconto": 46,
+    "preco_original": 54.9,
+    "preco_final": 29.9,
+    "link_afiliado": "https://lmdee.link/uKLWrhHR4bZ1",
+    "categoria": "Mercado",
+    "imagem_url": "https://promofarma.vteximg.com.br/arquivos/ids/170292/7898303263528.png?v=637974616365700000",
+    "destaque": false,
+    "lomadee_id": "16919",
+    "lomadee_organization_id": "6d69265c-6b83-4ff4-916f-95a75057947d",
+    "data_adicao": "2026-06-09T22:08:53.262546+00:00",
+    "ultima_verificacao": "2026-06-09T22:08:53.262570+00:00",
     "falhas_verificacao": 0
   }
 ]
