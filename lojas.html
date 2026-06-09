@@ -243,6 +243,17 @@
     transition: transform .4s ease;
   }
   .loja:hover .loja__media img{ transform: scale(1.04); }
+
+  /* Modo logo — imagem contida com fundo neutro */
+  .loja__media--logo{
+    background: #fff !important;
+  }
+  .loja__media--logo img{
+    object-fit: contain !important;
+    padding: 24px;
+    transform: none !important;
+  }
+  .loja:hover .loja__media--logo img{ transform: none !important; }
   .loja__media .ph{ position: relative; z-index: 1; }
 
   /* Tag de categoria (canto superior esquerdo) */
@@ -602,9 +613,12 @@
     const link  = l.link || "#";
     const img   = l.imagem_url || IMG_FALLBACK[l.categoria] || "";
     const featured = !!l.destaque;
+    // Logo da Lomadee: URL do CDN sem extensão — usa modo contain
+    const isLogo = img.includes("cdn.lomadee.com.br/logos");
+    const mediaClass = isLogo ? "loja__media loja__media--logo" : "loja__media";
     return `
     <article class="loja" data-cat="${escapeHtml(cat)}">
-      <a class="loja__media" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")}">
+      <a class="${mediaClass}" href="${escapeHtml(link)}" target="_blank" rel="noopener sponsored" aria-label="Ver oferta ${escapeHtml(l.nome_campanha || "")}">
         ${cat ? `<span class="loja__tag">${escapeHtml(cat)}</span>` : ""}
         ${featured ? `<span class="loja__destaque"><span class="dot"></span>Destaque</span>` : ""}
         <img src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.src=IMG_FALLBACK['${escapeHtml(cat)}'] || ''"/>
