@@ -18,15 +18,6 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Esquenta Sale 50% OFF - ZIN",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "",
-    "link": "https://lmdee.link/ofBHg0PkWGkZ",
-    "validade": "12/06/2026",
-    "destaque": false
-  },
-  {
     "nome_campanha": "Esquenta Sale 50% OFF - MR ",
     "loja": "Morena Rosa",
     "categoria": "Moda",
@@ -41,24 +32,6 @@
     "categoria": "Beleza",
     "imagem_url": "https://cdn.lomadee.com.br/logos/dabd2b17-1442-44e4-aea5-49cbd81cde35/logo",
     "link": "https://cdn.lomadee.com.br/offer/a49ad461-3da5-4d93-9fb7-6f7c0e3bf8b8/spreadsheet/Terca-Relampago--Drogaria-Rosarioin.csv",
-    "validade": "10/06/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Terça Relâmpago",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "",
-    "link": "https://cdn.lomadee.com.br/offer/8180f32d-ecb8-4b71-811a-1c618fe72f6d/spreadsheet/Terca-Relampago--Drogaria-DrogasMilin.csv",
-    "validade": "10/06/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Ofertas de Ar condicionado",
-    "loja": "",
-    "categoria": "Casa",
-    "imagem_url": "",
-    "link": "https://cdn.lomadee.com.br/offer/94ae1641-c3d9-4a51-8bfc-e5b778e2ffb3/spreadsheet/Ofertas-da-ar-condicionadoin.csv",
     "validade": "10/06/2026",
     "destaque": false
   },
@@ -141,24 +114,6 @@
     "imagem_url": "https://cdn.lomadee.com.br/logos/20ead81f-493b-45a7-8ab6-5f523d4df803/logo",
     "link": "https://lmdee.link/scmFYD92JIMb",
     "validade": "",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Peças com 70% OFF - Lebôh",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/3b764d71-96ae-4b9f-badb-120cac4bc67e/banners/banner%20desk.jpg.jpeg",
-    "link": "https://lmdee.link/WbVfnSEqbZEH",
-    "validade": "",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "2026.06 - Dia dos Namorados",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/34d117b0-39a9-4486-8522-05af59a9d2b3/banners/Lomadee_Mes_dos_Namorados_V0_I-120x600.png",
-    "link": "https://lmdee.link/HZhVeDx52ygZ",
-    "validade": "30/06/2026",
     "destaque": false
   },
   {
@@ -378,15 +333,6 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Coleção de produtos que estão com 10% OFF",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/48746e30-d575-468f-bc09-50a9f0986165/banners/Placas-de-Ofertas-960x1200.jpg",
-    "link": "https://lmdee.link/EhxQD0sXd2yh",
-    "validade": "01/07/2026",
-    "destaque": false
-  },
-  {
     "nome_campanha": "Dia dos Namorados Sawary Jeans",
     "loja": "Sawary",
     "categoria": "Moda",
@@ -567,48 +513,12 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Campanha dia dos namorados - MATCH PERFEITO   (Compre e ganhe)",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/d9986dca-50c7-4a0c-940b-d1fefe3e9139/banners/imagem%20%2862%29.png",
-    "link": "https://lmdee.link/ZIKoRRrCQ5lS",
-    "validade": "14/06/2026",
-    "destaque": false
-  },
-  {
     "nome_campanha": "Dia dos Namorados - Bolsas e malas com até 20% Off",
     "loja": "Up4you",
     "categoria": "Moda",
     "imagem_url": "https://cdn.lomadee.com.br/logos/9ad41f3f-431f-44e9-bf4c-ead611331557/logo",
     "link": "https://lmdee.link/xnLvV825jqmz",
     "validade": "13/06/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Criativo Camisetas",
-    "loja": "",
-    "categoria": "Moda",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/afea2e4c-3963-4fbd-8054-f8000053670f/banners/Patrocinado-Topocamisetas---1080x1080-.png",
-    "link": "https://lmdee.link/yRZ69ZQGFSQU",
-    "validade": "",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Criativo PrimeiraCompra",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/8a494228-687c-40cc-8650-9a28275f4d62/banners/Patrocinado-FundoCondicoes---1080x1080.png",
-    "link": "https://lmdee.link/3c2v3JOFZ8qt",
-    "validade": "",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Camisetas - Oversized",
-    "loja": "",
-    "categoria": "Moda",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/c324dba8-042e-49ef-9057-ded5d1c806e4/banners/Patrocinado-TopoOver---1080x1080%20%281%29.png",
-    "link": "https://lmdee.link/lPoqubtA6Htw",
-    "validade": "",
     "destaque": false
   },
   {
@@ -636,6 +546,15 @@
     "imagem_url": "https://cdn.lomadee.com.br/offer/9fdb9f64-e05c-4260-b07b-84eedf5a6cec/banners/120x600_lomade_blue.jpg",
     "link": "https://lmdee.link/vQdsMAfr2VdU",
     "validade": "13/06/2026",
+    "destaque": false
+  },
+  {
+    "nome_campanha": "Ofertas de dia dos namorados- Compre e Ganhe",
+    "loja": "AmoKarité",
+    "categoria": "Beleza",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/8cb3d5c6-7c24-418a-bb91-6445d673f93c/banners/imagem%20%2861%29.png",
+    "link": "https://lmdee.link/TVdfpbc3d4W3",
+    "validade": "16/06/2026",
     "destaque": false
   },
   {
@@ -720,6 +639,15 @@
     "destaque": false
   },
   {
+    "nome_campanha": "Calça de Sarja e Jeans - Leve 2 por R$ 199,99",
+    "loja": "Camisaria Colombo",
+    "categoria": "Moda",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/e1f39461-5122-4aab-a336-5e6dca768e1f/banners/1200x1200.png",
+    "link": "https://lmdee.link/aBE9H776wBC8",
+    "validade": "01/07/2026",
+    "destaque": false
+  },
+  {
     "nome_campanha": "🔥 Oferta relâmpago Magic Bullet com 20% OFF",
     "loja": "NutriBullet",
     "categoria": "Casa",
@@ -729,21 +657,12 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Torcida Mobly",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "",
-    "link": "https://lmdee.link/HcuuGCJUYU7N",
-    "validade": "20/07/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Campanha Dia dos Namorados",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/4cca3136-409a-400c-8893-a48cd7d9ea55/banners/Arquivo.zip",
-    "link": "https://lmdee.link/DstKM55sLIki",
-    "validade": "13/06/2026",
+    "nome_campanha": "Novas_Baixas_OI26",
+    "loja": "Soulier",
+    "categoria": "Moda",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/bed5c439-0c38-4a84-ac2c-20a45aa974d3/banners/970x90_lomade_blue.jpg",
+    "link": "https://lmdee.link/NojhE547e-Xf",
+    "validade": "01/09/2026",
     "destaque": false
   },
   {
@@ -765,24 +684,6 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Frete Grátis para Sul e SP em itens selecionados🔥",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/dcb69d64-fc7c-44bc-b68e-36e547a59297/banners/Image%20%289%29.jpg",
-    "link": "https://lmdee.link/UsiYdDiBD1z1",
-    "validade": "01/08/2026",
-    "destaque": false
-  },
-  {
-    "nome_campanha": "Coleção de Frete Reduzido R$50 de desconto",
-    "loja": "",
-    "categoria": "Eletrônicos",
-    "imagem_url": "",
-    "link": "https://lmdee.link/ckeEen-MKrRL",
-    "validade": "01/07/2026",
-    "destaque": false
-  },
-  {
     "nome_campanha": "Roomba 105+ - Campanha de Abril (Comunicação: Parcelamento, Percentual de Desconto)",
     "loja": "iRobot",
     "categoria": "Eletrônicos",
@@ -792,11 +693,11 @@
     "destaque": false
   },
   {
-    "nome_campanha": "Outlet até 60% Off ",
-    "loja": "",
+    "nome_campanha": "Desconto Aspirador Robô Roomba 705+ da iRobot",
+    "loja": "iRobot",
     "categoria": "Eletrônicos",
-    "imagem_url": "https://cdn.lomadee.com.br/offer/63d8cc10-a5c3-4dd6-ae4c-5dacace94bfe/banners/202603_Midia_LG_Outlet_Google_1080x1080_V1.jpg",
-    "link": "https://lmdee.link/4n6OWBXa8VFM",
+    "imagem_url": "https://cdn.lomadee.com.br/offer/0a38b39e-cabb-4b2b-abfb-c95fe02364b0/banners/Prancheta%201%20%286%29%20%281%29.png",
+    "link": "https://lmdee.link/nRWnpElKKurn",
     "validade": "",
     "destaque": false
   },
